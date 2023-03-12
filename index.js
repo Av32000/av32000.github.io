@@ -28,7 +28,6 @@ const raf = () => {
 
   disk.style.left = diskPos.x + "px"
   disk.style.top = diskPos.y + "px"
-  console.log(diskPos)
   requestAnimationFrame(raf)
 }
 
@@ -38,7 +37,8 @@ raf()
 
 const inViewport = (entries, observer) => {
   entries.forEach(entry => {
-    entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+    if (entry.isIntersecting) entry.target.classList.add("is-inViewport");
+
   });
 };
 
@@ -49,3 +49,17 @@ const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
 ELs_inViewport.forEach(EL => {
   Obs.observe(EL, obsOptions);
 });
+
+// Skills Anim
+const circle = document.getElementById("skills-circle")
+let elements = document.querySelectorAll(".skills-circle img")
+var numElements = elements.length,
+  angle = 0
+step = (2 * Math.PI) / numElements;
+for (var i = 0; i < numElements.length; i++) {
+  var x = circle.clientWidth / 2 + radius * Math.cos(angle);
+  var y = circle.clientHeight / 2 + radius * Math.sin(angle);
+  elements[i].clientLeft = x
+  elements[i].clientTop = y
+  angle += step;
+}

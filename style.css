@@ -145,3 +145,10 @@ body {
 [data-inviewport="from-left"].is-inViewport {
   transform: translate(0);
 }
+
+.skills {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
