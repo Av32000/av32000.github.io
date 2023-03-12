@@ -2,12 +2,6 @@
 
 const background = document.getElementById("header")
 const disk = document.getElementById("disk")
-// document.addEventListener("mousemove", (ev) => {
-//   let posX = (ev.clientX - disk.clientWidth / 2) + "px"
-//   let posY = (ev.clientY - disk.clientHeight / 2) + "px"
-
-//   disk.style.transform = `translate3d(${posX},${posY})`
-// })
 
 const diskPos = {
   x: 0,
@@ -39,3 +33,19 @@ const raf = () => {
 }
 
 raf()
+
+// History Anim
+
+const inViewport = (entries, observer) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+  });
+};
+
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {};
+
+const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+ELs_inViewport.forEach(EL => {
+  Obs.observe(EL, obsOptions);
+});
