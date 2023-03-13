@@ -51,15 +51,17 @@ ELs_inViewport.forEach(EL => {
 });
 
 // Skills Anim
+let radius = 200
 const circle = document.getElementById("skills-circle")
 let elements = document.querySelectorAll(".skills-circle img")
 var numElements = elements.length,
   angle = 0
 step = (2 * Math.PI) / numElements;
-for (var i = 0; i < numElements.length; i++) {
-  var x = circle.clientWidth / 2 + radius * Math.cos(angle);
-  var y = circle.clientHeight / 2 + radius * Math.sin(angle);
-  elements[i].clientLeft = x
-  elements[i].clientTop = y
+for (var i = 0; i < numElements; i++) {
+  var x = circle.clientWidth / 2 + radius * Math.cos(angle)-10;
+  var y = circle.clientHeight / 2 + radius * Math.sin(angle)-40;
+  elements[i].style.position = "absolute"
+  elements[i].style.left = x + "px"
+  elements[i].style.top = y + "px"
   angle += step;
 }

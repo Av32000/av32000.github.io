@@ -152,3 +152,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.skills-circle{
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  left: 0;
+  animation: rotation 30s infinite linear;
+}
+
+.skills-circle img{
+  cursor: pointer;
+  animation: rotation 30s infinite linear reverse;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
