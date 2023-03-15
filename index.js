@@ -63,10 +63,12 @@ function intervalManager(flag) {
         document.querySelector("." + currentSkill).classList.remove("fade-in")
       }
       currentSkill = document.querySelectorAll(".skills-icons img")[currentSelectedIndex].alt
+      UpdateColors()
       let content = document.querySelector("." + currentSkill)
       content.classList.add("fade-in")
 
-      currentSelectedIndex++
+      if (currentSelectedIndex == document.querySelectorAll(".skills-icons img").length - 1) currentSelectedIndex = 0
+      else currentSelectedIndex++
     }, 8000)
   else
     clearInterval(intervalID);
@@ -82,6 +84,7 @@ document.querySelectorAll(".skills-icons img").forEach(element => {
       document.querySelector("." + currentSkill).classList.remove("fade-in")
     }
     currentSkill = element.alt
+    UpdateColors()
     let content = document.querySelector("." + currentSkill)
     content.classList.add("fade-in")
 
@@ -90,3 +93,12 @@ document.querySelectorAll(".skills-icons img").forEach(element => {
     }, 20000)
   })
 })
+
+function UpdateColors() {
+  document.querySelectorAll(".skills-icons img").forEach(element => {
+    if (element.alt == currentSkill) element.src = `./src/${currentSkill}-Selected.svg`
+    else element.src = `./src/${element.alt}.svg`
+  })
+}
+
+intervalManager(true)
