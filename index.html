@@ -1,79 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Av32000</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Av32000</title>
-</head>
+	<body>
+		<div class="header" id="header">
+			<div class="background">
+				<div class="disk disk-1"></div>
+				<div class="disk disk-2" id="disk"></div>
+				<div class="disk disk-3"></div>
+			</div>
+			<div class="topbar">
+				<img src="./src/icon.jpg" alt="Icon Compte" />
+				<p>Av32000</p>
+			</div>
+			<h1>Salut 👋</h1>
+			<p id="header-desc">
+				Je suis Av32000, développeur frontend et backend, passionné
+				d’informatique et de nouvelles technologies !
+			</p>
+			<img src="./src/bottomBtn.svg" alt="Bottom Btn" id="bottom-btn" />
+		</div>
+		<div class="history">
+			<div class="content">
+				<h1 data-inviewport="from-right" class="accent">Mon Histoire</h1>
+				<p data-inviewport="from-left">
+					J’ai commencé la programmation à l'âge de
+					<span class="accent">10 ans</span> en codant de petits sites en HTML
+					et CSS.
+				</p>
 
-<body>
-  <div class="header" id="header">
-    <div class="background">
-      <div class=" disk disk-1"></div>
-      <div class="disk disk-2" id="disk"></div>
-      <div class="disk disk-3"></div>
-    </div>
-    <div class="topbar">
-      <img src="./src/icon.jpg" alt="Icon Compte">
-      <p>Av32000</p>
-    </div>
-    <h1>Salut 👋</h1>
-    <p id="header-desc">Je suis Av32000, développeur frontend et backend, passionné d’informatique et de nouvelles
-      technologies !</p>
-    <img src="./src/bottomBtn.svg" alt="Bottom Btn" id="bottom-btn">
-  </div>
-  <div class="history">
+				<p data-inviewport="from-right">
+					J’ai ensuite mis de coté ces langages au profits du
+					<span class="accent">C#</span> grâce auquel j’ai découvert les
+					<span class="accent">bases de la programmation</span> orienté objet.
+					Avec .NET, j’ai créer mes premières applications
+					<span class="accent">Windows</span> puis avec Unity, de petits
+					<span class="accent">jeux vidéos</span>.
+				</p>
 
-    <div class="content">
-      <h1 data-inviewport="from-right">Mon Histoire</h1>
-      <p data-inviewport="from-left">J’ai commencé la programmation à l'âge de <span class="accent">10 ans</span> en
-        codant de petits sites en HTML
-        et CSS.</p>
+				<p data-inviewport="from-left">
+					A 14 ans, je commence à utiliser massivement
+					<span class="accent">Discord</span> et à m’intéresser à leur API. Je
+					découvre ainsi <span class="accent">JavaScript</span> et
+					<span class="accent">Node.JS</span> dont je tombe immédiatement
+					<span class="accent">amoureux</span>.
+				</p>
 
-      <p data-inviewport="from-right">J’ai ensuite mis de coté ces langages au profits du <span class="accent">C#</span>
-        grâce auquel j’ai découvert
-        les <span class="accent">bases de la programmation</span>
-        orienté objet. Avec .NET, j’ai créer mes premières applications <span class="accent">Windows</span> puis avec
-        Unity, de petits <span class="accent">jeux vidéos</span>.
-      </p>
+				<p data-inviewport="from-right">
+					Je découvre ainsi l’univers du <span class="accent">backend</span> et
+					des <span class="accent">API</span> et je comprends immédiatement que
+					je veux en faire mon <span class="accent">futur métier</span>.
+				</p>
 
-      <p data-inviewport="from-left">A 14 ans, je commence à utiliser massivement <span class="accent">Discord</span>
-        et à m’intéresser à leur API.
-        Je découvre ainsi <span class="accent">JavaScript</span>
-        et <span class="accent">Node.JS</span> dont je tombe immédiatement <span class="accent">amoureux</span>.</p>
-
-      <p data-inviewport="from-right">Je découvre ainsi l’univers du <span class="accent">backend</span> et des <span
-          class="accent">API</span> et je
-        comprends immédiatement que je veux en faire mon <span class="accent">futur
-          métier</span>.</p>
-
-      <p data-inviewport="from-left">Aujourd’hui, j’essaie de découvrir un maximum de nouvelles technologies comme
-        <span class="accent">React</span>
-        et <span class="accent">Docker</span> pour élargir mon
-        panel de compétences.
-      </p>
-    </div>
-  </div>
-  <div class="skills">
-    <div class="skills-circle" id="skills-circle">
-      <img src="src/Git.svg" alt="Git" class="skill skill-1">
-      <img src="src/Node.Js.svg" alt="Node.Js"class="skill skill-2">
-      <img src="src/JavaScript.svg" alt="JavaScript"class="skill skill-3">
-      <img src="src/React.svg" alt="React"class="skill skill-4">
-      <img src="src/Docker.svg" alt="Docker"class="skill skill-5">
-      <img src="src/Csharp.svg" alt="Csharp"class="skill skill-6">
-      <img src="src/Unity.svg" alt="Unity"class="skill skill-7">
-      <img src="src/Java.svg" alt="Java"class="skill skill-8">
-      <img src="src/Jest.svg" alt="Jest"class="skill skill-9">
-      <img src="src/Github.svg" alt="Github"class="skill skill-10">
-      <img src="src/HTML.svg" alt="HTML"class="skill skill-11">
-      <img src="src/CSS.svg" alt="CSS"class="skill skill-12">
-    </div>
-  </div>
-</body>
-<script src="index.js"></script>
-
+				<p data-inviewport="from-left">
+					Aujourd’hui, j’essaie de découvrir un maximum de nouvelles
+					technologies comme
+					<span class="accent">React</span>
+					et <span class="accent">Docker</span> pour élargir mon panel de
+					compétences.
+				</p>
+			</div>
+		</div>
+		<div class="skills">
+			<div class="content">
+				<h1 data-inviewport="fade-in" class="accent">Mes Compétences</h1>
+				<div class="skills-icons" id="skills-icons">
+					<img src="src/Git.svg" alt="Git" class="skill skill-1" />
+					<img src="src/Node.Js.svg" alt="Node.Js" class="skill skill-2" />
+					<img
+						src="src/JavaScript.svg"
+						alt="JavaScript"
+						class="skill skill-3"
+					/>
+					<img src="src/React.svg" alt="React" class="skill skill-4" />
+					<img src="src/Docker.svg" alt="Docker" class="skill skill-5" />
+					<img src="src/Csharp.svg" alt="Csharp" class="skill skill-6" />
+					<img src="src/Unity.svg" alt="Unity" class="skill skill-7" />
+					<img src="src/Java.svg" alt="Java" class="skill skill-8" />
+					<img src="src/Jest.svg" alt="Jest" class="skill skill-9" />
+					<img src="src/GitHub.svg" alt="GitHub" class="skill skill-10" />
+					<img src="src/HTML.svg" alt="HTML" class="skill skill-11" />
+					<img src="src/CSS.svg" alt="CSS" class="skill skill-12" />
+				</div>
+				<div class="skills-content">
+					<div class="Git fade-in">
+						<h1>Git</h1>
+						<p>
+							Je suis un grand utilisateur de Git depuis longtemps. J'ai tout de
+							suite aimé sa facon de fonctionner si particuilère qui le rends à
+							la fois simple et complexe.
+						</p>
+						<p>
+							Je m'en sert dans chaque projet que je commence que ce soit pour
+							sa facilité a versionner une application ou pour sa capacité à
+							syncroniser instantanément du code entre plusieurs appareils.
+						</p>
+						<p>
+							J'ai beaucoups lu et regardé de nombreux livres et tutos pour
+							connaitre de fond en comble son fonctionnement et même si je ne
+							suis pas un expert je connais très bien la majorité de
+							foncionnalités importantes.
+						</p>
+					</div>
+					<div class="Node Js">
+						<h1>Node.Js</h1>
+						<p>
+							J’ai découvert Node.JS grâce à Discord en voulant apprendre à
+							coder des bots.
+						</p>
+						<p>
+							Je suis très vite devenu amoureux de ce framework et je l’utilise
+							aujourd’hui dans presque tous mes projets que ce soit avec des
+							librairies comme express.js pour les API, react pour le web ou
+							electron pour des logiciels.
+						</p>
+						<p>
+							Ce framework m’a permis découvrir ma grande passion pour le
+							backend avec Javascript.
+						</p>
+					</div>
+					<div class="JavaScript"><h1>JavaScript</h1></div>
+					<div class="React"><h1>React</h1></div>
+					<div class="Docker"><h1>Docker</h1></div>
+					<div class="Csharp"><h1>Csharp</h1></div>
+					<div class="Unity"><h1>Unity</h1></div>
+					<div class="Java"><h1>Java</h1></div>
+					<div class="Jest"><h1>Jest</h1></div>
+					<div class="GitHub"><h1>GitHub</h1></div>
+					<div class="HTML"><h1>HTML</h1></div>
+					<div class="CSS"><h1>CSS</h1></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="index.js"></script>
 </html>
