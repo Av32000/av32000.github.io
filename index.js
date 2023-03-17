@@ -31,7 +31,7 @@ const raf = () => {
   requestAnimationFrame(raf)
 }
 
-raf()
+if (screen.width > 900) raf()
 
 // History Anim
 

@@ -24,9 +24,17 @@
 				Je suis Av32000, développeur frontend et backend, passionné
 				d’informatique et de nouvelles technologies !
 			</p>
-			<img src="./src/bottomBtn.svg" alt="Bottom Btn" id="bottom-btn" />
+			<img
+				src="./src/bottomBtn.svg"
+				alt="Bottom Btn"
+				id="bottom-btn"
+				onclick="document.getElementById('history').scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				})"
+			/>
 		</div>
-		<div class="history">
+		<div class="history" id="history">
 			<div class="content">
 				<h1 data-inviewport="from-right" class="accent">Mon Histoire</h1>
 				<p data-inviewport="from-left">
