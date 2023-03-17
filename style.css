@@ -198,18 +198,18 @@ body {
 	justify-content: center;
 }
 
-.project{
+.project {
 	margin: 20px 0;
 }
 
-.project .content{
-	background-color: #1C1F1E;
+.project .content {
+	background-color: #1c1f1e;
 	border-radius: 20px;
 	width: 80vw;
 	padding: 25px;
 }
 
-.project .link{
+.project .link {
 	display: flex;
 	background-color: #181818;
 	border-radius: 20px;
@@ -219,29 +219,50 @@ body {
 	margin-bottom: -36px;
 }
 
-.project .link *{
+.project .link * {
 	margin-top: -30px;
 }
 
-.project .link img{
+.project .link img {
 	width: 30px;
 	height: 30px;
 	margin-right: 10px;
 }
 
-.project .link p{
+.project .link p {
 	cursor: pointer;
 }
 
-.project .content .top{
+.project .content .top {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 17px;
 }
 
-.project .content .top img{
+.project .content .top img {
 	width: 32px;
 	height: 32px;
+}
+
+.socials {
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 25px;
+	cursor: pointer;
+	height: 40px;
+}
+
+.social img {
+	width: 40px;
+	height: 40px;
 }
 
 @keyframes fade-in {
