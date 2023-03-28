@@ -81,6 +81,7 @@ body {
 	margin-top: 50px;
 	width: 103px;
 	height: 103px;
+	cursor: pointer;
 }
 
 .header .topbar {
