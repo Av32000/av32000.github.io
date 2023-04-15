@@ -272,6 +272,12 @@ body {
 	height: 40px;
 }
 
+.last-update-project{
+	color: gray;
+	font-size: .8rem;
+	margin-left: 5px;
+}
+
 @media all and (max-width: 900px) {
 	.header h1,
 	#header-desc {
@@ -336,6 +342,18 @@ body {
 
 	* h1 {
 		font-size: 1.8rem;
+	}
+}
+
+@media all and (max-width: 550px) {
+	.link{
+		font-size: 3.3vw;
+	}
+	.last-update-project{
+		font-size: 2.4vw;
+	}
+	.socials{
+		margin: 20vw;
 	}
 }
 
