@@ -136,23 +136,49 @@ function FormatDate(sDate) {
   const diffMonths = Math.floor(diffDays / 30);
   const diffYears = Math.floor(diffMonths / 12);
 
-  if(diffSeconds < 10){
-    return "Maintenant"
-  } else if (diffSeconds < 60) {
-    return `Il y a ${diffSeconds} secondes`;
-  } else if (diffMinutes < 60) {
-    return `Il y a ${diffMinutes} minutes`;
-  } else if (diffHours < 24) {
-    return `Il y a ${diffHours} heures`;
-  } else if (diffDays == 1) {
-    return "Hier";
-  } else if (diffDays < 30) {
-    return `Il y a ${diffDays} jours`;
-  } else if (diffMonths < 12) {
-    return `Il y a ${diffMonths} mois`;
-  } else if (diffYears == 1) {
-    return "L'année dernière";
+  const languages = ["fr", "en"]
+  let userLanguage = (navigator.language || navigator.userLanguage).split("-")[0];
+  if (!languages.includes(userLanguage)) userLanguage = "fr"
+
+  if (userLanguage == "fr") {
+    if (diffSeconds < 10) {
+      return "Maintenant"
+    } else if (diffSeconds < 60) {
+      return `Il y a ${diffSeconds} secondes`;
+    } else if (diffMinutes < 60) {
+      return `Il y a ${diffMinutes} minutes`;
+    } else if (diffHours < 24) {
+      return `Il y a ${diffHours} heures`;
+    } else if (diffDays == 1) {
+      return "Hier";
+    } else if (diffDays < 30) {
+      return `Il y a ${diffDays} jours`;
+    } else if (diffMonths < 12) {
+      return `Il y a ${diffMonths} mois`;
+    } else if (diffYears == 1) {
+      return "L'année dernière";
+    } else {
+      return `Il y a ${diffYears} ans`;
+    }
   } else {
-    return `Il y a ${diffYears} ans`;
+    if (diffSeconds < 10) {
+      return "Now"
+    } else if (diffSeconds < 60) {
+      return `${diffSeconds} seconds ago`;
+    } else if (diffMinutes < 60) {
+      return `${diffMinutes} minutes ago`;
+    } else if (diffHours < 24) {
+      return `${diffHours} hours ago`;
+    } else if (diffDays == 1) {
+      return "Yesterday";
+    } else if (diffDays < 30) {
+      return `${diffDays} days ago`;
+    } else if (diffMonths < 12) {
+      return `${diffMonths} month ago`;
+    } else if (diffYears == 1) {
+      return "Last Year";
+    } else {
+      return `${diffYears} years ago`;
+    }
   }
 }
