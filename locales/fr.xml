@@ -102,11 +102,6 @@
       JavaScript aujourd’hui, il m’arrive encore très souvent de m’en servir dans tout un tas de
       projet.</value>
   </translation>
-  <translation key="unity">
-    <value>Unity m’a permis de découvrir des concepts bien plus poussés de la programmation et à été
-      un grand plus dans mon apprentissage. Même si je n’ai jamais réalisé de gros projets avec, il
-      m’a permis de m’améliorer dans un grand nombre de sujets.</value>
-  </translation>
   <translation key="java-1">
     <value>J’ai découvert Java en créant des mods et plugin pour le jeu Minecraft. Je l'ai également
       utilisé dans de
@@ -136,28 +131,6 @@
     <value>Il m’a fallu du temps pour savoir l’utiliser parfaitement mais c’est pour moi le meilleur
       investissent de temps que j’ai eu à faire. J’y mets tous mes projets et je ne l’échangerais
       pour aucune alternative.</value>
-  </translation>
-  <translation key="html-1">
-    <value>J’ai une histoire particulière avec le HTML car c’est le premier langage de programmation
-      auquel j’ai touché. C’est lui qui m’a fait entrer dans ce milieu passionnant qu’est
-      l’informatique.</value>
-  </translation>
-  <translation key="html-2">
-    <value>Je n’ai pas grand chose à rajouter dessus au vu de sa grande simplicité.</value>
-  </translation>
-  <translation key="css-1">
-    <value>Pour être honnête, lorsque j’ai découvert CSS, je l’ai détesté ! Je le trouvais trop
-      complexe et je n’arrivais pas à en sortir quelque chose de bien. Je l’ai alors mis de coté et
-      rangé dans la case des langages que je ne toucherais plus.</value>
-  </translation>
-  <translation key="css-2">
-    <value>Quelques années après, j’ai réessayé de l’utiliser et, avec l’expérience que j’avais
-      acquise entre temps, il m’a parus beaucoup simple que ce dont je me rappelais. Paradoxalement,
-      c’est aujourd’hui ma méthode de design favorite au vu de la quantité astronomique de
-      possibilité qu’il propose.</value>
-  </translation>
-  <translation key="css-3">
-    <value>Avec le temps, je pense le maîtriser convenablement aujourd’hui.</value>
   </translation>
   <!-- Projects -->
   <translation key="projects-title">
@@ -190,11 +163,6 @@
       nombre de case vide qu'il permet d'obtenir. Elle possède
       également un système de profondeur qui lui permet de prévoir
       plusieurs coups à l'avance.</value>
-  </translation>
-  <translation key="youtube-downloader">
-    <value>Youtube Downloader est une webapp très simple d'utilisation qui
-      permet de télécharger gratuitement et rapidement des vidéos
-      Youtube. Elle utilise les librairies express.js et YouTube.js.</value>
   </translation>
   <translation key="embed-builder">
     <value>Embed Builder est un Bot discord permettant grace à une simple commande de créer et

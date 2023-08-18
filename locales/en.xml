@@ -91,11 +91,6 @@
     <value>I coded my first Windows applications with it, and although I prefer JavaScript today, I
       still often use it in many projects.</value>
   </translation>
-  <translation key="unity">
-    <value>Unity allowed me to discover much more advanced programming concepts, and was a big plus
-      in my learning curve. Even though I've never done any major projects with it, it has helped me
-      improve in a number of areas.</value>
-  </translation>
   <translation key="java-1">
     <value>I discovered Java while creating mods and plugins for the Minecraft game. I've also used
       it in small Android application projects. Even if I rarely use it, I've used it enough to have
@@ -124,27 +119,6 @@
       of time I've ever made. I put all my projects on it and I wouldn't change it for any
       alternative. </value>
   </translation>
-  <translation key="html-1">
-    <value>I have a special relationship with HTML because it was the first programming language I
-      ever worked with. It's what got me into the exciting world of computing.</value>
-  </translation>
-  <translation key="html-2">
-    <value>I don't have much more to say about it, given its simplicity.</value>
-  </translation>
-  <translation key="css-1">
-    <value>To be honest, when I first discovered CSS, I hated it! I found it too complex and I
-      couldn't get anything good out of it. So I put it to one side and filed it away as a language
-      I wouldn't touch again.</value>
-  </translation>
-  <translation key="css-2">
-    <value>A few years later, I tried using it again and, with the experience I'd gained in the
-      meantime, it seemed much simpler than I remembered. Paradoxically, it's now my favourite
-      design method, given the
-      astronomical amount of possibilities it offers.</value>
-  </translation>
-  <translation key="css-3">
-    <value>With time, I think I've mastered it quite now.</value>
-  </translation>
   <!-- Projects -->
   <translation key="projects-title">
     <value>My Projects</value>
@@ -169,10 +143,6 @@
     <value>Parthénis is an artificial intelligence playing the game 2048. For each move, it
       calculates the score and the number of empty squares. It also has a depth system that enables
       it to predict several moves in advance.</value>
-  </translation>
-  <translation key="youtube-downloader">
-    <value>Youtube Downloader is an easy-to-use webapp that lets you download Youtube videos quickly
-      and free of charge. It uses the express.js and YouTube.js libraries.</value>
   </translation>
   <translation key="embed-builder">
     <value>Embed Builder is a Discord Bot that lets you create and send a fully customizable embed
