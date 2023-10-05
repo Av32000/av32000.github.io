@@ -65,6 +65,27 @@ body {
 	justify-content: center;
 }
 
+.local-selector {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: white;
+	appearance: none;
+}
+
+.local-selector select {
+	appearance: none;
+	outline: none;
+	background: none;
+	border: none;
+	color: white;
+	padding: 10px;
+}
+
+.local-selector select option {
+	color: black;
+}
+
 .header h1 {
 	font-size: 48px;
 	margin-bottom: 90px;
@@ -272,13 +293,14 @@ body {
 	height: 40px;
 }
 
-.last-update-project{
+.last-update-project {
 	color: gray;
 	font-size: .8rem;
 	margin-left: 5px;
 }
 
 @media all and (max-width: 900px) {
+
 	.header h1,
 	#header-desc {
 		font-size: 6vw;
@@ -346,13 +368,15 @@ body {
 }
 
 @media all and (max-width: 550px) {
-	.link{
+	.link {
 		font-size: 3.3vw;
 	}
-	.last-update-project{
+
+	.last-update-project {
 		font-size: 2.4vw;
 	}
-	.socials{
+
+	.socials {
 		margin: 20vw;
 	}
 }
@@ -361,6 +385,7 @@ body {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}

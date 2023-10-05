@@ -25,7 +25,7 @@ function extractTranslations(xml) {
 // Detect User Preferences
 const languages = ["fr", "en"]
 let userLanguage = (navigator.language || navigator.userLanguage).split("-")[0];
-if (!languages.includes(userLanguage)) userLanguage = "fr"
+if (!languages.includes(userLanguage)) userLanguage = "en"
 
 loadXMLFile(userLanguage + ".xml", function (xml) {
   var translations = extractTranslations(xml);
@@ -40,10 +40,22 @@ function ApplyTranslations(translations) {
     let html = translations[element.id]
     if (html != null) element.innerHTML = html;
   })
+
+  // Load LocalSelector
+  const loaclSelector = document.getElementById("local")
+  loaclSelector.innerHTML = ""
+  languages.forEach(l => {
+    const option = document.createElement("option")
+    option.value = l
+    option.innerText = l.toUpperCase()
+    option.onclick = e => setLanguage(e.target.value)
+    if (userLanguage == l) option.selected = "selected"
+    loaclSelector.appendChild(option)
+  })
 }
 
-// Debug Function
 function setLanguage(language) {
+  userLanguage = language
   loadXMLFile(language + ".xml", function (xml) {
     var translations = extractTranslations(xml);
     ApplyTranslations(translations)
