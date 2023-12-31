@@ -155,5 +155,31 @@
       lets you change your bot's status (Online, Idle...) and activity (Playing at...).</value>
   </translation>
   <!-- Other -->
-
+<translation key="now">
+    <value>Now</value>
+  </translation>
+  <translation key="seconds-ago">
+    <value>${time} seconds ago</value>
+  </translation>
+  <translation key="minutes-ago">
+    <value>${time} minute${plural} ago</value>
+  </translation>
+  <translation key="hours-ago">
+    <value>${time} hour${plural} ago</value>
+  </translation>
+  <translation key="yesterday">
+    <value>Yesterday</value>
+  </translation>
+  <translation key="days-ago">
+    <value>${time} days ago</value>
+  </translation>
+  <translation key="month-ago">
+    <value>${time} mounth${plural} ago</value>
+  </translation>
+  <translation key="years-ago">
+    <value>${time} years ago</value>
+  </translation>
+  <translation key="last-year">
+    <value>Last Year</value>
+  </translation>
 </translations>

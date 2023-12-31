@@ -178,4 +178,31 @@
       permet également de changer le statut (Online, Idle...) et l'activité (Joue à...) de votre
       bot.</value>
   </translation>
+  <translation key="now">
+    <value>Maintenant</value>
+  </translation>
+  <translation key="seconds-ago">
+    <value>Il y a ${time} secondes</value>
+  </translation>
+  <translation key="minutes-ago">
+    <value>Il y a ${time} minute${plural}</value>
+  </translation>
+  <translation key="hours-ago">
+    <value>Il y a ${time} heure${plural}</value>
+  </translation>
+  <translation key="yesterday">
+    <value>Hier</value>
+  </translation>
+  <translation key="days-ago">
+    <value>Il y a ${time} jours</value>
+  </translation>
+  <translation key="month-ago">
+    <value>Il y a ${time} mois</value>
+  </translation>
+  <translation key="years-ago">
+    <value>Il y a ${time} ans</value>
+  </translation>
+  <translation key="last-year">
+    <value>L'année dernière</value>
+  </translation>
 </translations>
