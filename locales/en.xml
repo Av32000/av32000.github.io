@@ -174,7 +174,7 @@
     <value>${time} days ago</value>
   </translation>
   <translation key="month-ago">
-    <value>${time} mounth${plural} ago</value>
+    <value>${time} month${plural} ago</value>
   </translation>
   <translation key="years-ago">
     <value>${time} years ago</value>
