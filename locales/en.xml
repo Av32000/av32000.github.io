@@ -139,10 +139,15 @@
       game. Simply import an image, select a drawing area and let the program take control of your
       mouse to draw for you.</value>
   </translation>
-  <translation key="parthenis">
-    <value>Parthénis is an artificial intelligence playing the game 2048. For each move, it
-      calculates the score and the number of empty squares. It also has a depth system that enables
-      it to predict several moves in advance.</value>
+  <translation key="game-of-life">
+    <value>
+      The Game Of Life is a "cellular automaton" invented by the mathematician John Conway. The
+      principle is very simple: a grid where each square is a cell that can be "alive" or "dead".
+      This "zero player" game follows 2 simple rules: At each iteration, the next state of each cell
+      is defined according to the number of living cells around it. A dead cell "born" if it is
+      surrounded by exactly 3 "alive" cells. A cell remains "alive" if it is surrounded by exactly 2
+      or 3 cells. These 2 simple rules give rise to an infinite number of possible simulations.
+    </value>
   </translation>
   <translation key="embed-builder">
     <value>Embed Builder is a Discord Bot that lets you create and send a fully customizable embed
@@ -155,7 +160,7 @@
       lets you change your bot's status (Online, Idle...) and activity (Playing at...).</value>
   </translation>
   <!-- Other -->
-<translation key="now">
+  <translation key="now">
     <value>Now</value>
   </translation>
   <translation key="seconds-ago">
