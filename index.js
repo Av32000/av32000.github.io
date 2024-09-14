@@ -51,6 +51,9 @@ ELs_inViewport.forEach((EL) => {
 
 // Skills Anim
 let currentSelectedIndex = 0;
+let skillCount = document.querySelectorAll(".skills-icons img").length
+const anglePerSkill = 360 / skillCount
+let currentRotation = 0;
 let currentSkill =
   document.querySelectorAll(".skills-icons img")[currentSelectedIndex].alt;
 
@@ -62,6 +65,7 @@ function intervalManager(flag) {
       if (currentSkill != null) {
         document.querySelector("." + currentSkill).classList.remove("fade-in");
       }
+
       currentSkill =
         document.querySelectorAll(".skills-icons img")[currentSelectedIndex]
           .alt;
@@ -75,13 +79,15 @@ function intervalManager(flag) {
       )
         currentSelectedIndex = 0;
       else currentSelectedIndex++;
+
+      rotateToSkill(currentSelectedIndex)
     }, 8000);
   else clearInterval(intervalID);
 }
 
 let timeout;
 
-document.querySelectorAll(".skills-icons img").forEach((element) => {
+document.querySelectorAll(".skills-icons img").forEach((element, index) => {
   element.addEventListener("click", () => {
     intervalManager(false);
     if (timeout != null) clearTimeout(timeout);
@@ -90,14 +96,40 @@ document.querySelectorAll(".skills-icons img").forEach((element) => {
     }
     currentSkill = element.alt;
     UpdateColors();
+    rotateToSkill(index + 1)
+    currentSelectedIndex = index
     let content = document.querySelector("." + currentSkill);
     content.classList.add("fade-in");
 
     timeout = setTimeout(() => {
       intervalManager(true);
-    }, 20000);
+    }, 5000);
   });
 });
+
+function rotateToSkill(skillNumber) {
+  const wheel = document.getElementById('skills-icons');
+  let targetAngle = (skillNumber - 1) * anglePerSkill;
+
+  if (window.innerWidth < 900) {
+    targetAngle -= 90;
+  }
+
+  let rotationDiff = targetAngle - currentRotation;
+  if (Math.abs(rotationDiff) > 180) {
+    rotationDiff = rotationDiff > 0 ? rotationDiff - 360 : rotationDiff + 360;
+  }
+
+  currentRotation += rotationDiff;
+  currentRotation %= 360;
+
+  wheel.style.transform = `rotate(${-currentRotation}deg)`;
+
+  const icons = wheel.querySelectorAll('.skill img');
+  icons.forEach((icon) => {
+    icon.style.transform = `rotate(${currentRotation}deg)`;
+  });
+}
 
 function UpdateColors() {
   document.querySelectorAll(".skills-icons img").forEach((element) => {
@@ -108,3 +140,4 @@ function UpdateColors() {
 }
 
 intervalManager(true);
+rotateToSkill(1)

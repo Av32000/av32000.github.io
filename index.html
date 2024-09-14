@@ -1,389 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="./src/favicon.ico" />
+		<title>Av32000</title>
+		<meta content="Av32000" property="og:title" />
+		<meta
+			content="I'm Av32000, frontend and backend developer, passionate about IT
+      and new technologies!"
+			property="og:description"
+		/>
+		<meta content="https://av32000.github.io" property="og:url" />
+		<meta
+			content="https://av32000.github.io/src/embed.png"
+			property="og:image"
+		/>
+		<meta content="#00FFB2" data-react-helmet="true" name="theme-color" />
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="style.css" />
-	<link rel="icon" href="./src/favicon.ico" />
-	<title>Av32000</title>
-	<meta content="Av32000" property="og:title" />
-	<meta content="I'm Av32000, frontend and backend developer, passionate about IT
-      and new technologies!" property="og:description" />
-	<meta content="https://av32000.github.io" property="og:url" />
-	<meta content="https://av32000.github.io/src/embed.png" property="og:image" />
-	<meta content="#00FFB2" data-react-helmet="true" name="theme-color" />
-</head>
-
-<body>
-	<div class="header" id="header">
-		<div class="background">
-			<div class="disk disk-1"></div>
-			<div class="disk disk-2" id="disk"></div>
-			<div class="disk disk-3"></div>
-		</div>
-		<div class="local-selector">
-			<select id="local"></select>
-		</div>
-		<div class="topbar">
-			<img src="./src/icon.jpg" alt="Icon Compte" />
-			<p>Av32000</p>
-		</div>
-		<h1 id="header-welcome" toTranslate>Salut 👋</h1>
-		<p id="header-desc" toTranslate>
-			Je suis Av32000, développeur frontend et backend, passionné
-			d’informatique et de nouvelles technologies !
-		</p>
-		<img src="./src/bottomBtn.svg" alt="Bottom Btn" id="bottom-btn" onclick="document.getElementById('history').scrollIntoView({
+	<body>
+		<div class="header" id="header">
+			<div class="background">
+				<div class="disk disk-1"></div>
+				<div class="disk disk-2" id="disk"></div>
+				<div class="disk disk-3"></div>
+			</div>
+			<div class="local-selector">
+				<select id="local"></select>
+			</div>
+			<div class="topbar">
+				<img src="./src/icon.jpg" alt="Icon Compte" />
+				<p>Av32000</p>
+			</div>
+			<h1 id="header-welcome" toTranslate>Salut 👋</h1>
+			<p id="header-desc" toTranslate>
+				Je suis Av32000, développeur frontend et backend, passionné
+				d’informatique et de nouvelles technologies !
+			</p>
+			<img
+				src="./src/bottomBtn.svg"
+				alt="Bottom Btn"
+				id="bottom-btn"
+				onclick="document.getElementById('history').scrollIntoView({
 					behavior: 'smooth',
 					block: 'start'
-				})" />
-	</div>
-	<div class="history" id="history">
-		<div class="content">
-			<h1 data-inviewport="from-right" class="accent" id="story-title" toTranslate>Mon Histoire</h1>
-			<p data-inviewport="from-left" id="story-1" toTranslate>
-				J’ai commencé la programmation à l'âge de
-				<span class="accent">10 ans</span> en codant de petits sites en HTML
-				et CSS.
-			</p>
-
-			<p data-inviewport="from-right" id="story-2" toTranslate>
-				J’ai ensuite mis de coté ces langages au profits du
-				<span class="accent">C#</span> grâce auquel j’ai découvert les
-				<span class="accent">bases de la programmation</span> orienté objet.
-				Avec .NET, j’ai créer mes premières applications
-				<span class="accent">Windows</span> puis avec Unity, de petits
-				<span class="accent">jeux vidéos</span>.
-			</p>
-
-			<p data-inviewport="from-left" id="story-3" toTranslate>
-				A 14 ans, je commence à utiliser massivement
-				<span class="accent">Discord</span> et à m’intéresser à leur API. Je
-				découvre ainsi <span class="accent">JavaScript</span> et
-				<span class="accent">Node.JS</span> dont je tombe immédiatement
-				<span class="accent">amoureux</span>.
-			</p>
-
-			<p data-inviewport="from-right" id="story-4" toTranslate>
-				Je découvre ainsi l’univers du <span class="accent">backend</span> et
-				des <span class="accent">API</span> et je comprends immédiatement que
-				je veux en faire mon <span class="accent">futur métier</span>.
-			</p>
-
-			<p data-inviewport="from-left" id="story-5" toTranslate>
-				Aujourd’hui, j’essaie de découvrir un maximum de nouvelles
-				technologies comme
-				<span class="accent">React</span>
-				et <span class="accent">Docker</span> pour élargir mon panel de
-				compétences.
-			</p>
+				})"
+			/>
 		</div>
-	</div>
-	<div class="skills">
-		<div class="content">
-			<h1 data-inviewport="from-left" class="accent" id="skills-title" toTranslate>Mes Compétences</h1>
-			<div data-inviewport="from-right" class="skills-icons" id="skills-icons">
-				<img src="src/Git-Selected.svg" alt="Git" class="skill skill-1" />
-				<img src="src/Node.Js.svg" alt="Node.Js" class="skill skill-2" />
-				<img src="src/JavaScript.svg" alt="JavaScript" class="skill skill-3" />
-				<img src="src/React.svg" alt="React" class="skill skill-4" />
-				<img src="src/Docker.svg" alt="Docker" class="skill skill-5" />
-				<img src="src/Csharp.svg" alt="Csharp" class="skill skill-6" />
-				<img src="src/Java.svg" alt="Java" class="skill skill-8" />
-				<img src="src/Jest.svg" alt="Jest" class="skill skill-9" />
-				<img src="src/GitHub.svg" alt="GitHub" class="skill skill-10" />
-			</div>
-			<div class="skills-content" data-inviewport="from-left">
-				<div class="Git fade-in">
-					<h1>Git</h1>
-					<p id="git-1" toTranslate>
-						Je suis un grand utilisateur de Git depuis longtemps. J'ai tout de
-						suite aimé sa facon de fonctionner si particuilère qui le rends si
-						complexe et puissant.
-					</p>
-					<p id="git-2" toTranslate>
-						Je m'en sert dans chaque projet que je commence que ce soit pour
-						sa facilité a versionner une application ou pour sa capacité à
-						syncroniser instantanément du code entre plusieurs appareils.
-					</p>
-					<p id="git-3" toTranslate>
-						J'ai beaucoups lu et regardé de nombreux livres et tutos pour
-						connaitre de fond en comble son fonctionnement et même si je ne
-						suis pas un expert je connais très bien la majorité des
-						foncionnalités importantes.
-					</p>
-				</div>
-				<div class="Node Js">
-					<h1>Node.Js</h1>
-					<p id="node-1" toTranslate>
-						J’ai découvert Node.JS grâce à Discord en voulant apprendre à
-						coder des bots.
-					</p>
-					<p id="node-2" toTranslate>
-						Je suis très vite devenu amoureux de ce framework et je l’utilise
-						aujourd’hui dans presque tous mes projets que ce soit avec des
-						librairies comme express.js pour les API, react pour le web ou
-						electron pour des logiciels.
-					</p>
-					<p id="node-3" toTranslate>
-						Ce framework m’a permis découvrir ma grande passion pour le
-						backend avec Javascript.
-					</p>
-				</div>
-				<div class="JavaScript">
-					<h1>JavaScript</h1>
-					<p id="js-1" toTranslate>
-						J’ai découvert JavaScript en m’intéressant à l’API de Discord. Ca
-						a été pour moi une révélation. Je suis tout de suite devenu fan de
-						ce langage que ce soit pour son étrange simplicité comme pour sa
-						façon de fonctionner pour tout (pour le web, les serveurs, les
-						logiciels…).
-					</p>
-					<p id="js-2" toTranslate>
-						N’étant pas un grand fan de design, Javascript me permet de coder
-						simplement des applications fonctionnant dans un terminal (avec
-						Node) de façon à ne pas avoir à réaliser d’UI.
-					</p>
-				</div>
-				<div class="React">
-					<h1>React</h1>
-					<p id="react" toTranslate>
-						J’aime beaucoup React pour sa facilité d’utilisation. Je m’en suis
-						servis dans de nombreux projets et même si, au début, je n’ai pas
-						bien compris l’intérêt, je m’en sert aujourd’hui très (parfois
-						trop) souvent.
-					</p>
-				</div>
-				<div class="Docker">
-					<h1>Docker</h1>
-					<p id="docker-1" toTranslate>
-						Je n’ai pas beaucoup utilisé Docker par manque de cas où j’en ai
-						vraiment besoin. Mais ayant vite compris l’intérêt de savoir s’en
-						servir en entreprise je me suis forcé à apprendre ne serait-ce que
-						les bases.
-					</p>
-					<p id="docker-2" toTranslate>
-						Même si je suis loin d’être un pro, je connais bien son
-						fonctionnement et je sais l’utiliser dans les cas les plus
-						simples.
-					</p>
-				</div>
-				<div class="Csharp">
-					<h1>Csharp</h1>
-					<p id="cs-1" toTranslate>
-						Le C# est le premier véritable langage de programmation que j’ai
-						appris. Il m’a fait découvrir toutes les portes qu’ouvre la
-						programmation et pour cela, il est très important à mes yeux.
-					</p>
-					<p id="cs-2" toTranslate>
-						J’ai codé avec mes premières applications Windows avec et quoique
-						je privilégie JavaScript aujourd’hui, il m’arrive encore très
-						souvent de m’en servir dans tout un tas de projet.
-					</p>
-				</div>
-				<div class="Java">
-					<h1>Java</h1>
-					<p id="java-1" toTranslate>
-						J’ai découvert Java en créant des mods et plugin pour le jeu Minecraft. Je l'ai également
-						utilisé dans de
-						petits projets d'applications Android. Même si je ne m’en sers
-						que rarement, je l’ai assez utilisé pour en avoir une bonne maîtrise d’ensemble.
-					</p>
-					<p id="java-2" toTranslate>
-						Malgré tout, j’ai toujours du mal à savoir quand l’utiliser là où
-						JavaScript est meilleur sur presque tous les sujets.
-					</p>
-				</div>
-				<div class="Jest">
-					<h1>Jest</h1>
-					<p id="jest-1" toTranslate>
-						J’ai entendu parler de Jest pendant très longtemps sans vraiment
-						comprendre l’intérêt. Ce n’est que récemment que j’ai commencé à
-						l’utiliser et que je me suis rendu compte à coté de quoi j’étais
-						passé pendant tout le temps.
-					</p>
-					<p id="jest-2" toTranslate>
-						Ne l’utilisant que depuis quelques mois je ne connais pas encore
-						toutes ces fonctions et cas d’usage mais il me fait économiser
-						tellement de temps dans plein de situations que je cherche à en apprendre
-						de plus en plus.
-					</p>
-				</div>
-				<div class="GitHub">
-					<h1>GitHub</h1>
-					<p id="github-1" toTranslate>
-						GitHub est pour moi un essentiel pour presque tous les projets
-						informatiques. Que ce soit pour le stockage de code, la
-						collaboration, les actions, les issues, les pulls request et j’en
-						passe. Je l’utilise tous les jours dans tous mes projets et j’en
-						suis toujours très content.
-					</p>
-					<p id="github-2" toTranslate>
-						Il m’a fallu du temps pour savoir l’utiliser parfaitement mais
-						c’est pour moi le meilleur investissent de temps que j’ai eu à
-						faire. J’y mets tous mes projets et je ne l’échangerais pour
-						aucune alternative.
-					</p>
-				</div>
+		<div class="history" id="history">
+			<div class="content">
+				<h1
+					data-inviewport="from-right"
+					class="accent"
+					id="story-title"
+					toTranslate
+				>
+					Mon Histoire
+				</h1>
+				<p data-inviewport="from-left" id="story-1" toTranslate>
+					J’ai commencé la programmation à l'âge de
+					<span class="accent">10 ans</span> en codant de petits sites en HTML
+					et CSS.
+				</p>
+
+				<p data-inviewport="from-right" id="story-2" toTranslate>
+					J’ai ensuite mis de coté ces langages au profits du
+					<span class="accent">C#</span> grâce auquel j’ai découvert les
+					<span class="accent">bases de la programmation</span> orienté objet.
+					Avec .NET, j’ai créer mes premières applications
+					<span class="accent">Windows</span> puis avec Unity, de petits
+					<span class="accent">jeux vidéos</span>.
+				</p>
+
+				<p data-inviewport="from-left" id="story-3" toTranslate>
+					A 14 ans, je commence à utiliser massivement
+					<span class="accent">Discord</span> et à m’intéresser à leur API. Je
+					découvre ainsi <span class="accent">JavaScript</span> et
+					<span class="accent">Node.JS</span> dont je tombe immédiatement
+					<span class="accent">amoureux</span>.
+				</p>
+
+				<p data-inviewport="from-right" id="story-4" toTranslate>
+					Je découvre ainsi l’univers du <span class="accent">backend</span> et
+					des <span class="accent">API</span> et je comprends immédiatement que
+					je veux en faire mon <span class="accent">futur métier</span>.
+				</p>
+
+				<p data-inviewport="from-left" id="story-5" toTranslate>
+					Aujourd’hui, j’essaie de découvrir un maximum de nouvelles
+					technologies comme
+					<span class="accent">React</span>
+					et <span class="accent">Docker</span> pour élargir mon panel de
+					compétences.
+				</p>
 			</div>
 		</div>
-	</div>
-	<div class="projects">
-		<div class="content">
-			<h1 data-inviewport="from-right" class="accent" id="projects-title" toTranslate>Mes Projets</h1>
-			<div class="projects-list">
-				<div data-inviewport="from-left" class="project">
-					<div class="link">
-						<img src="./src/GitHub.svg" alt="GitHub" />
-						<p onclick="window.open('https:\/\/github.com/Av32000/Discord-Badge')">
-							Av32000/Discord-Badge
-						</p>
-					</div>
-					<div class="content">
-						<div class="top">
-							<h1 class="accent">Discord Badge</h1>
-							<img src="./src/Node.Js.svg" alt="Node.Js" />
+		<div class="skills">
+			<div class="content">
+				<h1
+					data-inviewport="from-left"
+					class="accent"
+					id="skills-title"
+					toTranslate
+				>
+					Mes Compétences
+				</h1>
+				<div class="skills-row">
+					<div class="wheel-container">
+						<div
+							data-inviewport="from-right"
+							class="skills-icons"
+							id="skills-icons"
+						>
+							<div class="skill skill-1">
+								<img src="src/Git-Selected.svg" alt="Git" />
+							</div>
+							<div class="skill skill-2">
+								<img src="src/Node.Js.svg" alt="Node.Js" />
+							</div>
+							<div class="skill skill-3">
+								<img src="src/JavaScript.svg" alt="JavaScript" />
+							</div>
+							<div class="skill skill-4">
+								<img src="src/React.svg" alt="React" />
+							</div>
+							<div class="skill skill-5">
+								<img src="src/Docker.svg" alt="Docker" />
+							</div>
+							<div class="skill skill-6">
+								<img src="src/Csharp.svg" alt="Csharp" />
+							</div>
+							<div class="skill skill-7">
+								<img src="src/Java.svg" alt="Java" />
+							</div>
+							<div class="skill skill-8">
+								<img src="src/Jest.svg" alt="Jest" />
+							</div>
+							<div class="skill skill-9">
+								<img src="src/GitHub.svg" alt="GitHub" />
+							</div>
 						</div>
-						<p id="discord-badge" toTranslate>
-							Discord Badge est un Bot Discord vous permettant de récupéré
-							grâce à son API un badge indiquant votre statut Discord (Online,
-							Offline...). Il est très simple d’utilisation et peut être
-							utilisé sur un site web ou un profil GitHub par exemple.
-						</p>
 					</div>
-				</div>
-				<div data-inviewport="from-right" class="project">
-					<div class="link">
-						<img src="./src/GitHub.svg" alt="GitHub" />
-						<p onclick="window.open('https:\/\/github.com/Av32000/CodeLyoko-UHC')">
-							Av32000/CodeLyoko-UHC
-						</p>
-					</div>
-					<div class="content">
-						<div class="top">
-							<h1 class="accent">CodeLyoko UHC</h1>
-							<img src="./src/Java.svg" alt="Java" />
+					<div class="skills-content" data-inviewport="from-left">
+						<div class="Git fade-in">
+							<h1>Git</h1>
+							<p id="git-1" toTranslate>
+								Je suis un grand utilisateur de Git depuis longtemps. J'ai tout
+								de suite aimé sa facon de fonctionner si particuilère qui le
+								rends si complexe et puissant.
+							</p>
+							<p id="git-2" toTranslate>
+								Je m'en sert dans chaque projet que je commence que ce soit pour
+								sa facilité a versionner une application ou pour sa capacité à
+								syncroniser instantanément du code entre plusieurs appareils.
+							</p>
+							<p id="git-3" toTranslate>
+								J'ai beaucoups lu et regardé de nombreux livres et tutos pour
+								connaitre de fond en comble son fonctionnement et même si je ne
+								suis pas un expert je connais très bien la majorité des
+								foncionnalités importantes.
+							</p>
 						</div>
-						<p id="code-lyoko-uhc" toTranslate>
-							Code Lyoko UHC est un plugin Minecraft d’UHC basé sur l’univers
-							de Code Lyoko. Chaque joueur reçoit un rôle correspondant à un
-							personnage de la série et doit, seul, ou avec ses alliés,
-							éliminer tous les autres joueurs pour gagner la partie. Chaque
-							rôle possède ses propres pouvoirs et caractéristiques afin de
-							créer un large panel de stratégies possibles.
-						</p>
-					</div>
-				</div>
-				<div data-inviewport="from-left" class="project">
-					<div class="link">
-						<img src="./src/GitHub.svg" alt="GitHub" />
-						<p onclick="window.open('https:\/\/github.com/Av32000/GarticCheat')">
-							Av32000/GarticCheat
-						</p>
-					</div>
-					<div class="content">
-						<div class="top">
-							<h1 class="accent">Gartic Cheat</h1>
-							<img src="./src/Csharp.svg" alt="Csharp" />
+						<div class="Node Js">
+							<h1>Node.Js</h1>
+							<p id="node-1" toTranslate>
+								J’ai découvert Node.JS grâce à Discord en voulant apprendre à
+								coder des bots.
+							</p>
+							<p id="node-2" toTranslate>
+								Je suis très vite devenu amoureux de ce framework et je
+								l’utilise aujourd’hui dans presque tous mes projets que ce soit
+								avec des librairies comme express.js pour les API, react pour le
+								web ou electron pour des logiciels.
+							</p>
+							<p id="node-3" toTranslate>
+								Ce framework m’a permis découvrir ma grande passion pour le
+								backend avec Javascript.
+							</p>
 						</div>
-						<p id="gartic-cheat" toTranslate>
-							Gartic Cheat est un logiciel codé en C# permettant de dessiner à
-							votre place dans le jeu Gartic Phone. Il vous suffit d’importer
-							une image, de sélectionner une zone de dessin et de laisser le
-							logiciel prendre le contrôle de votre souris pour dessiner à
-							votre place.
-						</p>
-					</div>
-				</div>
-				<div data-inviewport="from-right" class="project">
-					<div class="link">
-						<img src="./src/GitHub.svg" alt="GitHub" />
-						<p onclick="window.open('https:\/\/github.com/Av32000/GameOfLife')">
-							Av32000/GameOfLife
-						</p>
-					</div>
-					<div class="content">
-						<div class="top">
-							<h1 class="accent">Game Of Life</h1>
-							<img src="./src/Node.Js.svg" alt="Node.Js" />
+						<div class="JavaScript">
+							<h1>JavaScript</h1>
+							<p id="js-1" toTranslate>
+								J’ai découvert JavaScript en m’intéressant à l’API de Discord.
+								Ca a été pour moi une révélation. Je suis tout de suite devenu
+								fan de ce langage que ce soit pour son étrange simplicité comme
+								pour sa façon de fonctionner pour tout (pour le web, les
+								serveurs, les logiciels…).
+							</p>
+							<p id="js-2" toTranslate>
+								N’étant pas un grand fan de design, Javascript me permet de
+								coder simplement des applications fonctionnant dans un terminal
+								(avec Node) de façon à ne pas avoir à réaliser d’UI.
+							</p>
 						</div>
-						<p id="game-of-life" toTranslate>
-							Le jeu de la vie (Game Of Life) est un "automate cellulaire" inventé par le mathématicien John Conway. Le
-							principe est simple : Une grille où chaque case est une cellule pouvant être "vivante" ou "morte". Ce jeu
-							dit "à zéro joueur" suit 2 règles simples : A chaque itération, l'état suivant de chaque cellule est
-							définis en foncton du nombre de cellules vivantes autour d'elle. Une cellule morte "nait" si elle est
-							entourée par exactement 3 cellules vivantes. Une cellule "vivante" le reste si elle est entourée par
-							exactement 2 ou 3 cellules. Ces 2 règles simples entrainent une infinité de simulations possibles.
-						</p>
-					</div>
-				</div>
-				<div data-inviewport="from-left" class="project">
-					<div class="link">
-						<img src="./src/GitHub.svg" alt="GitHub" />
-						<p onclick="window.open('https:\/\/github.com/Av32000/Clyde-Gateway')">
-							Av32000/Clyde-Gateway
-						</p>
-					</div>
-					<div class="content">
-						<div class="top">
-							<h1 class="accent">Clyde Gateway</h1>
-							<img src="./src/Node.Js.svg" alt="Node.Js" />
+						<div class="React">
+							<h1>React</h1>
+							<p id="react" toTranslate>
+								J’aime beaucoup React pour sa facilité d’utilisation. Je m’en
+								suis servis dans de nombreux projets et même si, au début, je
+								n’ai pas bien compris l’intérêt, je m’en sert aujourd’hui très
+								(parfois trop) souvent.
+							</p>
 						</div>
-						<p id="clyde-gateway" toTranslate>
-							Clyde Gateway est une librairie simple et très légère pour connecter votre bot au gateway
-							Discord.
-							Il permet à votre bot d'écouter tous les événements et de pouvoir y réagir en temps réel. Il
-							permet également de changer le statut (Online, Idle...) et l'activité (Joue à...) de votre
-							bot.
-						</p>
-					</div>
-				</div>
-				<div data-inviewport="from-right" class="project">
-					<div class="link">
-						<img src="./src/GitHub.svg" alt="GitHub" />
-						<p onclick="window.open('https:\/\/github.com/Av32000/Embed-Builder')">
-							Av32000/Embed-Builder
-						</p>
-					</div>
-					<div class="content">
-						<div class="top">
-							<h1 class="accent">Embed Builder</h1>
-							<img src="./src/Node.Js.svg" alt="Node.Js" />
+						<div class="Docker">
+							<h1>Docker</h1>
+							<p id="docker-1" toTranslate>
+								Je n’ai pas beaucoup utilisé Docker par manque de cas où j’en ai
+								vraiment besoin. Mais ayant vite compris l’intérêt de savoir
+								s’en servir en entreprise je me suis forcé à apprendre ne
+								serait-ce que les bases.
+							</p>
+							<p id="docker-2" toTranslate>
+								Même si je suis loin d’être un pro, je connais bien son
+								fonctionnement et je sais l’utiliser dans les cas les plus
+								simples.
+							</p>
 						</div>
-						<p id="embed-builder" toTranslate>
-							Embed Builder est un Bot discord permettant grace à une simple commande de créer et
-							d'envoyer un embed
-							entièrement personnalisable. Il est très simple d'utilisation et pour autant très complet
-							offrant une
-							personnalisation intégrale de l'embed.
-						</p>
+						<div class="Csharp">
+							<h1>Csharp</h1>
+							<p id="cs-1" toTranslate>
+								Le C# est le premier véritable langage de programmation que j’ai
+								appris. Il m’a fait découvrir toutes les portes qu’ouvre la
+								programmation et pour cela, il est très important à mes yeux.
+							</p>
+							<p id="cs-2" toTranslate>
+								J’ai codé avec mes premières applications Windows avec et
+								quoique je privilégie JavaScript aujourd’hui, il m’arrive encore
+								très souvent de m’en servir dans tout un tas de projet.
+							</p>
+						</div>
+						<div class="Java">
+							<h1>Java</h1>
+							<p id="java-1" toTranslate>
+								J’ai découvert Java en créant des mods et plugin pour le jeu
+								Minecraft. Je l'ai également utilisé dans de petits projets
+								d'applications Android. Même si je ne m’en sers que rarement, je
+								l’ai assez utilisé pour en avoir une bonne maîtrise d’ensemble.
+							</p>
+							<p id="java-2" toTranslate>
+								Malgré tout, j’ai toujours du mal à savoir quand l’utiliser là
+								où JavaScript est meilleur sur presque tous les sujets.
+							</p>
+						</div>
+						<div class="Jest">
+							<h1>Jest</h1>
+							<p id="jest-1" toTranslate>
+								J’ai entendu parler de Jest pendant très longtemps sans vraiment
+								comprendre l’intérêt. Ce n’est que récemment que j’ai commencé à
+								l’utiliser et que je me suis rendu compte à coté de quoi j’étais
+								passé pendant tout le temps.
+							</p>
+							<p id="jest-2" toTranslate>
+								Ne l’utilisant que depuis quelques mois je ne connais pas encore
+								toutes ces fonctions et cas d’usage mais il me fait économiser
+								tellement de temps dans plein de situations que je cherche à en
+								apprendre de plus en plus.
+							</p>
+						</div>
+						<div class="GitHub">
+							<h1>GitHub</h1>
+							<p id="github-1" toTranslate>
+								GitHub est pour moi un essentiel pour presque tous les projets
+								informatiques. Que ce soit pour le stockage de code, la
+								collaboration, les actions, les issues, les pulls request et
+								j’en passe. Je l’utilise tous les jours dans tous mes projets et
+								j’en suis toujours très content.
+							</p>
+							<p id="github-2" toTranslate>
+								Il m’a fallu du temps pour savoir l’utiliser parfaitement mais
+								c’est pour moi le meilleur investissent de temps que j’ai eu à
+								faire. J’y mets tous mes projets et je ne l’échangerais pour
+								aucune alternative.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="socials">
-		<div class="social" onclick="window.open('https:\/\/github.com/Av32000')">
-			<img src="./src/GitHub.svg" alt="GitHub" />
-			<p>Av32000</p>
+		<div class="projects">
+			<div class="content">
+				<h1
+					data-inviewport="from-right"
+					class="accent"
+					id="projects-title"
+					toTranslate
+				>
+					Mes Projets
+				</h1>
+				<div class="projects-list">
+					<div data-inviewport="from-left" class="project">
+						<div class="link">
+							<img src="./src/GitHub.svg" alt="GitHub" />
+							<p
+								onclick="window.open('https:\/\/github.com/Av32000/Discord-Badge')"
+							>
+								Av32000/Discord-Badge
+							</p>
+						</div>
+						<div class="content">
+							<div class="top">
+								<h1 class="accent">Discord Badge</h1>
+								<img src="./src/Node.Js.svg" alt="Node.Js" />
+							</div>
+							<p id="discord-badge" toTranslate>
+								Discord Badge est un Bot Discord vous permettant de récupéré
+								grâce à son API un badge indiquant votre statut Discord (Online,
+								Offline...). Il est très simple d’utilisation et peut être
+								utilisé sur un site web ou un profil GitHub par exemple.
+							</p>
+						</div>
+					</div>
+					<div data-inviewport="from-right" class="project">
+						<div class="link">
+							<img src="./src/GitHub.svg" alt="GitHub" />
+							<p
+								onclick="window.open('https:\/\/github.com/Av32000/CodeLyoko-UHC')"
+							>
+								Av32000/CodeLyoko-UHC
+							</p>
+						</div>
+						<div class="content">
+							<div class="top">
+								<h1 class="accent">CodeLyoko UHC</h1>
+								<img src="./src/Java.svg" alt="Java" />
+							</div>
+							<p id="code-lyoko-uhc" toTranslate>
+								Code Lyoko UHC est un plugin Minecraft d’UHC basé sur l’univers
+								de Code Lyoko. Chaque joueur reçoit un rôle correspondant à un
+								personnage de la série et doit, seul, ou avec ses alliés,
+								éliminer tous les autres joueurs pour gagner la partie. Chaque
+								rôle possède ses propres pouvoirs et caractéristiques afin de
+								créer un large panel de stratégies possibles.
+							</p>
+						</div>
+					</div>
+					<div data-inviewport="from-left" class="project">
+						<div class="link">
+							<img src="./src/GitHub.svg" alt="GitHub" />
+							<p
+								onclick="window.open('https:\/\/github.com/Av32000/GarticCheat')"
+							>
+								Av32000/GarticCheat
+							</p>
+						</div>
+						<div class="content">
+							<div class="top">
+								<h1 class="accent">Gartic Cheat</h1>
+								<img src="./src/Csharp.svg" alt="Csharp" />
+							</div>
+							<p id="gartic-cheat" toTranslate>
+								Gartic Cheat est un logiciel codé en C# permettant de dessiner à
+								votre place dans le jeu Gartic Phone. Il vous suffit d’importer
+								une image, de sélectionner une zone de dessin et de laisser le
+								logiciel prendre le contrôle de votre souris pour dessiner à
+								votre place.
+							</p>
+						</div>
+					</div>
+					<div data-inviewport="from-right" class="project">
+						<div class="link">
+							<img src="./src/GitHub.svg" alt="GitHub" />
+							<p
+								onclick="window.open('https:\/\/github.com/Av32000/GameOfLife')"
+							>
+								Av32000/GameOfLife
+							</p>
+						</div>
+						<div class="content">
+							<div class="top">
+								<h1 class="accent">Game Of Life</h1>
+								<img src="./src/Node.Js.svg" alt="Node.Js" />
+							</div>
+							<p id="game-of-life" toTranslate>
+								Le jeu de la vie (Game Of Life) est un "automate cellulaire"
+								inventé par le mathématicien John Conway. Le principe est simple
+								: Une grille où chaque case est une cellule pouvant être
+								"vivante" ou "morte". Ce jeu dit "à zéro joueur" suit 2 règles
+								simples : A chaque itération, l'état suivant de chaque cellule
+								est définis en foncton du nombre de cellules vivantes autour
+								d'elle. Une cellule morte "nait" si elle est entourée par
+								exactement 3 cellules vivantes. Une cellule "vivante" le reste
+								si elle est entourée par exactement 2 ou 3 cellules. Ces 2
+								règles simples entrainent une infinité de simulations possibles.
+							</p>
+						</div>
+					</div>
+					<div data-inviewport="from-left" class="project">
+						<div class="link">
+							<img src="./src/GitHub.svg" alt="GitHub" />
+							<p
+								onclick="window.open('https:\/\/github.com/Av32000/Clyde-Gateway')"
+							>
+								Av32000/Clyde-Gateway
+							</p>
+						</div>
+						<div class="content">
+							<div class="top">
+								<h1 class="accent">Clyde Gateway</h1>
+								<img src="./src/Node.Js.svg" alt="Node.Js" />
+							</div>
+							<p id="clyde-gateway" toTranslate>
+								Clyde Gateway est une librairie simple et très légère pour
+								connecter votre bot au gateway Discord. Il permet à votre bot
+								d'écouter tous les événements et de pouvoir y réagir en temps
+								réel. Il permet également de changer le statut (Online, Idle...)
+								et l'activité (Joue à...) de votre bot.
+							</p>
+						</div>
+					</div>
+					<div data-inviewport="from-right" class="project">
+						<div class="link">
+							<img src="./src/GitHub.svg" alt="GitHub" />
+							<p
+								onclick="window.open('https:\/\/github.com/Av32000/Embed-Builder')"
+							>
+								Av32000/Embed-Builder
+							</p>
+						</div>
+						<div class="content">
+							<div class="top">
+								<h1 class="accent">Embed Builder</h1>
+								<img src="./src/Node.Js.svg" alt="Node.Js" />
+							</div>
+							<p id="embed-builder" toTranslate>
+								Embed Builder est un Bot discord permettant grace à une simple
+								commande de créer et d'envoyer un embed entièrement
+								personnalisable. Il est très simple d'utilisation et pour autant
+								très complet offrant une personnalisation intégrale de l'embed.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="social" onclick="window.open('https:\/\/x.com/av32000')">
-			<img src="./src/X.svg" alt="X" />
-			<p>av32000</p>
+		<div class="socials">
+			<div class="social" onclick="window.open('https:\/\/github.com/Av32000')">
+				<img src="./src/GitHub.svg" alt="GitHub" />
+				<p>Av32000</p>
+			</div>
+			<div class="social" onclick="window.open('https:\/\/x.com/av32000')">
+				<img src="./src/X.svg" alt="X" />
+				<p>av32000</p>
+			</div>
+			<div class="social" onclick="window.open('https:\/\/discord.com')">
+				<img src="./src/Discord.svg" alt="Discord" />
+				<p>av32000</p>
+			</div>
+			<div
+				class="social"
+				onclick="window.open('https:\/\/instagram.com/Av32000')"
+			>
+				<img src="./src/Instagram.svg" alt="Instagram" />
+				<p>Av32000</p>
+			</div>
 		</div>
-		<div class="social" onclick="window.open('https:\/\/discord.com')">
-			<img src="./src/Discord.svg" alt="Discord" />
-			<p>av32000</p>
-		</div>
-		<div class="social" onclick="window.open('https:\/\/instagram.com/Av32000')">
-			<img src="./src/Instagram.svg" alt="Instagram" />
-			<p>Av32000</p>
-		</div>
-	</div>
-</body>
-<script src="index.js"></script>
-<script src="translations.js"></script>
-
+	</body>
+	<script src="index.js"></script>
+	<script src="translations.js"></script>
 </html>
