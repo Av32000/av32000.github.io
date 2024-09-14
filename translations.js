@@ -24,8 +24,8 @@ function extractTranslations(xml) {
 
 // Detect User Preferences
 const languages = ["fr", "en"];
-let userLanguage = (navigator.language || navigator.userLanguage).split("-")[0];
-if (!languages.includes(userLanguage)) userLanguage = "en";
+// let userLanguage = (navigator.language || navigator.userLanguage).split("-")[0];
+let userLanguage = "en";
 
 setLanguage(userLanguage);
 

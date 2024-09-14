@@ -2,6 +2,7 @@
 
 :root {
 	--skills-wheel-size: 180px;
+	--skills-count: 10;
 }
 
 * {
@@ -227,31 +228,53 @@ body {
 }
 
 .skill-1 {
-	transform: rotate(0deg) translate(var(--skills-wheel-size)) rotate(0deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 0))
+		translate(var(--skills-wheel-size)) rotate(0deg);
 }
 .skill-2 {
-	transform: rotate(40deg) translate(var(--skills-wheel-size)) rotate(-40deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 1))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -1));
 }
 .skill-3 {
-	transform: rotate(80deg) translate(var(--skills-wheel-size)) rotate(-80deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 2))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -2));
 }
 .skill-4 {
-	transform: rotate(120deg) translate(var(--skills-wheel-size)) rotate(-120deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 3))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -3));
 }
 .skill-5 {
-	transform: rotate(160deg) translate(var(--skills-wheel-size)) rotate(-160deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 4))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -4));
 }
 .skill-6 {
-	transform: rotate(200deg) translate(var(--skills-wheel-size)) rotate(-200deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 5))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -5));
 }
 .skill-7 {
-	transform: rotate(240deg) translate(var(--skills-wheel-size)) rotate(-240deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 6))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -6));
 }
 .skill-8 {
-	transform: rotate(280deg) translate(var(--skills-wheel-size)) rotate(-280deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 7))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -7));
 }
 .skill-9 {
-	transform: rotate(320deg) translate(var(--skills-wheel-size)) rotate(-320deg);
+	transform: rotate(calc(360deg / var(--skills-count) * 8))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -8));
+}
+.skill-10 {
+	transform: rotate(calc(360deg / var(--skills-count) * 9))
+		translate(var(--skills-wheel-size))
+		rotate(calc(360deg / var(--skills-count) * -9));
 }
 
 .skill img {
@@ -281,6 +304,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: 20vh;
 }
 
 .projects .content {

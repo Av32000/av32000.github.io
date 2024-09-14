@@ -103,7 +103,7 @@ document.querySelectorAll(".skills-icons img").forEach((element, index) => {
 
     timeout = setTimeout(() => {
       intervalManager(true);
-    }, 5000);
+    }, 3000);
   });
 });
 

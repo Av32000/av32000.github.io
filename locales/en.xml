@@ -12,152 +12,102 @@
     <value>My Story</value>
   </translation>
   <translation key="story-1">
-    <value>I started programming at the age of <span class="accent">10 yo</span> coding small
-      website in HTML and CSS.</value>
+    <value>I started programming at the age of <span class="accent">10 yo</span> coding small website in HTML and CSS.</value>
   </translation>
   <translation key="story-2">
-    <value>I then put aside these languages in favor of <span class="accent">C#</span> through which
-      I discovered the <span class="accent">basics</span> of object-oriented programming. With .NET,
-      I created my firsts <span class="accent">Windows</span> applications then with Unity, smalls <span
-        class="accent">video games</span>.</value>
+    <value>I then put aside these languages in favor of <span class="accent">C#</span> through which I discovered the <span class="accent">basics</span> of object-oriented programming. With .NET, I created my firsts <span class="accent">Windows</span> applications then with Unity, smalls <span class="accent">video games</span>.</value>
   </translation>
   <translation key="story-3">
-    <value>At 14, I started using <span class="accent"> Discord</span> massively and interested in
-      their API. This is how I discovered <span class="accent"> JavaScript</span> and <span
-        class="accent">Node.JS</span> and fell in <span class="accent">love</span> with it.</value>
+    <value>At 14, I started using <span class="accent">Discord</span> massively and interested in their API. This is how I discovered <span class="accent">JavaScript</span> and <span class="accent">Node.JS</span>.</value>
   </translation>
   <translation key="story-4">
-    <value>In this way, I discovered the world of the <span class="accent">backend</span> and <span
-        class="accent">APIs</span> and I immediately understood that I wanted to make it my <span
-        class="accent">futur jobs</span>.</value>
+    <value>In this way, I discovered the world of the <span class="accent">backend</span> and <span class="accent">APIs</span> and I immediately understood that I wanted to make it my <span class="accent">futur jobs</span>.</value>
   </translation>
   <translation key="story-5">
-    <value>Today, I try to discover as many new technologies as possible. Like <span class="accent">
-      React</span> and <span class="accent">Docker</span> to broaden my range of skills.</value>
+    <value>Today, I try to discover as many new technologies as possible to improve my skills.</value>
   </translation>
   <!-- Skills -->
   <translation key="skills-title">
     <value>My Skills</value>
   </translation>
   <translation key="git-1">
-    <value>I've been a big Git user for a long time. I immediately liked the way it worked, which
-      makes it so complex and powerful.</value>
+    <value>Complex and powerful, Git it's one of my favorite tools. I use it since a long time in every project I start. I've read and watched a lot of books and tutorials to get to know it inside out.</value>
   </translation>
   <translation key="git-2">
-    <value>I use it in every project I start, whether for its ease of versioning an application or
-      for its ability to instantly synchronize code between multiple devices.</value>
-  </translation>
-  <translation key="git-3">
-    <value>I've read and watched a lot of books and tutorials to get to know it inside out, and even
-      if I'm not an expert, I know most of the important functions very well.</value>
+    <value>I'm not an expert but I know most of the important functions very well.</value>
   </translation>
   <translation key="node-1">
     <value>I discovered Node.JS on Discord when I wanted to learn how to code bots.</value>
   </translation>
   <translation key="node-2">
-    <value>I quickly fell in love with this framework and now use it in almost all my projects,
-      whether with libraries such as express.js for APIs, react for web and electron for software.</value>
+    <value>Today, I use it in almost all my projects with libraries such as fastify for APIs, react for web, electron for software and so many others.</value>
   </translation>
   <translation key="node-3">
     <value>This framework allowed me to discover my great passion for the backend with Javascript.</value>
   </translation>
   <translation key="js-1">
-    <value>I discovered JavaScript when I got interested in the Discord API. It was a revelation for
-      me. I immediately became a fan of this language, both for its strange simplicity and for the
-      way it works for everything (web, servers, software...).</value>
+    <value>My favorite language, both for its strange simplicity and for the way it works for everything (web, servers, software...).</value>
   </translation>
   <translation key="js-2">
-    <value>As I'm not a big fan of design, Javascript lets me simply code applications that run in a
-      terminal (with Node), so I don't have to create a UI.</value>
+    <value>Javascript lets me simply code applications that run in a terminal (with NodeJS), so I don't have to create a UI.</value>
   </translation>
   <translation key="react">
-    <value>I really like React for its ease of use. I've used it in many projects, and
-      if at first I didn't understand the interest, I now use it very (sometimes too) often.</value>
+    <value>Powerful and easy to use, React is my default framework for coding web interface. I use it whenever possible in all my projects and I prefer it to all others.</value>
   </translation>
   <translation key="docker-1">
-    <value>I haven't used Docker much for lack of cases where I really need it. But having quickly
-      realized the value of knowing how to use it in company, I forced myself to learn even the
-      basics.</value>
+    <value>Docker is an essential tool for many companies. I use it regulary to learn how to use it in most cases as possible.</value>
   </translation>
   <translation key="docker-2">
-    <value>Although I'm far from being a pro, I know how it works and how to use it in the simplest
+    <value>Even if I'm not a pro, I know how it works and how to use it in the simplest
       cases.</value>
   </translation>
   <translation key="cs-1">
-    <value>C# was the first real programming language I learned. It introduced me to all the doors
-      that programming can open, and that's why it's so important to me.</value>
+    <value>C# was the first real programming language I learned. It introduced me to all the doors that programming can open.</value>
   </translation>
   <translation key="cs-2">
-    <value>I coded my first Windows applications with it, and although I prefer JavaScript today, I
-      still often use it in many projects.</value>
+    <value>I coded my first Windows applications with it, and even if I prefer JavaScript today, I still often use it in many projects.</value>
   </translation>
-  <translation key="java-1">
-    <value>I discovered Java while creating mods and plugins for the Minecraft game. I've also used
-      it in small Android application projects. Even if I rarely use it, I've used it enough to have
-      a good overall knowledge of it.</value>
+  <translation key="linux-1">
+    <value>As an open source fan, Linux is my favorite operating system. It has replaced Windows since many time on my computers.</value>
   </translation>
-  <translation key="java-2">
-    <value>Even so, I still find it hard to know when to use it where JavaScript is better on almost
-      every subject.</value>
+  <translation key="linux-2">
+    <value>The more I use it, the less I support Windows. No more untimely updates, unmodifiable system files, trackers and bloatware. With Linux, I can choose and customize every parts of my system to create an optimized environment.</value>
   </translation>
   <translation key="jest-1">
-    <value>I've heard about Jest for a very long time without really understanding the interest.
-      This recently that I started using it and realized what I'd been missing all along.</value>
-  </translation>
-  <translation key="jest-2">
-    <value>Having only been using it for a few months, I'm not yet familiar with all its functions
-      and use cases, but it saves me so much time in so many situations that I'm looking to learn
-      more and more.</value>
+    <value>Like many developers, I don't like writing tests. But when it's necessary, Jest is the perfect tool. Easy to use and very efficient, it's always my first choice.</value>
   </translation>
   <translation key="github-1">
-    <value>For me, GitHub is an essential for almost every IT project. Whether it's for code
-      storage, collaboration, actions, issues, pull requests and so on. I use it every
-      day in all my projects and I'm always very happy with it.</value>
+    <value>Essential for almost every IT project Github it's the perfect tool for code and team management. I use it every day in all my projects and I'm always very happy with it.</value>
   </translation>
   <translation key="github-2">
-    <value>It took me a while to learn how to use it perfectly, but for me it's the best investment
-      of time I've ever made. I put all my projects on it and I wouldn't change it for any
-      alternative. </value>
+    <value>It took me a while to learn how to use it perfectly, but it's one the best investment of time I've made.</value>
+  </translation>
+  <translation key="tailwind-1">
+    <value>Tailwind is my favorite css framework. It's very easy to use and include all css functionalities.</value>
+  </translation>
+  <translation key="tailwind-2">
+    <value>It unifies the design while making development simpler and faster.</value>
   </translation>
   <!-- Projects -->
   <translation key="projects-title">
     <value>My Projects</value>
   </translation>
   <translation key="discord-badge">
-    <value>Discord Badge is a Discord Bot that uses its API to retrieve a badge indicating your
-      Discord status (Online, Offline...). It's very easy to use, and can be used on a website or
-      GitHub profile, for example.</value>
+    <value>Discord Badge is a Discord Bot that expose an API to generate a badge indicating your Discord status (Online, Offline...). It's very easy to use, and can be used on a website or GitHub profile, for example.</value>
   </translation>
   <translation key="code-lyoko-uhc">
-    <value>Code Lyoko UHC is a UHC Minecraft plugin based on the Code Lyoko universe. Each player is
-      assigned a role corresponding to a character from the series, and must, alone or with allies,
-      eliminate all other players to win the game. Each role has its own powers and characteristics,
-      creating a wide range of possible strategies.</value>
-  </translation>
-  <translation key="gartic-cheat">
-    <value>Gartic Cheat is a C#-coded program that lets you draw for yourself in the Gartic Phone
-      game. Simply import an image, select a drawing area and let the program take control of your
-      mouse to draw for you.</value>
+    <value>Code Lyoko UHC is a UHC Minecraft plugin based on the Code Lyoko universe. Each player is assigned a role corresponding to a character from the series, and must, alone or with allies, eliminate all other players to win the game. Each role has its own powers and characteristics, creating a wide range of possible strategies.</value>
   </translation>
   <translation key="game-of-life">
     <value>
-      The Game Of Life is a "cellular automaton" invented by the mathematician John Conway. The
-      principle is very simple: a grid where each square is a cell that can be "alive" or "dead".
-      This "zero player" game follows 2 simple rules: At each iteration, the next state of each cell
-      is defined according to the number of living cells around it. A dead cell "born" if it is
-      surrounded by exactly 3 "alive" cells. A cell remains "alive" if it is surrounded by exactly 2
-      or 3 cells. These 2 simple rules give rise to an infinite number of possible simulations.
+      The Game Of Life is a "cellular automaton" invented by the mathematician John Conway. The concept is very simple: a grid where each square is a cell that can be "alive" or "dead". This "zero player" game follows 2 simple rules: At each iteration, the next state of each cell is defined according to the number of living cells around it. A dead cell "born" if it is surrounded by exactly 3 "alive" cells. A cell remains "alive" if it is surrounded by exactly 2 or 3 cells. These 2 simple rules create an infinite number of possible simulations.
     </value>
   </translation>
   <translation key="embed-builder">
-    <value>Embed Builder is a Discord Bot that lets you create and send a fully customizable embed
-      with a simple command. It's very easy to use, yet very complete, offering full embed
-      customization.</value>
+    <value>Embed Builder is a Discord Bot that lets you create and send a fully customizable embed with a simple command. It's very easy to use, very complete, and offering full embed customization.</value>
   </translation>
   <translation key="clyde-gateway">
-    <value>Clyde Gateway is a simple, lightweight library for connecting your bot to the Discord
-      gateway. It allows your bot to listen to all events and react to them in real time. It also
-      lets you change your bot's status (Online, Idle...) and activity (Playing at...).</value>
+    <value>Clyde Gateway is a simple and lightweight library for connecting your bot to the Discord gateway. It allows your bot to listen to all events and react to them in real time. It also lets you change your bot's status (Online, Idle...) and activity (Playing at...).</value>
   </translation>
   <!-- Other -->
   <translation key="now">
