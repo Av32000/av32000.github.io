@@ -164,10 +164,10 @@ function applyOSMessage() {
 
 	switch (getOS()) {
 		case 'Windows':
-			span.innerText = "You're on Windows ! I See you !";
+			span.innerText = 'I see you 👀 windows user';
 			break;
 		case 'Linux':
-			span.innerText = 'Hi fellow Linux User !';
+			span.innerText = 'Hi fellow Linux User 🤗 !';
 			break;
 		case 'Mac OS':
 			span.innerText = "You're on MacOS ! Why ?";
