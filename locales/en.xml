@@ -93,6 +93,11 @@
       system files, trackers and bloatware. With Linux, I can choose and customize every parts of my
       system to create an optimized environment.</value>
   </translation>
+  <translation key="linux-3">
+    <value>
+      <span id="os-message"></span>
+    </value>
+  </translation>
   <translation key="jest-1">
     <value>Like many developers, I don't like writing tests. But when it's necessary, Jest is the
       perfect tool. Easy to use and very efficient, it's always my first choice.</value>

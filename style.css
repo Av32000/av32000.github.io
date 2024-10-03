@@ -151,6 +151,10 @@ body {
 	color: #00ffb2;
 }
 
+#os-message{
+	font-weight: bold;
+}
+
 @media all and (min-width: 900px) {
 	[data-inviewport='from-right'] {
 		transition: 0.5s;
