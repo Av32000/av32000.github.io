@@ -121,6 +121,11 @@
   <translation key="projects-title">
     <value>My Projects</value>
   </translation>
+  <translation key="finance-tracker">
+    <value>Simple tool to monitor bank accounts with cool statistics. Finance Tracker allows you to
+      keep track of every transaction and create useful charts. Organize, analyze and manage your
+      transactions thanks to powerful filters and tags.</value>
+  </translation>
   <translation key="discord-badge">
     <value>Discord Badge is a Discord Bot that expose an API to generate a badge indicating your
       Discord status (Online, Offline...). It's very easy to use, and can be used on a website or
