@@ -186,5 +186,14 @@ function applyOSMessage() {
   }
 }
 
+// Project Rendering
+function render() {
+  const favoriteProjectsGrid = document.getElementById(
+    "favorite-projects-grid"
+  );
+  renderFavoriteProjectsGrid(favoriteProjectsGrid);
+}
+
+render();
 intervalManager(true);
 rotateToSkill(1);

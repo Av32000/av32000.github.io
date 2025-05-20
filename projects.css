@@ -1,0 +1,67 @@
+/* Project Card Small */
+.favorite-projects-grid {
+  margin: 15px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 100%;
+}
+
+.project-card-small {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-small-cover {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #1a1c1b;
+  border-radius: 5px;
+  filter: drop-shadow(-4px 6px 15px #000000);
+}
+
+.project-small-cover .rendered-cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 4px 1px #000000);
+  overflow: hidden;
+}
+
+.project-small-cover .rendered-cover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(350px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-small-cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-small-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3px;
+}
+
+.project-small-footer img {
+  height: 50%;
+  aspect-ratio: 1/1;
+}

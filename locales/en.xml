@@ -118,8 +118,8 @@
     <value>It unifies the design while making development simpler and faster.</value>
   </translation>
   <!-- Projects -->
-  <translation key="projects-title">
-    <value>My Projects</value>
+  <translation key="favorite-projects-title">
+    <value>My Favorite Projects</value>
   </translation>
   <translation key="finance-tracker">
     <value>Simple tool to monitor bank accounts with cool statistics. Finance Tracker allows you to

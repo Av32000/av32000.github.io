@@ -62,11 +62,11 @@ function setLanguage(language) {
 
 // Last Update Projects
 const githubApiEndpoint = "https://api.github.com/repos/";
-const projects = document.querySelectorAll(".projects-list .project");
+const projectsList = document.querySelectorAll(".projects-list .project");
 
 function ApplyLastUpdate(translations) {
   document.querySelectorAll(".last-update-project").forEach((e) => e.remove());
-  projects.forEach(async (project) => {
+  projectsList.forEach(async (project) => {
     const url = project.querySelector(".link p").innerHTML.trim();
     const lastUpdate = await (await fetch(githubApiEndpoint + url)).json();
 
