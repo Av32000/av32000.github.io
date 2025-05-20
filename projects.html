@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="projects.css" />
     <script src="data/projects.js" defer></script>
-    <script src="renderComponents.js" defer></script>
+    <script src="js/renderComponents.js" defer></script>
+    <script src="js/disks.js" defer></script>
+    <script src="js/projects.js" defer></script>
     <title>Av32000 - Projects</title>
     <meta content="Av32000" property="og:title" />
     <meta
@@ -41,6 +43,13 @@
         <p>Av32000</p>
       </div>
       <h1 id="header-welcome" toTranslate>Projects</h1>
+      <div class="projects-filters">
+        <p id="projects-filter-0" class="projects-filter">All Projects</p>
+        <p id="projects-filter-1" class="projects-filter">IT Projects</p>
+        <p id="projects-filter-2" class="projects-filter">Films</p>
+        <p id="projects-filter-3" class="projects-filter">Photos</p>
+      </div>
+      <div id="projects-grid"></div>
     </div>
   </body>
 </html>

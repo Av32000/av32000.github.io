@@ -66,3 +66,22 @@
   height: 100%;
   aspect-ratio: 1/1;
 }
+
+/* Projects Page */
+.projects-filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60vw;
+  font-size: 25px;
+}
+
+.projects-filter {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.projects-filters .selected {
+  color: var(--primary-color);
+}

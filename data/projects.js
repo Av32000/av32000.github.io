@@ -66,7 +66,7 @@ const projects = [
     favorite: -1,
     cover: {
       type: "image",
-      value: "embed.png",
+      value: "kintsugi.jpg",
     },
   },
 ];
