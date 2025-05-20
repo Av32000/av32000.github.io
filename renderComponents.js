@@ -17,7 +17,7 @@ function renderFavoriteProjectsGrid(parentDiv) {
     switch (project.cover.type) {
       case "image":
         coverContent = document.createElement("img");
-        coverContent.src = "/src/" + project.cover.value;
+        coverContent.src = "/assets/projects/cover/" + project.cover.value;
         break;
 
       case "text":
@@ -34,7 +34,7 @@ function renderFavoriteProjectsGrid(parentDiv) {
         coverContent.classList.add("rendered-cover");
 
         const icon = document.createElement("img");
-        icon.src = "/src/" + project.cover.value;
+        icon.src = "/assets/" + project.cover.value;
         coverContent.appendChild(icon);
         break;
 
@@ -48,8 +48,7 @@ function renderFavoriteProjectsGrid(parentDiv) {
     const projectName = document.createElement("p");
     projectName.innerText = project.name;
     const projectIcon = document.createElement("img");
-    projectIcon.src =
-      project.type == "dev" ? "/src/Git.svg" : "/src/Docker.svg";
+    projectIcon.src = `/assets/projects/icons/${project.type}.svg`;
     cardFooter.append(projectName, projectIcon);
 
     projectDiv.append(cover, cardFooter);

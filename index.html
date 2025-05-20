@@ -8,7 +8,7 @@
     <meta name="fediverse:creator" content="@Av32000@mastodon.social" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="projects.css" />
-    <link rel="icon" href="./src/favicon.ico" />
+    <link rel="icon" href="./assets/favicon.ico" />
     <script src="data/projects.js" defer></script>
     <script src="renderComponents.js" defer></script>
     <script src="index.js" defer></script>
@@ -21,7 +21,7 @@
     />
     <meta content="https://av32000.github.io" property="og:url" />
     <meta
-      content="https://av32000.github.io/src/embed.png"
+      content="https://av32000.github.io/assets/embed.png"
       property="og:image"
     />
     <meta content="#00FFB2" data-react-helmet="true" name="theme-color" />
@@ -37,8 +37,12 @@
       <div class="local-selector">
         <select id="local"></select>
       </div>
-      <div class="topbar">
-        <img src="./src/icon.jpg" alt="Icon Compte" />
+      <div
+        class="topbar"
+        onclick="window.location = '/'"
+        style="cursor: pointer"
+      >
+        <img src="./assets/icon.jpg" alt="Icon Compte" />
         <p>Av32000</p>
       </div>
       <h1 id="header-welcome" toTranslate>Hi 👋</h1>
@@ -47,7 +51,7 @@
         technologies!
       </p>
       <img
-        src="./src/bottomBtn.svg"
+        src="./assets/bottomBtn.svg"
         alt="Bottom Btn"
         id="bottom-btn"
         onclick="document.getElementById('history').scrollIntoView({
@@ -127,34 +131,34 @@
               id="skills-icons"
             >
               <div class="skill skill-1">
-                <img src="src/Git-Selected.svg" alt="Git" />
+                <img src="assets/Git-Selected.svg" alt="Git" />
               </div>
               <div class="skill skill-2">
-                <img src="src/Node.Js.svg" alt="Node.Js" />
+                <img src="assets/Node.Js.svg" alt="Node.Js" />
               </div>
               <div class="skill skill-3">
-                <img src="src/JavaScript.svg" alt="JavaScript" />
+                <img src="assets/JavaScript.svg" alt="JavaScript" />
               </div>
               <div class="skill skill-4">
-                <img src="src/React.svg" alt="React" />
+                <img src="assets/React.svg" alt="React" />
               </div>
               <div class="skill skill-5">
-                <img src="src/Docker.svg" alt="Docker" />
+                <img src="assets/Docker.svg" alt="Docker" />
               </div>
               <div class="skill skill-6">
-                <img src="src/Csharp.svg" alt="Csharp" />
+                <img src="assets/Csharp.svg" alt="Csharp" />
               </div>
               <div class="skill skill-7">
-                <img src="src/Linux.svg" alt="Linux" />
+                <img src="assets/Linux.svg" alt="Linux" />
               </div>
               <div class="skill skill-8">
-                <img src="src/Jest.svg" alt="Jest" />
+                <img src="assets/Jest.svg" alt="Jest" />
               </div>
               <div class="skill skill-9">
-                <img src="src/GitHub.svg" alt="GitHub" />
+                <img src="assets/GitHub.svg" alt="GitHub" />
               </div>
               <div class="skill skill-10">
-                <img src="src/Tailwind.svg" alt="Tailwind" />
+                <img src="assets/Tailwind.svg" alt="Tailwind" />
               </div>
             </div>
           </div>
@@ -280,22 +284,22 @@
     </div>
     <div class="socials">
       <div class="social" onclick="window.open('https:\/\/github.com/Av32000')">
-        <img src="./src/GitHub.svg" alt="GitHub" />
+        <img src="./assets/GitHub.svg" alt="GitHub" />
         <p>Av32000</p>
       </div>
       <div class="social" onclick="window.open('https:\/\/x.com/av32000')">
-        <img src="./src/X.svg" alt="X" />
+        <img src="./assets/X.svg" alt="X" />
         <p>av32000</p>
       </div>
       <div class="social" onclick="window.open('https:\/\/discord.com')">
-        <img src="./src/Discord.svg" alt="Discord" />
+        <img src="./assets/Discord.svg" alt="Discord" />
         <p>av32000</p>
       </div>
       <div
         class="social"
         onclick="window.open('https:\/\/instagram.com/Av32000')"
       >
-        <img src="./src/Instagram.svg" alt="Instagram" />
+        <img src="./assets/Instagram.svg" alt="Instagram" />
         <p>Av32000</p>
       </div>
       <div
@@ -308,7 +312,7 @@
           style="display: none"
           >Mastodon</a
         >
-        <img src="./src/Mastodon.svg" alt="Instagram" />
+        <img src="./assets/Mastodon.svg" alt="Instagram" />
         <p>Av32000</p>
       </div>
     </div>

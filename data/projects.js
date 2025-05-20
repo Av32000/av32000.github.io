@@ -32,21 +32,21 @@ const projects = [
   {
     id: "3",
     name: "Soirée des talents 2025",
-    type: "cinema",
+    type: "films",
     favorite: 3,
     cover: {
       type: "image",
-      value: "embed.png",
+      value: "sdt.jpg",
     },
   },
   {
     id: "4",
     name: "Roadkill",
-    type: "cinema",
+    type: "films",
     favorite: 4,
     cover: {
       type: "image",
-      value: "embed.png",
+      value: "roadkill.webp",
     },
   },
   {
@@ -62,7 +62,7 @@ const projects = [
   {
     id: "6",
     name: "Kintsugi",
-    type: "cinema",
+    type: "films",
     favorite: -1,
     cover: {
       type: "image",

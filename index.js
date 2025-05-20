@@ -135,8 +135,8 @@ function rotateToSkill(skillNumber) {
 function UpdateColors() {
   document.querySelectorAll(".skills-icons img").forEach((element) => {
     if (element.alt == currentSkill)
-      element.src = `./src/${currentSkill}-Selected.svg`;
-    else element.src = `./src/${element.alt}.svg`;
+      element.src = `./assets/${currentSkill}-Selected.svg`;
+    else element.src = `./assets/${element.alt}.svg`;
   });
 }
 

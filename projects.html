@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <script src="data/projects.js" defer></script>
+    <script src="renderComponents.js" defer></script>
+    <title>Av32000 - Projects</title>
+    <meta content="Av32000" property="og:title" />
+    <meta
+      content="I'm Av32000, frontend and backend developer, passionate about IT and new technologies!"
+      property="og:description"
+    />
+    <meta content="https://av32000.github.io" property="og:url" />
+    <meta
+      content="https://av32000.github.io/assets/embed.png"
+      property="og:image"
+    />
+    <meta content="#00FFB2" data-react-helmet="true" name="theme-color" />
+  </head>
+  <body>
+    <div class="header" id="header">
+      <div class="background">
+        <div class="disk disk-1"></div>
+        <div class="disk disk-2" id="disk"></div>
+        <div class="disk disk-3"></div>
+      </div>
+      <div class="local-selector">
+        <select id="local"></select>
+      </div>
+      <div
+        class="topbar"
+        onclick="window.location = '/'"
+        style="cursor: pointer"
+      >
+        <img src="./assets/icon.jpg" alt="Icon Compte" />
+        <p>Av32000</p>
+      </div>
+      <h1 id="header-welcome" toTranslate>Projects</h1>
+    </div>
+  </body>
+</html>

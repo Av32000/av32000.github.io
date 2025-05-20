@@ -59,9 +59,10 @@
   justify-content: space-between;
   align-items: center;
   margin-left: 3px;
+  margin-top: 10px;
 }
 
 .project-small-footer img {
-  height: 50%;
+  height: 100%;
   aspect-ratio: 1/1;
 }
