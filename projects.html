@@ -24,8 +24,8 @@
     />
     <meta content="#00FFB2" data-react-helmet="true" name="theme-color" />
   </head>
-  <body>
-    <div class="header" id="header">
+  <body class="projects-body">
+    <div class="header projects-header" id="header">
       <div class="background">
         <div class="disk disk-1"></div>
         <div class="disk disk-2" id="disk"></div>
@@ -49,7 +49,41 @@
         <p id="projects-filter-2" class="projects-filter">Films</p>
         <p id="projects-filter-3" class="projects-filter">Photos</p>
       </div>
-      <div id="projects-grid"></div>
+    </div>
+    <div id="projects-grid"></div>
+    <div class="socials">
+      <div class="social" onclick="window.open('https:\/\/github.com/Av32000')">
+        <img src="./assets/GitHub.svg" alt="GitHub" />
+        <p>Av32000</p>
+      </div>
+      <div class="social" onclick="window.open('https:\/\/x.com/av32000')">
+        <img src="./assets/X.svg" alt="X" />
+        <p>av32000</p>
+      </div>
+      <div class="social" onclick="window.open('https:\/\/discord.com')">
+        <img src="./assets/Discord.svg" alt="Discord" />
+        <p>av32000</p>
+      </div>
+      <div
+        class="social"
+        onclick="window.open('https:\/\/instagram.com/Av32000')"
+      >
+        <img src="./assets/Instagram.svg" alt="Instagram" />
+        <p>Av32000</p>
+      </div>
+      <div
+        class="social"
+        onclick="window.open('https:\/\/mastodon.social/@Av32000')"
+      >
+        <a
+          rel="me"
+          href="https://mastodon.social/@Av32000"
+          style="display: none"
+          >Mastodon</a
+        >
+        <img src="./assets/Mastodon.svg" alt="Instagram" />
+        <p>Av32000</p>
+      </div>
     </div>
   </body>
 </html>
