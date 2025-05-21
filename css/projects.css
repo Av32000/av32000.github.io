@@ -39,10 +39,12 @@
   justify-content: center;
   overflow: hidden;
 }
+
 .project-small-cover .rendered-cover img {
   filter: drop-shadow(-1px 5px 6px #000000);
 }
 
+.project-header .rendered-cover::before,
 .project-small-cover .rendered-cover::before {
   content: "";
   position: absolute;
@@ -122,12 +124,118 @@
 .project-body {
   background-color: var(--background-color);
   color: var(--text-color);
+  overflow: visible;
 }
 
 .project-header {
-  height: 30vh;
+  position: relative;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: visible;
+}
+
+.project-header .project-name {
+  font-size: 48px;
+  filter: drop-shadow(0px 4px 8px #000000ad);
+}
+
+.project-header .background-image {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  user-select: none;
+  filter: brightness(0.9);
+}
+
+.project-header .rendered-cover img {
+  display: none;
+}
+
+.project-header .rendered-cover::before {
+  height: 125%;
+  transform: translate(-50%, -70%);
+  width: auto;
+}
+
+.project-body .layout-content {
+  width: 100%;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.project-body .layout-content #project-card {
+  float: right;
+  width: 25vw;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.project-body .layout-content .content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Project Card */
+.project-card .content {
+  background-color: #1c1f1e;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.project-card .link {
+  display: flex;
+  background-color: #181818;
+  border-radius: 20px;
+  padding: 25px;
+  height: 40px;
+  align-items: center;
+  margin-bottom: -36px;
+}
+
+.project-card .link * {
+  margin-top: -30px;
+}
+
+.project-card .link img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.project-card .link p {
+  cursor: pointer;
+}
+
+.project-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card .content .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card .content .top p {
+  text-align: start;
+  font-size: 1.5rem;
+}
+
+.project-card .content .top img {
+  width: 25px;
+  height: 25px;
+}
+
+.project-card .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

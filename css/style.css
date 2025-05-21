@@ -115,10 +115,6 @@ body {
   margin: 20px 0px;
 }
 
-.accent {
-  color: var(--primary-color);
-}
-
 #os-message {
   font-weight: bold;
 }
@@ -271,94 +267,6 @@ body {
   animation: fade-in 0.5s linear;
 }
 
-.projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20vh;
-}
-
-.projects .content {
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.project {
-  margin: 20px 0;
-}
-
-.project .content {
-  background-color: #1c1f1e;
-  border-radius: 20px;
-  width: 80vw;
-  padding: 25px;
-}
-
-.project .link {
-  display: flex;
-  background-color: #181818;
-  border-radius: 20px;
-  padding: 25px;
-  height: 40px;
-  align-items: center;
-  margin-bottom: -36px;
-}
-
-.project .link * {
-  margin-top: -30px;
-}
-
-.project .link img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-.project .link p {
-  cursor: pointer;
-}
-
-.project .content .top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 17px;
-}
-
-.project .content .top h1 {
-  text-align: start;
-}
-
-.project .content .top img {
-  width: 32px;
-  height: 32px;
-}
-
-.socials {
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-}
-
-.social {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 25px;
-  cursor: pointer;
-  height: 40px;
-  overflow: visible;
-}
-
-.social img {
-  width: 40px;
-  height: 40px;
-}
-
 .last-update-project {
   color: gray;
   font-size: 0.8rem;
@@ -373,27 +281,6 @@ body {
   .header h1,
   #header-desc {
     font-size: 6vw;
-  }
-
-  .disk-1 {
-    width: 60vw;
-    height: 60vw;
-    left: 73px;
-    top: 88px;
-  }
-
-  .disk-2 {
-    width: 50vw;
-    height: 50vw;
-    left: 30px;
-    bottom: 30px;
-  }
-
-  .disk-3 {
-    width: 40vw;
-    height: 40vw;
-    right: 10px;
-    bottom: 10px;
   }
 
   #header-desc {
@@ -427,16 +314,6 @@ body {
     text-align: center;
   }
 
-  .socials {
-    flex-direction: column;
-    gap: 40px;
-    margin: 100px;
-  }
-
-  .social {
-    margin: 0;
-  }
-
   * h1 {
     font-size: 1.8rem;
   }
@@ -449,10 +326,6 @@ body {
 
   .last-update-project {
     font-size: 2.4vw;
-  }
-
-  .socials {
-    margin: 20vw;
   }
 }
 

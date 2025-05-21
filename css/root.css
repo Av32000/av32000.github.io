@@ -16,9 +16,15 @@
   overflow-x: hidden;
 }
 
+.accent {
+  color: var(--primary-color);
+}
+
+/* Navbar */
 .navbar {
   position: absolute;
   top: 0;
+  z-index: 2;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -35,4 +41,66 @@
   width: 33px;
   border-radius: 90px;
   margin: 0px 10px 0 0;
+}
+
+/* Footer */
+.socials {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 25px;
+  cursor: pointer;
+  height: 40px;
+  overflow: visible;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+}
+
+@media all and (max-width: 900px) {
+  .disk-1 {
+    width: 60vw;
+    height: 60vw;
+    left: 73px;
+    top: 88px;
+  }
+
+  .disk-2 {
+    width: 50vw;
+    height: 50vw;
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .disk-3 {
+    width: 40vw;
+    height: 40vw;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .socials {
+    flex-direction: column;
+    gap: 40px;
+    margin: 100px;
+  }
+
+  .social {
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .socials {
+    margin: 20vw;
+  }
 }

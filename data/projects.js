@@ -1,61 +1,139 @@
 const projects = [
   {
-    id: "0",
+    id: 0,
     name: "Finance Tracker",
     type: "dev",
     url: "/projects/finance-tracker.html",
+    description:
+      "Simple tool to monitor bank accounts with cool statistics. Finance Tracker allows you to keep track of every transaction and create useful charts. Organize, analyze and manage your transactions thanks to powerful filters and tags.",
+    link: {
+      icon: "GitHub.svg",
+      text: "Av32000/Finance-Tracker",
+      url: "https://github.com/Av32000/Finance-Tracker",
+    },
     favorite: 0,
     cover: {
       type: "icon",
       value: "Node.Js.svg",
     },
+    cardFields: [
+      {
+        type: "key",
+        key: "Language",
+        value: "Typescript",
+      },
+      {
+        type: "key",
+        key: "Tools Used",
+        value: "React, Tailwind CSS, Chart.js",
+      },
+      {
+        type: "last-commit",
+        key: "Last Update",
+        value: "Av32000/Finance-Tracker",
+      },
+    ],
   },
   {
-    id: "1",
-    name: "Discord Status",
+    id: 1,
+    name: "Discord-Badge",
+    link: {
+      icon: "GitHub.svg",
+      text: "Av32000/Discord-Badge",
+      url: "https://github.com/Av32000/CodeLyoko-UHC",
+    },
+    description:
+      "Discord Badge is a Discord Bot that expose an API to generate a badge indicating your Discord status (Online, Offline...). It's very easy to use, and can be used on a website or GitHub profile, for example.",
     type: "dev",
     favorite: 1,
-    url: "/projects.html",
+    url: "/projects/discord-badge.html",
     cover: {
       type: "icon",
       value: "Node.Js.svg",
     },
+    cardFields: [
+      {
+        type: "key",
+        key: "Language",
+        value: "Javascript",
+      },
+      {
+        type: "last-commit",
+        key: "Last Update",
+        value: "Av32000/Discord-Badge",
+      },
+    ],
   },
   {
-    id: "2",
+    id: 2,
     name: "Code Lyoko UHC",
     type: "dev",
-    url: "/projects.html",
+    link: {
+      icon: "GitHub.svg",
+      text: "Av32000/Discord-Badge",
+      url: "https://github.com/Av32000/Discord-Badge",
+    },
+    description:
+      "Code Lyoko UHC is a UHC Minecraft plugin based on the Code Lyoko universe. Each player is assigned a role corresponding to a character from the series, and must, alone or with allies, eliminate all other players to win the game. Each role has its own powers and characteristics, creating a wide range of possible strategies.",
+    url: "/projects/code-lyoko-uhc.html",
     favorite: 2,
     cover: {
       type: "icon",
       value: "Java.svg",
     },
+    cardFields: [
+      {
+        type: "key",
+        key: "Language",
+        value: "Java",
+      },
+      {
+        type: "last-commit",
+        key: "Last Update",
+        value: "Av32000/CodeLyoko-UHC",
+      },
+    ],
   },
   {
-    id: "3",
+    id: 3,
     name: "Soirée des talents 2025",
     type: "films",
-    url: "/projects.html",
+    description:
+      "Live production of the annual evening event at Lycée Descartes in Montigny-le-Bretonneux.",
+    url: "/projects/soiree-des-talents-2025.html",
     favorite: 3,
     cover: {
       type: "image",
       value: "sdt.jpg",
     },
+    cardFields: [
+      {
+        type: "key",
+        key: "Roles",
+        value: "Pre-Production / Director / Editing",
+      },
+    ],
   },
   {
-    id: "4",
+    id: 4,
     name: "Roadkill",
     type: "films",
-    url: "/projects.html",
+    url: "/projects/roadkill.html",
     favorite: 4,
     cover: {
       type: "image",
       value: "roadkill.webp",
     },
+    cardFields: [
+      {
+        type: "key",
+        key: "Roles",
+        value: "Pre-Production /  Assistant Director / 1st Camera Assistant",
+      },
+    ],
   },
   {
-    id: "5",
+    id: 5,
     name: "View More...",
     type: "more",
     favorite: 5,
@@ -66,14 +144,21 @@ const projects = [
     },
   },
   {
-    id: "6",
+    id: 6,
     name: "Kintsugi",
     type: "films",
-    url: "/projects.html",
+    url: "/projects/kintsugi.html",
     favorite: -1,
     cover: {
       type: "image",
       value: "kintsugi.jpg",
     },
+    cardFields: [
+      {
+        type: "key",
+        key: "Roles",
+        value: "Pre-Production",
+      },
+    ],
   },
 ];
