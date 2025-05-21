@@ -156,7 +156,12 @@ function render() {
   const favoriteProjectsGrid = document.getElementById(
     "favorite-projects-grid"
   );
+  const navbar = document.getElementById("navbar");
+  const footerDiv = document.getElementById("socials");
+
   renderProjectsGrid(favoriteProjectsGrid, [], true);
+  renderNavBar(navbar);
+  renderFooter(footerDiv);
 }
 
 render();

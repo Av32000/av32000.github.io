@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="fediverse:creator" content="@Av32000@mastodon.social" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="projects.css" />
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/projects.css" />
     <link rel="icon" href="./assets/favicon.ico" />
     <script src="data/projects.js" defer></script>
+    <script src="data/socials.js" defer></script>
     <script src="js/renderComponents.js" defer></script>
     <script src="js/disks.js" defer></script>
     <script src="js/index.js" defer></script>
@@ -29,6 +31,7 @@
   </head>
 
   <body>
+    <div id="navbar"></div>
     <div class="header" id="header">
       <div class="background">
         <div class="disk disk-1"></div>
@@ -37,14 +40,6 @@
       </div>
       <div class="local-selector">
         <select id="local"></select>
-      </div>
-      <div
-        class="topbar"
-        onclick="window.location = '/'"
-        style="cursor: pointer"
-      >
-        <img src="./assets/icon.jpg" alt="Icon Compte" />
-        <p>Av32000</p>
       </div>
       <h1 id="header-welcome" toTranslate>Hi 👋</h1>
       <p id="header-desc" toTranslate>
@@ -283,39 +278,10 @@
         </div>
       </div>
     </div>
-    <div class="socials">
-      <div class="social" onclick="window.open('https:\/\/github.com/Av32000')">
-        <img src="./assets/GitHub.svg" alt="GitHub" />
-        <p>Av32000</p>
-      </div>
-      <div class="social" onclick="window.open('https:\/\/x.com/av32000')">
-        <img src="./assets/X.svg" alt="X" />
-        <p>av32000</p>
-      </div>
-      <div class="social" onclick="window.open('https:\/\/discord.com')">
-        <img src="./assets/Discord.svg" alt="Discord" />
-        <p>av32000</p>
-      </div>
-      <div
-        class="social"
-        onclick="window.open('https:\/\/instagram.com/Av32000')"
+    <div id="socials">
+      <a rel="me" href="https://mastodon.social/@Av32000" style="display: none"
+        >Mastodon</a
       >
-        <img src="./assets/Instagram.svg" alt="Instagram" />
-        <p>Av32000</p>
-      </div>
-      <div
-        class="social"
-        onclick="window.open('https:\/\/mastodon.social/@Av32000')"
-      >
-        <a
-          rel="me"
-          href="https://mastodon.social/@Av32000"
-          style="display: none"
-          >Mastodon</a
-        >
-        <img src="./assets/Mastodon.svg" alt="Instagram" />
-        <p>Av32000</p>
-      </div>
     </div>
   </body>
 </html>

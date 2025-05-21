@@ -1,22 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
-
-:root {
-  --skills-wheel-size: 180px;
-  --skills-count: 10;
-  --primary-color: #00ffb2;
-  --text-color: #ffffff;
-}
-
-* {
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-  font-family: Comfortaa, Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-}
-
 body {
-  background-color: black;
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -91,7 +74,7 @@ body {
 }
 
 .local-selector select option {
-  color: black;
+  color: var(--background-color);
 }
 
 .header h1 {
@@ -111,26 +94,6 @@ body {
   width: 103px;
   height: 103px;
   cursor: pointer;
-}
-
-.header .topbar {
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
-}
-
-.header .topbar p {
-  font-size: 24px;
-}
-
-.header .topbar img {
-  height: 33px;
-  width: 33px;
-  border-radius: 90px;
-  margin: 0px 10px 0 0;
 }
 
 .history,

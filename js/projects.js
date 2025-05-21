@@ -44,4 +44,13 @@ projectsFiltersBtn.forEach((pf) => {
   });
 });
 
+function render() {
+  const footerDiv = document.getElementById("socials");
+  const navbar = document.getElementById("navbar");
+
+  renderNavBar(navbar);
+  renderFooter(footerDiv);
+}
+
+render();
 updateFilters();
