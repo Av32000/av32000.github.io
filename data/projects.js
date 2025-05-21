@@ -70,8 +70,8 @@ const projects = [
     type: "dev",
     link: {
       icon: "GitHub.svg",
-      text: "Av32000/Discord-Badge",
-      url: "https://github.com/Av32000/Discord-Badge",
+      text: "Av32000/CodeLyoko-UHC",
+      url: "https://github.com/Av32000/CodeLyoko-UHC",
     },
     description:
       "Code Lyoko UHC is a UHC Minecraft plugin based on the Code Lyoko universe. Each player is assigned a role corresponding to a character from the series, and must, alone or with allies, eliminate all other players to win the game. Each role has its own powers and characteristics, creating a wide range of possible strategies.",

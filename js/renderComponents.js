@@ -171,8 +171,10 @@ function renderFooter(footerDiv) {
 
 function renderNavBar(navBarDiv) {
   navBarDiv.classList.add("navbar");
-  navBarDiv.addEventListener("click", () => (window.location = "/"));
-  navBarDiv.style.cursor = "pointer";
+
+  const userDiv = document.createElement("div");
+  userDiv.classList.add("user");
+  userDiv.addEventListener("click", () => (window.location = "/"));
 
   const icon = document.createElement("img");
   icon.src = "/assets/icon.jpg";
@@ -181,7 +183,24 @@ function renderNavBar(navBarDiv) {
   const username = document.createElement("p");
   username.innerText = "Av32000";
 
-  navBarDiv.append(icon, username);
+  const linksDiv = document.createElement("div");
+  linksDiv.classList.add("links");
+
+  const homeLink = document.createElement("p");
+  homeLink.innerText = "Home";
+  homeLink.addEventListener("click", () => (window.location = "/"));
+
+  const projectsLink = document.createElement("p");
+  projectsLink.innerText = "Projects";
+  projectsLink.addEventListener(
+    "click",
+    () => (window.location = "/projects.html")
+  );
+
+  userDiv.append(icon, username);
+  linksDiv.append(homeLink, projectsLink);
+
+  navBarDiv.append(userDiv, linksDiv);
 }
 
 function renderProjectHeader(headerDiv, project) {
