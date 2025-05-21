@@ -20,7 +20,13 @@ function renderProjectsGrid(parentDiv, filters = [], favoriteOnly = false) {
 function renderProjectCardSmall(project) {
   const projectDiv = document.createElement("div");
   projectDiv.classList.add("project-card-small");
-  projectDiv.addEventListener("click", () => (window.location = project.url));
+  projectDiv.addEventListener("click", () => {
+    if (project.url) {
+      window.location = project.url;
+    } else {
+      window.location = `/projects/details.html?id=${project.id}`;
+    }
+  });
 
   const cover = renderProjectCover(project);
 
@@ -212,6 +218,86 @@ function renderProjectHeader(headerDiv, project) {
   projectName.innerText = project.name;
 
   headerDiv.append(projectName);
+}
+
+function renderProjectContent(contentDiv, project) {
+  if (!project.contentBlocks) return;
+
+  contentDiv.classList.add("content");
+
+  for (let i = 0; i < project.contentBlocks.length; i++) {
+    const block = project.contentBlocks[i];
+
+    switch (block.type) {
+      case "text":
+        const textBlock = document.createElement("p");
+        textBlock.innerHTML = block.value;
+        contentDiv.append(textBlock);
+        break;
+
+      case "images":
+        if (block.value.length) {
+          const imagesBlock = document.createElement("div");
+          imagesBlock.classList.add("images-block");
+          block.value.forEach((image) => {
+            const imageBlock = document.createElement("div");
+            imageBlock.classList.add("image-container");
+
+            const imageElem = document.createElement("img");
+            imageElem.src = `/assets/projects/images/${image}`;
+            imageElem.addEventListener("click", () =>
+              loadFullscreenImage(imageElem.src)
+            );
+            imageBlock.append(imageElem);
+            imagesBlock.append(imageBlock);
+          });
+          contentDiv.append(imagesBlock);
+        } else {
+          const imageBlock = document.createElement("img");
+          imageBlock.src = `/assets/projects/images/${block.value}`;
+          imageBlock.addEventListener("click", () =>
+            loadFullscreenImage(imageBlock.src)
+          );
+          contentDiv.append(imageBlock);
+        }
+        break;
+
+      case "youtube":
+        const embed = document.createElement("iframe");
+        embed.src = `https://www.youtube-nocookie.com/embed/${block.value}`;
+        embed.allowFullscreen = true;
+        embed.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        embed.setAttribute("frameborder", 0);
+        embed.referrerPolicy = "strict-origin-when-cross-origin";
+        contentDiv.append(embed);
+        break;
+
+      case "related":
+        const relatedProjects = document.createElement("div");
+        relatedProjects.classList.add("related-projects");
+
+        const title = document.createElement("p");
+        title.innerText = "You might like";
+
+        const projectsList = document.createElement("div");
+        projectsList.classList.add("projects-list");
+        const selectedProjects = projects
+          .filter((p) => block.value.includes(p.type) && p.id != project.id)
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 2);
+
+        selectedProjects.forEach((p) =>
+          projectsList.append(renderProjectCardSmall(p))
+        );
+
+        relatedProjects.append(title, projectsList);
+        contentDiv.append(relatedProjects);
+        break;
+      default:
+        break;
+    }
+  }
 }
 
 async function getLastCommit(repo) {
