@@ -33,8 +33,12 @@
   </head>
   <body class="project-body">
     <div id="fullscreen-image">
-      <button class="close-btn" onclick="closeFullscreenImage()">×</button>
+      <p class="close-btn" onclick="closeFullscreenImage()">×</p>
+      <p class="nav-btn prev-btn" id="prev-btn" onclick="navigateImage(-1)">
+        ‹
+      </p>
       <img src="" alt="Fullscreen Preview" />
+      <p class="nav-btn next-btn" id="next-btn" onclick="navigateImage(1)">›</p>
     </div>
     <div id="navbar"></div>
     <div id="project-header"></div>

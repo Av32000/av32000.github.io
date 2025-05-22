@@ -236,30 +236,34 @@ function renderProjectContent(contentDiv, project) {
         break;
 
       case "images":
-        if (block.value.length) {
-          const imagesBlock = document.createElement("div");
-          imagesBlock.classList.add("images-block");
-          block.value.forEach((image) => {
-            const imageBlock = document.createElement("div");
-            imageBlock.classList.add("image-container");
+        const imagesBlock = document.createElement("div");
+        imagesBlock.classList.add("images-block");
+        block.value.forEach((image, i) => {
+          const imageBlock = document.createElement("div");
+          imageBlock.classList.add("image-container");
 
-            const imageElem = document.createElement("img");
-            imageElem.src = `/assets/projects/images/${image}`;
-            imageElem.addEventListener("click", () =>
-              loadFullscreenImage(imageElem.src)
-            );
-            imageBlock.append(imageElem);
-            imagesBlock.append(imageBlock);
-          });
-          contentDiv.append(imagesBlock);
-        } else {
-          const imageBlock = document.createElement("img");
-          imageBlock.src = `/assets/projects/images/${block.value}`;
-          imageBlock.addEventListener("click", () =>
-            loadFullscreenImage(imageBlock.src)
+          const imageElem = document.createElement("img");
+          imageElem.src = `/assets/projects/images/${image}`;
+          imageElem.addEventListener("click", () =>
+            loadFullscreenImage(
+              block.value.map((image) => `/assets/projects/images/${image}`),
+              i
+            )
           );
-          contentDiv.append(imageBlock);
-        }
+          imageBlock.append(imageElem);
+          imagesBlock.append(imageBlock);
+        });
+        contentDiv.append(imagesBlock);
+        break;
+
+      case "image":
+        const imageBlock = document.createElement("img");
+        imageBlock.style.cursor = "pointer";
+        imageBlock.src = `/assets/projects/images/${block.value}`;
+        imageBlock.addEventListener("click", () =>
+          loadFullscreenImage([imageBlock.src])
+        );
+        contentDiv.append(imageBlock);
         break;
 
       case "youtube":

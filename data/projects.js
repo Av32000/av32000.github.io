@@ -32,6 +32,16 @@ const projects = [
         value: "Av32000/Finance-Tracker",
       },
     ],
+    contentBlocks: [
+      {
+        type: "images",
+        value: ["embed.png", "roadkill.webp", "sdt.jpg"],
+      },
+      {
+        type: "image",
+        value: "embed.png",
+      },
+    ],
   },
   {
     id: 1,
@@ -109,6 +119,12 @@ const projects = [
         value: "Pre-Production / Director / Editing",
       },
     ],
+    contentBlocks: [
+      {
+        type: "youtube",
+        value: "ESbr3xTVNks",
+      },
+    ],
   },
   {
     id: 4,
@@ -163,7 +179,7 @@ const projects = [
     contentBlocks: [
       {
         type: "youtube",
-        value: "k6A2jz8GRcg ",
+        value: "k6A2jz8GRcg",
       },
       {
         type: "related",
