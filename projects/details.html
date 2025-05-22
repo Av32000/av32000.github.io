@@ -7,21 +7,21 @@
     <link rel="icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="/css/root.css" />
     <link rel="stylesheet" href="/css/projects.css" />
-    <script src="/data/projects.js" defer></script>
-    <script src="/data/socials.js" defer></script>
+    <script src="/data/projects.js"></script>
+    <script src="/data/socials.js"></script>
     <script src="/js/renderComponents.js" defer></script>
     <script src="/js/project.js" defer></script>
     <script>
       const params = new URLSearchParams(window.location.search);
       const projectId = params.get("id");
-      if (projectId === null) {
+      if (!projects.find((p) => p.id == projectId)) {
         window.location = "/projects.html";
       }
     </script>
     <title>Av32000</title>
     <meta content="Av32000" property="og:title" />
     <meta
-      content="I'm Av32000, frontend and backend developer, passionate about IT and new technologies!"
+      content="I'm Av32000 — software developer, tech enthusiast, and amateur filmmaker."
       property="og:description"
     />
     <meta content="https://av32000.github.io" property="og:url" />
