@@ -187,4 +187,50 @@ const projects = [
       },
     ],
   },
+  {
+    id: 7,
+    name: "Lycée Hotelier",
+    type: "photos",
+    description: "Photo shoot for Lycée Hotelier of Saint-Quentin en Yvelines",
+    favorite: -1,
+    link: {
+      icon: "Lightroom.svg",
+      text: "adobe.ly/414hT6G",
+      url: "https://adobe.ly/414hT6G",
+    },
+    cover: {
+      type: "image",
+      value: "lycee-hotelier.jpg",
+    },
+    cardFields: [
+      {
+        type: "key",
+        key: "Type",
+        value: "Photo Shoot",
+      },
+      {
+        type: "key",
+        key: "Date",
+        value: "02/08/2025",
+      },
+    ],
+    contentBlocks: [
+      {
+        type: "images",
+        value: [
+          "lycee-hotelier/_NFA3477.jpg",
+          "lycee-hotelier/_NFA3488.jpg",
+          "lycee-hotelier/_NFA3502.jpg",
+          "lycee-hotelier/_NFA3510.jpg",
+          "lycee-hotelier/_NFA3609.jpg",
+          "lycee-hotelier/IMG_0348-Enhanced-NR.jpg",
+          "lycee-hotelier/IMG_0456-Enhanced-NR.jpg",
+        ],
+      },
+      {
+        type: "related",
+        value: ["photos"],
+      },
+    ],
+  },
 ];

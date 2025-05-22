@@ -278,6 +278,17 @@ function renderProjectContent(contentDiv, project) {
         break;
 
       case "related":
+        const selectedProjects = projects
+          .filter(
+            (p) =>
+              (block.value.includes(p.type) && p.id != project.id) ||
+              block.value.includes(p.id)
+          )
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 2);
+
+        if (selectedProjects.length == 0) break;
+
         const relatedProjects = document.createElement("div");
         relatedProjects.classList.add("related-projects");
 
@@ -286,10 +297,6 @@ function renderProjectContent(contentDiv, project) {
 
         const projectsList = document.createElement("div");
         projectsList.classList.add("projects-list");
-        const selectedProjects = projects
-          .filter((p) => block.value.includes(p.type) && p.id != project.id)
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 2);
 
         selectedProjects.forEach((p) =>
           projectsList.append(renderProjectCardSmall(p))
