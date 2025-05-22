@@ -203,8 +203,15 @@ function renderNavBar(navBarDiv) {
     () => (window.location = "/projects.html")
   );
 
+  const contactLink = document.createElement("p");
+  contactLink.innerText = "Contact";
+  contactLink.addEventListener(
+    "click",
+    () => (window.location = "/contact.html")
+  );
+
   userDiv.append(icon, username);
-  linksDiv.append(homeLink, projectsLink);
+  linksDiv.append(homeLink, projectsLink, contactLink);
 
   navBarDiv.append(userDiv, linksDiv);
 }

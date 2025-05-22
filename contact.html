@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <script src="data/socials.js" defer></script>
+    <script src="js/renderComponents.js" defer></script>
+    <script src="js/disks.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <title>Av32000 - Contact</title>
+    <meta content="Av32000" property="og:title" />
+    <meta
+      content="I'm Av32000, frontend and backend developer, passionate about IT and new technologies!"
+      property="og:description"
+    />
+    <meta content="https://av32000.github.io" property="og:url" />
+    <meta
+      content="https://av32000.github.io/assets/embed.png"
+      property="og:image"
+    />
+    <meta content="#00FFB2" data-react-helmet="true" name="theme-color" />
+  </head>
+  <body class="projects-body">
+    <div id="navbar"></div>
+    <div class="header contact-header" id="header">
+      <div class="background">
+        <div class="disk disk-1"></div>
+        <div class="disk disk-2" id="disk"></div>
+        <div class="disk disk-3"></div>
+      </div>
+      <h1 id="header-welcome">Contact</h1>
+      <div class="contact-card project-card">
+        <div class="link" style="cursor: default">
+          <img src="/assets/icon.jpg" alt="AccountIcon" />
+          <p>Av32000</p>
+        </div>
+        <div class="content">
+          <div class="contact-panel">
+            <p class="title">IT Project</p>
+            <div class="contact-row" onclick="copyTextContent(this)">
+              <img src="/assets/Gmail.svg" alt="Mail" />
+              <p>alexis.etcheverria15@gmail.com</p>
+            </div>
+            <div
+              class="contact-row"
+              onclick="window.open('https:\/\/www.instagram.com/Av32000')"
+            >
+              <img src="/assets/Instagram.svg" alt="Instagram" />
+              <p>@av32000</p>
+            </div>
+            <div class="contact-row" onclick="copyTextContent(this)">
+              <img src="/assets/Discord.svg" alt="Discord" />
+              <p>av32000</p>
+            </div>
+          </div>
+          <div class="contact-panel">
+            <p class="title">Media Project</p>
+            <div class="contact-row" onclick="copyTextContent(this)">
+              <img src="/assets/Gmail.svg" alt="Mail" />
+              <p>maejamprod@gmail.com</p>
+            </div>
+            <div
+              class="contact-row"
+              onclick="window.open('https:\/\/www.instagram.com/maejam.prod')"
+            >
+              <img src="/assets/Instagram.svg" alt="Instagram" />
+              <p>@maejam.prod</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="socials"></div>
+  </body>
+</html>

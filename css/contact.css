@@ -1,0 +1,53 @@
+#header-welcome {
+  margin-bottom: 40px;
+}
+
+.project-card {
+  width: 55vw;
+}
+
+.project-card .link p {
+  cursor: default;
+}
+
+.project-card .link img {
+  border-radius: 999px;
+}
+
+.project-card .content {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-card .content .contact-panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card .content .contact-panel .title {
+  font-size: 25px;
+  color: var(--primary-color);
+}
+
+.project-card .content .contact-panel .contact-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.project-card .content .contact-panel .contact-row img {
+  width: 30px;
+  height: 30px;
+}
+
+.socials {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 10vw;
+}
