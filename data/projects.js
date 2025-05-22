@@ -112,6 +112,11 @@ const projects = [
       type: "image",
       value: "sdt.jpg",
     },
+    link: {
+      icon: "Youtube.svg",
+      text: "youtu.be/ESbr3xTVNks",
+      url: "https://youtu.be/ESbr3xTVNks",
+    },
     cardFields: [
       {
         type: "key",
@@ -131,9 +136,16 @@ const projects = [
     name: "Roadkill",
     type: "films",
     favorite: 4,
+    description:
+      "Short film in the form of a making-of for a series written as part of the CNC’s “Écris ta série” competition.",
     cover: {
       type: "image",
       value: "roadkill.webp",
+    },
+    link: {
+      icon: "Youtube.svg",
+      text: "youtu.be/8fHyNr-5Uv0",
+      url: "https://youtu.be/8fHyNr-5Uv0",
     },
     cardFields: [
       {
@@ -141,11 +153,60 @@ const projects = [
         key: "Roles",
         value: "Pre-Production /  Assistant Director / 1st Camera Assistant",
       },
+      {
+        type: "key",
+        key: "Date",
+        value: "2023-2024",
+      },
     ],
     contentBlocks: [
       {
+        type: "text",
+        value:
+          "Participation in the “Écris ta série” competition organized by the CNC (Centre National du Cinéma). The objective: to create a production dossier for a series (Universe, Characters, Format, Pilot Episode).",
+      },
+      {
+        type: "text",
+        value:
+          'Result: A 98-page dossier available <span class="accent" onclick="window.open(\'https://drive.google.com/file/d/1AJrSbMOlCBBEu8eNssaGScx55ZLRWFTh/view\')" style="cursor:pointer;">here</span> and the presentation pitch below.',
+      },
+      {
         type: "youtube",
         value: "8fHyNr-5Uv0",
+      },
+      {
+        type: "quote",
+        value:
+          '"Our series is designed as a project meant to be filmed, not just read. We focused all our efforts and the details in the dossier on the pre-production phase of the series, developing numerous technical documents to anticipate a potential shoot.',
+      },
+      {
+        type: "quote",
+        value:
+          "That’s why we chose to create a fake making-of for the series—we genuinely enjoy seeing behind the scenes. This approach allowed us to hold a casting to introduce actresses who match our characters and to place them within the series’ sets. Moreover, since the project is primarily driven by visuals, we used professional equipment, involved friends in our team, and meticulously prepared the shoot.",
+      },
+      {
+        type: "quote",
+        value:
+          "This video is also a way to offer a different perspective than that of the creators, thanks to the input of external contributors such as the actresses and production assistants.",
+      },
+      {
+        type: "quote",
+        value:
+          'The video pitch will showcase different aspects of the series, including its storyline, while also highlighting our motivations, passion for the project, and the choices and compromises we made." - Extract from the dossier',
+      },
+      {
+        type: "images",
+        value: [
+          "roadkill/IMG_5267.jpg",
+          "roadkill/IMG_5487.jpg",
+          "roadkill/IMG_5566.jpg",
+          "roadkill/IMG_9649.jpg",
+          "roadkill/IMG_9714.jpg",
+        ],
+      },
+      {
+        type: "related",
+        value: ["films"],
       },
     ],
   },
@@ -164,22 +225,44 @@ const projects = [
     id: 6,
     name: "Kintsugi",
     type: "films",
+    description:
+      "Short film for which I managed the pre-production, overseeing shoot planning, equipment management, and logistics. This preparatory work helped establish optimal conditions for a smooth and well-structured production on set.",
     favorite: -1,
     cover: {
       type: "image",
       value: "kintsugi.jpg",
     },
+    link: {
+      icon: "Youtube.svg",
+      text: "youtu.be/k6A2jz8GRcg",
+      url: "https://youtu.be/k6A2jz8GRcg",
+    },
     cardFields: [
       {
         type: "key",
         key: "Roles",
-        value: "Pre-Production",
+        value: "Pre-Production / Photos",
       },
     ],
     contentBlocks: [
       {
+        type: "text",
+        value:
+          "When Elena looks at her body, all she sees are her burns. She then remembers an art form a friend once told her about: Kintsugi.",
+      },
+      {
         type: "youtube",
         value: "k6A2jz8GRcg",
+      },
+      {
+        type: "images",
+        value: [
+          "kintsugi/_NFA5400.jpg",
+          "kintsugi/_NFA6179.jpg",
+          "kintsugi/_NFA6196.jpg",
+          "kintsugi/Derush.00_01_28_17.Still001.webp",
+          "kintsugi/Derush.00_33_03_21.Still005.webp",
+        ],
       },
       {
         type: "related",

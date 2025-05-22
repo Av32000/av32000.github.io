@@ -235,6 +235,13 @@ function renderProjectContent(contentDiv, project) {
         contentDiv.append(textBlock);
         break;
 
+      case "quote":
+        const quoteBlock = document.createElement("p");
+        quoteBlock.classList.add("quote-text");
+        quoteBlock.innerHTML = block.value;
+        contentDiv.append(quoteBlock);
+        break;
+
       case "images":
         const imagesBlock = document.createElement("div");
         imagesBlock.classList.add("images-block");

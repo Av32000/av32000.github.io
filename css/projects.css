@@ -184,6 +184,11 @@
   gap: 10px;
 }
 
+.project-body .layout-content .content .quote-text {
+  text-align: center;
+  font-style: italic;
+}
+
 .project-body .layout-content .content .images-block {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 30vw));
