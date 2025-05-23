@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/wheel.css" />
     <link rel="icon" href="./assets/favicon.ico" />
-    <script src="data/projects.js" defer></script>
-    <script src="data/socials.js" defer></script>
+    <script src="data/projects.js"></script>
+    <script src="data/socials.js"></script>
+    <script src="data/skills.js"></script>
+    <script src="js/wheel.js" defer></script>
     <script src="js/renderComponents.js" defer></script>
     <script src="js/disks.js" defer></script>
     <script src="js/index.js" defer></script>
@@ -31,7 +34,7 @@
 
   <body>
     <div id="navbar"></div>
-    <div class="header" id="header">
+    <div class="header topic-block" id="header">
       <div class="background">
         <div class="disk disk-1"></div>
         <div class="disk disk-2" id="disk"></div>
@@ -55,7 +58,7 @@
 				})"
       />
     </div>
-    <div class="history" id="history">
+    <div class="history topic-block" id="history">
       <div class="content">
         <h1
           data-inviewport="from-right"
@@ -100,181 +103,18 @@
         </p>
       </div>
     </div>
-    <div class="favorite-projects" id="favorite-projects">
+    <div class="favorite-projects topic-block" id="favorite-projects">
       <div class="content">
-        <h1 class="accent" id="favorite-projects-title" toTranslate>
+        <h1 class="accent" id="favorite-projects-title">
           My Favorite Projects
         </h1>
         <div id="favorite-projects-grid" class="favorite-projects-grid"></div>
       </div>
     </div>
-    <div class="skills">
+    <div class="it-skills topic-block">
       <div class="content">
-        <h1
-          data-inviewport="from-left"
-          class="accent"
-          id="skills-title"
-          toTranslate
-        >
-          My Skills
-        </h1>
-        <div class="skills-row">
-          <div class="wheel-container">
-            <div
-              data-inviewport="from-left"
-              class="skills-icons"
-              id="skills-icons"
-            >
-              <div class="skill skill-1">
-                <img src="assets/Git-Selected.svg" alt="Git" />
-              </div>
-              <div class="skill skill-2">
-                <img src="assets/Node.Js.svg" alt="Node.Js" />
-              </div>
-              <div class="skill skill-3">
-                <img src="assets/JavaScript.svg" alt="JavaScript" />
-              </div>
-              <div class="skill skill-4">
-                <img src="assets/React.svg" alt="React" />
-              </div>
-              <div class="skill skill-5">
-                <img src="assets/Docker.svg" alt="Docker" />
-              </div>
-              <div class="skill skill-6">
-                <img src="assets/Csharp.svg" alt="Csharp" />
-              </div>
-              <div class="skill skill-7">
-                <img src="assets/Linux.svg" alt="Linux" />
-              </div>
-              <div class="skill skill-8">
-                <img src="assets/Jest.svg" alt="Jest" />
-              </div>
-              <div class="skill skill-9">
-                <img src="assets/GitHub.svg" alt="GitHub" />
-              </div>
-              <div class="skill skill-10">
-                <img src="assets/Tailwind.svg" alt="Tailwind" />
-              </div>
-            </div>
-          </div>
-          <div class="skills-content" data-inviewport="from-right">
-            <div class="Git fade-in">
-              <h1>Git</h1>
-              <p id="git-1" toTranslate>
-                Complex and powerful, Git it's one of my favorite tools. I use
-                it since a long time in every project I start. I've read and
-                watched a lot of books and tutorials to get to know it inside
-                out.
-              </p>
-              <p id="git-2" toTranslate>
-                I'm not an expert but I know most of the important functions
-                very well.
-              </p>
-            </div>
-            <div class="Node Js">
-              <h1>Node.Js</h1>
-              <p id="node-1" toTranslate>
-                I discovered Node.JS on Discord when I wanted to learn how to
-                code bots.
-              </p>
-              <p id="node-2" toTranslate>
-                Today, I use it in almost all my projects with libraries such as
-                fastify for APIs, react for web, electron for software and so
-                many others.
-              </p>
-              <p id="node-3" toTranslate>
-                This framework allowed me to discover my great passion for the
-                backend with Javascript.
-              </p>
-            </div>
-            <div class="JavaScript">
-              <h1>JavaScript</h1>
-              <p id="js-1" toTranslate>
-                My favorite language, both for its strange simplicity and for
-                the way it works for everything (web, servers, software...).
-              </p>
-              <p id="js-2" toTranslate>
-                Javascript lets me simply code applications that run in a
-                terminal (with NodeJS), so I don't have to create a UI.
-              </p>
-            </div>
-            <div class="React">
-              <h1>React</h1>
-              <p id="react" toTranslate>
-                Powerful and easy to use, React is my default framework for
-                coding web interface. I use it whenever possible in all my
-                projects and I prefer it to all others.
-              </p>
-            </div>
-            <div class="Docker">
-              <h1>Docker</h1>
-              <p id="docker-1" toTranslate>
-                Docker is an essential tool for many companies. I use it
-                regulary to learn how to use it in most cases as possible.
-              </p>
-              <p id="docker-2" toTranslate>
-                Even if I'm not a pro, I know how it works and how to use it in
-                the simplest cases.
-              </p>
-            </div>
-            <div class="Csharp">
-              <h1>Csharp</h1>
-              <p id="cs-1" toTranslate>
-                C# was the first real programming language I learned. It
-                introduced me to all the doors that programming can open.
-              </p>
-              <p id="cs-2" toTranslate>
-                I coded my first applications with it, and even if I prefer
-                JavaScript today, I still often use it in many projects.
-              </p>
-            </div>
-            <div class="Linux">
-              <h1>Linux</h1>
-              <p id="linux-1" toTranslate>
-                As an open source fan, Linux is my favorite operating system. It
-                has replaced Windows since many time on my computers.
-              </p>
-              <p id="linux-2" toTranslate>
-                The more I use it, the less I support Windows. No more untimely
-                updates, unmodifiable system files, trackers and bloatware. With
-                Linux, I can choose and customize every parts of my system to
-                create an optimized environment.
-              </p>
-              <p id="os-message" toTranslate />
-            </div>
-            <div class="Jest">
-              <h1>Jest</h1>
-              <p id="jest-1" toTranslate>
-                Like many developers, I don't like writing tests. But when it's
-                necessary, Jest is the perfect tool. Easy to use and very
-                efficient, it's always my first choice.
-              </p>
-            </div>
-            <div class="GitHub">
-              <h1>GitHub</h1>
-              <p id="github-1" toTranslate>
-                Essential for almost every IT project Github it's the perfect
-                tool for code and team management. I use it every day in all my
-                projects and I'm always very happy with it.
-              </p>
-              <p id="github-2" toTranslate>
-                It took me a while to learn how to use it perfectly, but it's
-                one the best investment of time I've made.
-              </p>
-            </div>
-            <div class="Tailwind">
-              <h1>Tailwind CSS</h1>
-              <p id="tailwind-1" toTranslate>
-                Tailwind is my favorite css framework. It's very easy to use and
-                include all css functionalities.
-              </p>
-              <p id="tailwind-2" toTranslate>
-                It unifies the design while making development simpler and
-                faster.
-              </p>
-            </div>
-          </div>
-        </div>
+        <h1 class="accent">My IT Skills</h1>
+        <div id="it-skills-wheel"></div>
       </div>
     </div>
     <div id="socials">

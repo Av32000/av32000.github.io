@@ -325,6 +325,58 @@ function renderProjectContent(contentDiv, project) {
   }
 }
 
+function renderSkillsWheel(wheelDiv, skills) {
+  wheelDiv.classList.add("wheel-container");
+
+  const wheel = document.createElement("div");
+  wheel.classList.add("wheel");
+
+  const content = document.createElement("div");
+  content.classList.add("wheel-content");
+  const title = document.createElement("p");
+  title.classList.add("title");
+  title.innerText = skills[0].name;
+
+  content.appendChild(title);
+
+  skills[0].content.forEach((str) => {
+    const contentText = document.createElement("p");
+    contentText.innerHTML = str;
+    content.appendChild(contentText);
+  });
+
+  for (let i = 0; i < skills.length; i++) {
+    const skill = skills[i];
+
+    const skillContainer = document.createElement("div");
+    skillContainer.classList.add("skill-container");
+    skillContainer.setAttribute("skillid", i);
+
+    const icon = document.createElement("img");
+    icon.addEventListener("click", () => {
+      content.innerHTML = "";
+
+      const title = document.createElement("p");
+      title.classList.add("title");
+      title.innerText = skill.name;
+
+      content.appendChild(title);
+
+      skill.content.forEach((str) => {
+        const contentText = document.createElement("p");
+        contentText.innerHTML = str;
+        content.appendChild(contentText);
+      });
+    });
+    icon.alt = skill.name;
+    skillContainer.append(icon);
+    wheel.append(skillContainer);
+  }
+
+  wheelDiv.append(wheel, content);
+  startSkillsWheel(wheelDiv, skills);
+}
+
 async function getLastCommit(repo) {
   const githubApiEndpoint = "https://api.github.com/repos/";
   const lastUpdate = await (await fetch(githubApiEndpoint + repo)).json();

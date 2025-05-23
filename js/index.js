@@ -1,4 +1,4 @@
-// History Anim
+// Text Anim
 
 const inViewport = (entries, observer) => {
   entries.forEach((entry) => {
@@ -13,97 +13,6 @@ const ELs_inViewport = document.querySelectorAll("[data-inviewport]");
 ELs_inViewport.forEach((EL) => {
   Obs.observe(EL, obsOptions);
 });
-
-// Skills Anim
-let currentSelectedIndex = 0;
-let skillCount = document.querySelectorAll(".skills-icons img").length;
-const anglePerSkill = 360 / skillCount;
-let currentRotation = 0;
-let currentSkill =
-  document.querySelectorAll(".skills-icons img")[currentSelectedIndex].alt;
-
-var intervalID = null;
-
-function intervalManager(flag) {
-  if (flag)
-    intervalID = setInterval(() => {
-      if (currentSkill != null) {
-        document.querySelector("." + currentSkill).classList.remove("fade-in");
-      }
-
-      currentSkill =
-        document.querySelectorAll(".skills-icons img")[currentSelectedIndex]
-          .alt;
-      UpdateColors();
-      let content = document.querySelector("." + currentSkill);
-      content.classList.add("fade-in");
-
-      if (
-        currentSelectedIndex ==
-        document.querySelectorAll(".skills-icons img").length - 1
-      )
-        currentSelectedIndex = 0;
-      else currentSelectedIndex++;
-
-      rotateToSkill(currentSelectedIndex);
-    }, 8000);
-  else clearInterval(intervalID);
-}
-
-let timeout;
-
-document.querySelectorAll(".skills-icons img").forEach((element, index) => {
-  element.addEventListener("click", () => {
-    intervalManager(false);
-    if (timeout != null) clearTimeout(timeout);
-    if (currentSkill != null) {
-      document.querySelector("." + currentSkill).classList.remove("fade-in");
-    }
-    currentSkill = element.alt;
-    UpdateColors();
-    rotateToSkill(index + 1);
-    currentSelectedIndex = index;
-    let content = document.querySelector("." + currentSkill);
-    content.classList.add("fade-in");
-
-    timeout = setTimeout(() => {
-      intervalManager(true);
-    }, 3000);
-  });
-});
-
-function rotateToSkill(skillNumber) {
-  applyOSMessage();
-  const wheel = document.getElementById("skills-icons");
-  let targetAngle = (skillNumber - 1) * anglePerSkill;
-
-  if (window.innerWidth < 900) {
-    targetAngle -= 90;
-  }
-
-  let rotationDiff = targetAngle - currentRotation;
-  if (Math.abs(rotationDiff) > 180) {
-    rotationDiff = rotationDiff > 0 ? rotationDiff - 360 : rotationDiff + 360;
-  }
-
-  currentRotation += rotationDiff;
-  currentRotation %= 360;
-
-  wheel.style.transform = `rotate(${-currentRotation}deg)`;
-
-  const icons = wheel.querySelectorAll(".skill img");
-  icons.forEach((icon) => {
-    icon.style.transform = `rotate(${currentRotation}deg)`;
-  });
-}
-
-function UpdateColors() {
-  document.querySelectorAll(".skills-icons img").forEach((element) => {
-    if (element.alt == currentSkill)
-      element.src = `./assets/${currentSkill}-Selected.svg`;
-    else element.src = `./assets/${element.alt}.svg`;
-  });
-}
 
 // Platoform EasterEgg
 // https://stackoverflow.com/a/38241481/18031156
@@ -158,12 +67,12 @@ function render() {
   );
   const navbar = document.getElementById("navbar");
   const footerDiv = document.getElementById("socials");
+  const itSkillsDiv = document.getElementById("it-skills-wheel");
 
   renderProjectsGrid(favoriteProjectsGrid, [], true);
   renderNavBar(navbar);
   renderFooter(footerDiv);
+  renderSkillsWheel(itSkillsDiv, itSkills);
 }
 
 render();
-intervalManager(true);
-rotateToSkill(1);

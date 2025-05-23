@@ -48,14 +48,6 @@ body {
   overflow: hidden;
 }
 
-.header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .local-selector {
   position: absolute;
   top: 10px;
@@ -96,8 +88,7 @@ body {
   cursor: pointer;
 }
 
-.history,
-.favorite-projects {
+.topic-block {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -105,14 +96,17 @@ body {
   align-items: center;
 }
 
-.history .content,
-.favorite-projects .content {
+.topic-block .content {
   width: 80vw;
   font-size: 18px;
 }
 
 .history .content p {
   margin: 20px 0px;
+}
+
+.it-skills .content {
+  overflow-x: visible;
 }
 
 #os-message {
@@ -143,123 +137,6 @@ body {
   }
 }
 
-.skills {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.skills * {
-  overflow-x: visible;
-}
-
-.skills-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.skills .content {
-  width: 80vw;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.skills .wheel-container {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  margin-top: 130px;
-  margin-bottom: 130px;
-  margin-right: 160px;
-  margin-left: 50px;
-}
-
-.skills-icons {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: transform 1s ease-in-out;
-}
-
-.skill {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  left: 50%;
-  margin: -25px;
-  transform-origin: 150px 150px;
-}
-
-.skill-1 {
-  transform: rotate(calc(360deg / var(--skills-count) * 0))
-    translate(var(--skills-wheel-size)) rotate(0deg);
-}
-.skill-2 {
-  transform: rotate(calc(360deg / var(--skills-count) * 1))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -1));
-}
-.skill-3 {
-  transform: rotate(calc(360deg / var(--skills-count) * 2))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -2));
-}
-.skill-4 {
-  transform: rotate(calc(360deg / var(--skills-count) * 3))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -3));
-}
-.skill-5 {
-  transform: rotate(calc(360deg / var(--skills-count) * 4))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -4));
-}
-.skill-6 {
-  transform: rotate(calc(360deg / var(--skills-count) * 5))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -5));
-}
-.skill-7 {
-  transform: rotate(calc(360deg / var(--skills-count) * 6))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -6));
-}
-.skill-8 {
-  transform: rotate(calc(360deg / var(--skills-count) * 7))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -7));
-}
-.skill-9 {
-  transform: rotate(calc(360deg / var(--skills-count) * 8))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -8));
-}
-.skill-10 {
-  transform: rotate(calc(360deg / var(--skills-count) * 9))
-    translate(var(--skills-wheel-size))
-    rotate(calc(360deg / var(--skills-count) * -9));
-}
-
-.skill img {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s ease-in-out;
-}
-
-.skills-icons img {
-  cursor: pointer;
-}
-
-.skills-content * {
-  display: none;
-  width: 50vw;
-}
-
 .fade-in,
 .fade-in * {
   display: block;
@@ -287,31 +164,17 @@ body {
     width: 80vw;
   }
 
-  .skills {
-    height: auto;
-    margin: 25vh 0;
-  }
-
   .history {
     height: auto;
   }
 
   .history h1,
-  .skills h1,
   .projects h1 {
     text-align: center;
   }
 
   .wheel-container {
     margin: 20px 0 !important;
-  }
-
-  .skills-row {
-    flex-direction: column;
-  }
-
-  .skills-content {
-    text-align: center;
   }
 
   * h1 {
