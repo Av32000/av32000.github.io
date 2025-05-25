@@ -1,13 +1,16 @@
 const wheelsData = [];
 
-function startSkillsWheel(wheelDiv, skills) {
+function initSkillsWheel(wheelDiv, skills, direction) {
   const wheelId = wheelsData.length;
+  const directionsShift = [0, skills.length / 2, skills.length / 4];
+
   const wheelData = {
     currentSkill: 0,
     currentShift: 0,
     skills: skills,
     locked: false,
     lockTimeout: null,
+    directionsShift: directionsShift[direction],
   };
   wheelsData.push(wheelData);
 
@@ -51,9 +54,13 @@ function updateWheel(wheelId, autoUpdateContent = true) {
   Array.from(wheel.childNodes).forEach((skillContainer) => {
     const id = parseInt(skillContainer.getAttribute("skillid"));
     const transalteX =
-      Math.cos(skillAngle * (id + wheelData.currentShift)) * radius;
+      Math.cos(
+        skillAngle * (id + wheelData.currentShift + wheelData.directionsShift)
+      ) * radius;
     const transalteY =
-      Math.sin(skillAngle * (id + wheelData.currentShift)) * radius;
+      Math.sin(
+        skillAngle * (id + wheelData.currentShift + wheelData.directionsShift)
+      ) * radius;
 
     const iconElem = skillContainer.querySelector("img");
     const skill = wheelData.skills.find((s) => s.id == id);

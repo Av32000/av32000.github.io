@@ -72,7 +72,7 @@ function render() {
   renderProjectsGrid(favoriteProjectsGrid, [], true);
   renderNavBar(navbar);
   renderFooter(footerDiv);
-  renderSkillsWheel(itSkillsDiv, itSkills);
+  renderSkillsWheel(itSkillsDiv, itSkills, 0);
 }
 
 render();

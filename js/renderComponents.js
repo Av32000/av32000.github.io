@@ -325,8 +325,9 @@ function renderProjectContent(contentDiv, project) {
   }
 }
 
-function renderSkillsWheel(wheelDiv, skills) {
+function renderSkillsWheel(wheelDiv, skills, direction) {
   wheelDiv.classList.add("wheel-container");
+  wheelDiv.classList.add(`wheel-direction-${direction}`);
 
   const wheel = document.createElement("div");
   wheel.classList.add("wheel");
@@ -359,7 +360,7 @@ function renderSkillsWheel(wheelDiv, skills) {
   }
 
   wheelDiv.append(wheel, content);
-  startSkillsWheel(wheelDiv, skills);
+  initSkillsWheel(wheelDiv, skills, direction);
 }
 
 async function getLastCommit(repo) {
