@@ -20,6 +20,11 @@
   color: var(--primary-color);
 }
 
+.fade-in,
+.fade-in * {
+  animation: fade-in 0.5s linear;
+}
+
 /* Navbar */
 .navbar {
   position: absolute;
@@ -63,6 +68,7 @@
 .navbar .links p {
   cursor: pointer;
 }
+
 /* Footer */
 .socials {
   height: 30vh;

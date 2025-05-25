@@ -332,7 +332,7 @@ function renderSkillsWheel(wheelDiv, skills) {
   wheel.classList.add("wheel");
 
   const content = document.createElement("div");
-  content.classList.add("wheel-content");
+  content.classList.add("wheel-content", "fade-in");
   const title = document.createElement("p");
   title.classList.add("title");
   title.innerText = skills[0].name;
@@ -353,21 +353,6 @@ function renderSkillsWheel(wheelDiv, skills) {
     skillContainer.setAttribute("skillid", i);
 
     const icon = document.createElement("img");
-    icon.addEventListener("click", () => {
-      content.innerHTML = "";
-
-      const title = document.createElement("p");
-      title.classList.add("title");
-      title.innerText = skill.name;
-
-      content.appendChild(title);
-
-      skill.content.forEach((str) => {
-        const contentText = document.createElement("p");
-        contentText.innerHTML = str;
-        content.appendChild(contentText);
-      });
-    });
     icon.alt = skill.name;
     skillContainer.append(icon);
     wheel.append(skillContainer);

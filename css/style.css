@@ -137,13 +137,6 @@ body {
   }
 }
 
-.fade-in,
-.fade-in * {
-  display: block;
-  margin: 20px 0px;
-  animation: fade-in 0.5s linear;
-}
-
 .last-update-project {
   color: gray;
   font-size: 0.8rem;
