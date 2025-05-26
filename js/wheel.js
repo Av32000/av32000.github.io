@@ -106,10 +106,10 @@ function shiftWheel(wheelId, shift) {
   if (!wheelData) throw new Error("Invalid wheelId provided !");
 
   wheelData.currentShift += shift;
-  if (wheelData.currentSkill - shift > wheelData.currentShift.length - 1) {
+  if (wheelData.currentSkill - shift > wheelData.skills.length - 1) {
     wheelData.currentSkill = 0;
   } else if (wheelData.currentSkill - shift < 0) {
-    wheelData.currentSkill = wheelData.currentShift.length - 1;
+    wheelData.currentSkill = wheelData.skills.length - 1;
   } else {
     wheelData.currentSkill = wheelData.currentSkill - shift;
   }
@@ -141,4 +141,6 @@ function updateContent(wheelId) {
     contentText.innerHTML = str;
     contentDiv.appendChild(contentText);
   });
+
+  if (skill.callback) skill.callback();
 }

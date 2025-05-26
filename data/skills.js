@@ -50,9 +50,11 @@ const itSkills = [
   {
     id: 6,
     name: "Linux",
+    callback: () => applyOSMessage(),
     content: [
       "As an open source fan, Linux is my favorite operating system. It has replaced Windows since many time on my computers.",
       "The more I use it, the less I support Windows. No more untimely updates, unmodifiable system files, trackers and bloatware. With Linux, I can choose and customize every parts of my system to create an optimized environment.",
+      '<span id="os-message"></span>',
     ],
   },
   {
