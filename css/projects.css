@@ -2,8 +2,8 @@
 .favorite-projects-grid {
   margin: 15px 0px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   max-width: 100%;
 }
 
@@ -55,7 +55,7 @@
   background-color: var(--primary-color);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  filter: blur(350px);
+  filter: blur(min(350px, 30vw));
   opacity: 0.8;
   pointer-events: none;
   z-index: 0;
@@ -77,7 +77,7 @@
 }
 
 .project-small-footer img {
-  height: 100%;
+  height: 20px;
   aspect-ratio: 1/1;
 }
 
@@ -87,23 +87,26 @@
 }
 
 .projects-header {
-  height: 60vh;
+  height: 50vh;
   overflow: visible;
+  padding: 0 10px;
 }
 
 .projects-filters {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: 60vw;
-  font-size: 25px;
+  justify-content: center;
+  width: 100%;
+  font-size: 18px;
+  gap: 15px;
 }
 
 .projects-filter {
   color: var(--text-color);
   cursor: pointer;
   filter: drop-shadow(0px 4px 1px #0000001d);
+  padding: 5px 10px;
 }
 
 .projects-filters .selected {
@@ -111,12 +114,12 @@
 }
 
 #projects-grid {
-  padding: 0 10vw;
+  padding: 0 10px;
   margin-top: -15px;
   margin-bottom: 15px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   max-width: 100%;
 }
 
@@ -129,23 +132,26 @@
 
 .project-header {
   position: relative;
-  height: 40vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: visible;
+  padding: 0 10px;
 }
 
 .project-header .project-name {
-  font-size: 48px;
+  margin-top: 50px;
+  font-size: clamp(24px, 6vw, 48px);
   filter: drop-shadow(0px 4px 8px #000000ad);
+  text-align: center;
 }
 
 .project-header .background-image {
   position: absolute;
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   object-fit: cover;
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   user-select: none;
@@ -164,16 +170,15 @@
 
 .project-body .layout-content {
   width: 100%;
-  padding: 0 5vw;
+  padding: 0 10px;
   box-sizing: border-box;
   position: relative;
 }
 
 .project-body .layout-content #project-card {
-  float: right;
-  width: 25vw;
-  margin-left: 1em;
-  margin-bottom: 1em;
+  width: 100%;
+  margin: 0 0 1em 0;
+  order: -1;
 }
 
 .project-body .layout-content .content {
@@ -187,17 +192,18 @@
 .project-body .layout-content .content .quote-text {
   text-align: center;
   font-style: italic;
+  padding: 0 10px;
 }
 
 .project-body .layout-content .content .images-block {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 30vw));
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
 .project-body .layout-content .content .images-block .image-container {
-  max-width: 50vw;
-  max-height: 30vh;
+  width: 100%;
+  max-height: 40vh;
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -207,8 +213,7 @@
 
 .project-body .layout-content .content .images-block img {
   width: 100%;
-  max-width: 50vw;
-  max-height: 30vh;
+  max-height: 40vh;
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -217,13 +222,13 @@
 }
 
 .project-body .layout-content .content .images-block img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-body .layout-content .content iframe {
   aspect-ratio: 16 / 9;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .project-body .layout-content .content .related-projects {
@@ -236,18 +241,19 @@
 }
 
 .project-body .layout-content .content .related-projects > p {
-  font-size: 25px;
+  font-size: clamp(20px, 4vw, 25px);
   color: var(--primary-color);
 }
 
 .project-body .layout-content .content .related-projects .projects-list {
   margin: 15px 0px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   max-width: 100%;
 }
 
+/* Fullscreen Image */
 #fullscreen-image {
   position: fixed;
   top: 0;
@@ -262,6 +268,8 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 9999;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 #fullscreen-image.show {
@@ -270,8 +278,8 @@
 }
 
 #fullscreen-image img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 95%;
+  max-height: 95%;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
@@ -283,15 +291,16 @@
 
 #fullscreen-image .close-btn {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
   background: transparent;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   cursor: pointer;
   z-index: 10000;
   transition: transform 0.2s ease;
+  padding: 10px;
 }
 
 #fullscreen-image .close-btn:hover {
@@ -304,12 +313,12 @@
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   cursor: pointer;
   z-index: 10000;
   transition: transform 0.2s ease;
-  padding: 0 20px;
+  padding: 10px 15px;
 }
 
 #fullscreen-image .nav-btn:hover {
@@ -317,42 +326,44 @@
 }
 
 #fullscreen-image .prev-btn {
-  left: 20px;
+  left: 10px;
 }
 
 #fullscreen-image .next-btn {
-  right: 20px;
+  right: 10px;
 }
 
 /* Project Card */
 .project-card .content {
   background-color: #1c1f1e;
   border-radius: 20px;
-  padding: 25px;
+  padding: 20px;
 }
 
 .project-card .link {
   display: flex;
   background-color: #181818;
   border-radius: 20px;
-  padding: 25px;
-  height: 40px;
+  padding: 20px;
+  min-height: 80px;
   align-items: center;
-  margin-bottom: -36px;
+  margin-bottom: -30px;
 }
 
 .project-card .link * {
-  margin-top: -30px;
+  margin-top: -25px;
 }
 
 .project-card .link img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .project-card .link p {
   cursor: pointer;
+  word-break: break-word;
 }
 
 .project-card .content {
@@ -364,21 +375,230 @@
 .project-card .content .top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .project-card .content .top p {
   text-align: start;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  flex: 1;
 }
 
 .project-card .content .top img {
   width: 25px;
   height: 25px;
+  flex-shrink: 0;
 }
 
 .project-card .fields {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .favorite-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .projects-header {
+    height: 55vh;
+    padding: 0 20px;
+  }
+
+  .projects-filters {
+    flex-direction: row;
+    width: 80vw;
+    font-size: 22px;
+    gap: 20px;
+  }
+
+  #projects-grid {
+    padding: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .project-header {
+    height: 35vh;
+    padding: 0 20px;
+  }
+
+  .project-header .background-image {
+    height: 35vh;
+  }
+
+  .project-body .layout-content {
+    padding: 0 20px;
+  }
+
+  .project-body .layout-content #project-card {
+    width: 45%;
+    float: right;
+    margin: 0 0 1em 1em;
+    order: initial;
+  }
+
+  .project-body .layout-content .content .images-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-body .layout-content .content .related-projects .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .project-card .content,
+  .project-card .link {
+    padding: 25px;
+  }
+
+  #fullscreen-image .close-btn {
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+  }
+
+  #fullscreen-image .nav-btn {
+    font-size: 2.5rem;
+    padding: 10px 20px;
+  }
+
+  #fullscreen-image .prev-btn {
+    left: 15px;
+  }
+
+  #fullscreen-image .next-btn {
+    right: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .favorite-projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .projects-header {
+    height: 60vh;
+    padding: 0 5vw;
+  }
+
+  .projects-filters {
+    width: 60vw;
+    font-size: 25px;
+  }
+
+  #projects-grid {
+    padding: 0 10vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .project-header {
+    height: 40vh;
+    padding: 0 5vw;
+  }
+
+  .project-header .background-image {
+    height: 40vh;
+  }
+
+  .project-body .layout-content {
+    padding: 0 5vw;
+  }
+
+  .project-body .layout-content #project-card {
+    width: 25vw;
+  }
+
+  .project-body .layout-content .content .images-block {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 30vw));
+  }
+
+  .project-body .layout-content .content .images-block .image-container {
+    max-width: 50vw;
+    max-height: 30vh;
+  }
+
+  .project-body .layout-content .content .images-block img {
+    max-width: 50vw;
+    max-height: 30vh;
+  }
+
+  .project-body .layout-content .content .images-block img:hover {
+    transform: scale(1.1);
+  }
+
+  .project-body .layout-content .content .related-projects .projects-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .project-small-footer img {
+    height: 100%;
+  }
+
+  #fullscreen-image {
+    padding: 20px;
+  }
+
+  #fullscreen-image img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  #fullscreen-image .close-btn {
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+  }
+
+  #fullscreen-image .nav-btn {
+    font-size: 3rem;
+    padding: 0 20px;
+  }
+
+  #fullscreen-image .prev-btn {
+    left: 20px;
+  }
+
+  #fullscreen-image .next-btn {
+    right: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .favorite-projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 15vw;
+  }
+
+  .project-body .layout-content .content .related-projects .projects-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (hover: none) {
+  .project-card-small:hover .project-small-cover *,
+  .project-body .layout-content .content .images-block img:hover,
+  #fullscreen-image img:hover,
+  #fullscreen-image .close-btn:hover,
+  #fullscreen-image .nav-btn:hover {
+    transform: none;
+  }
+
+  .project-small-cover * {
+    transition: none;
+  }
+
+  .project-body .layout-content .content .images-block img {
+    transition: none;
+  }
 }

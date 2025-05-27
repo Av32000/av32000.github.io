@@ -45,3 +45,20 @@
   font-size: 35px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 1000px) {
+  .wheel-container {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+    width: 90vw;
+  }
+
+  .wheel-container .wheel {
+    height: 400px !important;
+  }
+
+  .wheel-container .wheel-content {
+    text-align: center;
+  }
+}

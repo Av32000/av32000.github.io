@@ -1,8 +1,10 @@
 const wheelsData = [];
+const directionsShiftMultiplier = [0, 1 / 2, 1 / 4];
+
+window.addEventListener("resize", updateScreenSizeCategory);
 
 function initSkillsWheel(wheelDiv, skills, direction) {
   const wheelId = wheelsData.length;
-  const directionsShift = [0, skills.length / 2, skills.length / 4];
 
   const wheelData = {
     currentSkill: 0,
@@ -10,7 +12,8 @@ function initSkillsWheel(wheelDiv, skills, direction) {
     skills: skills,
     locked: false,
     lockTimeout: null,
-    directionsShift: directionsShift[direction],
+    directionsShift: skills.length * directionsShiftMultiplier[direction],
+    defaultDirection: direction,
   };
   wheelsData.push(wheelData);
 
@@ -32,6 +35,7 @@ function initSkillsWheel(wheelDiv, skills, direction) {
   });
 
   updateWheel(wheelId);
+  updateScreenSizeCategory();
 
   setInterval(() => {
     if (!wheelData.locked) {
@@ -47,7 +51,7 @@ function updateWheel(wheelId, autoUpdateContent = true) {
 
   const wheel = wheelDiv.querySelector(".wheel");
   const skillsCount = wheelData.skills.length;
-  const radius = 170;
+  const radius = 160;
 
   const skillAngle = (2 * Math.PI) / skillsCount;
 
@@ -143,4 +147,22 @@ function updateContent(wheelId) {
   });
 
   if (skill.callback) skill.callback();
+}
+
+function updateScreenSizeCategory() {
+  wheelsData.forEach((wheelData, i) => {
+    const width = window.innerWidth;
+    const currentDirectionsShift = wheelData.directionsShift;
+
+    if (width < 1000) {
+      wheelData.directionsShift =
+        wheelData.skills.length * directionsShiftMultiplier[2];
+    } else {
+      wheelData.directionsShift =
+        wheelData.skills.length *
+        directionsShiftMultiplier[wheelData.defaultDirection];
+    }
+
+    if (currentDirectionsShift != wheelData.directionsShift) updateWheel(i);
+  });
 }

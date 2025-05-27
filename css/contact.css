@@ -4,6 +4,8 @@
 
 .project-card {
   width: 55vw;
+  max-width: 800px;
+  min-width: 320px;
 }
 
 .project-card .link p {
@@ -50,4 +52,119 @@
   bottom: 0;
   width: 100vw;
   height: 10vw;
+  min-height: 60px;
+  max-height: 120px;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+  #header-welcome {
+    margin-bottom: 30px;
+  }
+
+  .project-card {
+    width: 70vw;
+  }
+
+  .project-card .content .contact-panel .title {
+    font-size: 22px;
+  }
+
+  .project-card .content .contact-panel .contact-row img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 768px) {
+  #header-welcome {
+    margin-bottom: 25px;
+  }
+
+  .project-card {
+    width: 85vw;
+  }
+
+  .project-card .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-card .content .contact-panel {
+    width: 100%;
+  }
+
+  .project-card .content .contact-panel .title {
+    font-size: 20px;
+  }
+
+  .project-card .content .contact-panel .contact-row {
+    gap: 12px;
+  }
+
+  .project-card .content .contact-panel .contact-row img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .socials {
+    height: 20vw;
+    min-height: 70px;
+    flex-wrap: nowrap;
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 480px) {
+  #header-welcome {
+    margin-bottom: 20px;
+  }
+
+  .project-card {
+    width: 95vw;
+  }
+
+  .project-card .content .contact-panel {
+    gap: 12px;
+  }
+
+  .project-card .content .contact-panel .title {
+    font-size: 18px;
+  }
+
+  .project-card .content .contact-panel .contact-row {
+    gap: 8px;
+  }
+
+  .project-card .content .contact-panel .contact-row img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .socials {
+    height: 15vw;
+    min-height: 80px;
+    flex-wrap: nowrap;
+  }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 320px) {
+  #header-welcome {
+    margin-bottom: 15px;
+  }
+
+  .project-card {
+    width: 98vw;
+  }
+
+  .project-card .content .contact-panel .title {
+    font-size: 16px;
+  }
+
+  .project-card .content .contact-panel .contact-row img {
+    width: 22px;
+    height: 22px;
+  }
 }
