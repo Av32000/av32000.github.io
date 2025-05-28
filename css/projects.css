@@ -572,16 +572,16 @@
 
 @media (min-width: 1440px) {
   .favorite-projects-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   #projects-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 15vw;
   }
 
   .project-body .layout-content .content .related-projects .projects-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
