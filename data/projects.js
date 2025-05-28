@@ -44,7 +44,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     name: "Discord-Badge",
     link: {
       icon: "GitHub.svg",
@@ -54,7 +54,7 @@ const projects = [
     description:
       "Discord Badge is a Discord Bot that expose an API to generate a badge indicating your Discord status (Online, Offline...). It's very easy to use, and can be used on a website or GitHub profile, for example.",
     type: "dev",
-    favorite: 1,
+    favorite: 4,
     cover: {
       type: "icon",
       value: "Node.Js.svg",
@@ -126,16 +126,49 @@ const projects = [
     ],
     contentBlocks: [
       {
+        type: "text",
+        value:
+          "A |2h40 live-recorded| talent show featuring music, dance, theater, and other student performances. With a |full replay| available on YouTube.",
+      },
+      {
+        type: "text",
+        value:
+          "The project required over |two months of preparation| and involved a |15-person team| handling both technical and coordination roles.",
+      },
+      {
+        type: "text",
+        value:
+          "A complete live production setup was implemented on site, transforming a |municipal theater| into a |professional multi-camera environment|.",
+      },
+      {
+        type: "text",
+        value:
+          "Technical setup:\n\n- |ATEM SDI Extreme ISO| for live switching\n- |5 camera positions|\n- |200+ meters| of SDI BNC cabling\n- |7 HDMI ⇄ SDI| Blackmagic converters\n- |Hollyland wireless transmitters|\n- |ISO recording| on all sources\n- Monitoring, audio routing, and intercom systems",
+      },
+      {
+        type: "text",
+        value:
+          "The objective: deliver a |high-quality stream| that highlights student creativity, with |broadcast-level| reliability and visuals.",
+      },
+      {
         type: "youtube",
         value: "ESbr3xTVNks",
+      },
+      {
+        type: "images",
+        value: [],
+      },
+      {
+        type: "related",
+        value: ["films"],
       },
     ],
   },
   {
-    id: 4,
+    id: 1,
     name: "Roadkill",
     type: "films",
-    favorite: 4,
+    favorite: 1,
     description:
       "Short film in the form of a making-of for a series written as part of the CNC’s “Écris ta série” competition.",
     cover: {
@@ -313,6 +346,69 @@ const projects = [
       {
         type: "related",
         value: ["photos"],
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: "Un Regard",
+    type: "films",
+    favorite: -1,
+    description:
+      "Short film project for a candidate's application to La CinéFabrique (Lyon film school).",
+    cover: {
+      type: "image",
+      value: "regard.jpg",
+    },
+    link: {
+      icon: "Youtube.svg",
+      text: "youtu.be/ndO783qu3pY ",
+      url: "https://youtu.be/ndO783qu3pY ",
+    },
+    cardFields: [
+      {
+        type: "key",
+        key: "Roles",
+        value: "Pre-Production / Director’s Assistant / Technical Setup",
+      },
+    ],
+    contentBlocks: [
+      {
+        type: "text",
+        value:
+          "A |short fiction film| produced as part of an application to the prestigious |La CinéFabrique| film school in Lyon.",
+      },
+      {
+        type: "text",
+        value:
+          "I contributed during the |pre-production phase| and acted as the |assistant director| throughout the shoot, ensuring both |creative continuity| and technical coordination.",
+      },
+      {
+        type: "text",
+        value:
+          "Innovative camera movement was a key aspect of this project. I designed and built a |custom cablecam system| and developed a |DIY overhead slider rig| using a Ronin mounted on an extended broom handle, allowing smooth movement above a table scene.",
+      },
+      {
+        type: "text",
+        value:
+          "I also set up a |wireless video monitoring system| using a Raspberry Pi with HDMI capture and transmission, enabling real-time image feedback for the director and crew.",
+      },
+      {
+        type: "text",
+        value:
+          "The shoot was completed over |three days|, demonstrating strong adaptability and hands-on problem-solving in a resourceful production environment.",
+      },
+      {
+        type: "youtube",
+        value: "ndO783qu3pY",
+      },
+      {
+        type: "images",
+        value: [],
+      },
+      {
+        type: "related",
+        value: ["films"],
       },
     ],
   },

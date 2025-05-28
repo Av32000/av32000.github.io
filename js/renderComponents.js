@@ -1,5 +1,5 @@
 function renderProjectsGrid(parentDiv, filters = [], favoriteOnly = false) {
-  let projectsToRender = projects;
+  let projectsToRender = projects.sort((a, b) => a.id - b.id);
 
   if (favoriteOnly)
     projectsToRender = projectsToRender
@@ -238,7 +238,12 @@ function renderProjectContent(contentDiv, project) {
     switch (block.type) {
       case "text":
         const textBlock = document.createElement("p");
-        textBlock.innerHTML = block.value;
+
+        let text = block.value;
+        text = text.replace(/\n/g, "<br>"); // New Lines
+        text = text.replace(/\|(.*?)\|/g, '<span class="accent">$1</span>'); // Acent
+
+        textBlock.innerHTML = text;
         contentDiv.append(textBlock);
         break;
 
