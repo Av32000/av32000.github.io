@@ -34,12 +34,33 @@ const projects = [
     ],
     contentBlocks: [
       {
-        type: "images",
-        value: ["embed.png", "roadkill.webp", "sdt.jpg"],
+        type: "text",
+        value:
+          "Finance Tracker is a simple tool to monitor bank accounts. Designed to provide |useful stats|, it includes a powerful and |highly customizable stats editor| to create graphs and diagrams without limits.",
       },
       {
-        type: "image",
-        value: "embed.png",
+        type: "text",
+        value:
+          "Self-hosted, you can simply run it with Node.js or the |built-in| Docker container.",
+      },
+      {
+        type: "text",
+        value:
+          "I’m currently working on adding more navigation shortcuts and expanding features, such as investment management tools.",
+      },
+      {
+        type: "images",
+        value: [
+          "finance-tracker/home.png",
+          "finance-tracker/transactions.png",
+          "finance-tracker/stats-creation.png",
+          "finance-tracker/stats-lines.png",
+          "finance-tracker/stats-tags.png",
+        ],
+      },
+      {
+        type: "related",
+        value: ["dev"],
       },
     ],
   },
