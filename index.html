@@ -49,11 +49,16 @@
         src="./assets/bottomBtn.svg"
         alt="Bottom Btn"
         id="bottom-btn"
-        onclick="document.getElementById('history').scrollIntoView({
-					behavior: 'smooth',
-					block: 'start'
-				})"
+        onclick="scrollToProjects()"
       />
+    </div>
+    <div class="favorite-projects topic-block" id="favorite-projects">
+      <div class="content">
+        <h1 class="accent" id="favorite-projects-title">
+          My Favorite Projects
+        </h1>
+        <div id="favorite-projects-grid" class="favorite-projects-grid"></div>
+      </div>
     </div>
     <div class="history topic-block" id="history">
       <div class="content">
@@ -118,14 +123,6 @@
           <span class="accent">finance</span> or
           <span class="accent">automotive</span>.
         </p>
-      </div>
-    </div>
-    <div class="favorite-projects topic-block" id="favorite-projects">
-      <div class="content">
-        <h1 class="accent" id="favorite-projects-title">
-          My Favorite Projects
-        </h1>
-        <div id="favorite-projects-grid" class="favorite-projects-grid"></div>
       </div>
     </div>
     <div class="it-skills topic-block">

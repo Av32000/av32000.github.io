@@ -60,6 +60,23 @@ function applyOSMessage() {
   }
 }
 
+// Header Scroll Btn
+function scrollToProjects(){
+  const projectsBlocks = document.getElementById("favorite-projects")
+  if(projectsBlocks.clientHeight <= window.innerHeight){
+    projectsBlocks.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		});
+  }else{
+    document.getElementById("favorite-projects-title").scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		});
+
+  }
+}
+
 // Project Rendering
 function render() {
   const favoriteProjectsGrid = document.getElementById(
