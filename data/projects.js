@@ -75,7 +75,7 @@ const projects = [
     link: {
       icon: "GitHub.svg",
       text: "Av32000/Discord-Badge",
-      url: "https://github.com/Av32000/CodeLyoko-UHC",
+      url: "https://github.com/Av32000/Discord-Badge",
     },
     description:
       "Discord Badge is a Discord Bot that expose an API to generate a badge indicating your Discord status (Online, Offline...). It's very easy to use, and can be used on a website or GitHub profile, for example.",
@@ -109,7 +109,7 @@ const projects = [
     },
     description:
       "Code Lyoko UHC is a UHC Minecraft plugin based on the Code Lyoko universe. Each player is assigned a role corresponding to a character from the series, and must, alone or with allies, eliminate all other players to win the game. Each role has its own powers and characteristics, creating a wide range of possible strategies.",
-    favorite: 2,
+    favorite: -1,
     cover: {
       type: "icon",
       value: "Java.svg",
@@ -179,10 +179,6 @@ const projects = [
       {
         type: "youtube",
         value: "ESbr3xTVNks",
-      },
-      {
-        type: "images",
-        value: [],
       },
       {
         type: "related",
@@ -528,6 +524,77 @@ const projects = [
         type: "text",
         value:
           "|Available on the AUR|: Install via |yay -S omcp-git| on Arch Linux",
+      },
+      {
+        type: "related",
+        value: ["dev"],
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: "Portfolio",
+    type: "dev",
+    description:
+      "My personal portfolio website, showcasing my projects, skills, and experiences.",
+    favorite: 2,
+    cover: {
+      type: "icon",
+      value: "favicon.ico",
+    },
+    link: {
+      icon: "GitHub.svg",
+      text: "Av32000/av32000.github.io",
+      url: "https://github.com/Av32000/av32000.github.io",
+    },
+    cardFields: [
+      {
+        type: "key",
+        key: "Language",
+        value: "Javascript",
+      },
+      {
+        type: "last-commit",
+        key: "Last Update",
+        value: "Av32000/av32000.github.io",
+      },
+    ],
+    contentBlocks: [
+      {
+        type: "text",
+        value:
+          "This portfolio is built in pure |Vanilla JavaScript|, HTML, and CSS. The goal of the project is to create a portfolio not only to showcase my work but also to |demonstrate my development philosophy| and the way I love coding.",
+      },
+      {
+        type: "text",
+        value:
+          "Every project, skill, and contact info is |rendered dynamically| from a JSON file, allowing easy updates and additions. I can add a new project without having to write a single line of code. |Everything| from the project card, recommendations, and cover to the page you're currently reading is |generated| in JavaScript.",
+      },
+      {
+        type: "text",
+        value:
+          "I love the idea of coding everything in a |modular way|. I love to |take the time| to write a complex and robust base |structure| to achieve a powerful and flexible architecture.",
+      },
+      {
+        type: "text",
+        value:
+          "I created a |building blocks| system that allows me to add new projects without locking myself into a specific structure. I can add |new projects| with different content, different covers, different card fields, etc...",
+      },
+      {
+        type: "text",
+        value:
+          "The code is available on <a href='https://github.com/Av32000/av32000.github.io' class='accent'>GitHub</a>, so you can read it and discover my coding philosophy.",
+      },
+
+      {
+        type: "images",
+        value: [
+          "portfolio/render-components.png",
+          "portfolio/js-folder.png",
+          "portfolio/content-blocks.png",
+          "portfolio/portfolio-json.png",
+          "portfolio/skills-json.png",
+        ],
       },
       {
         type: "related",

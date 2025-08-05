@@ -1,5 +1,9 @@
 function renderProjectsGrid(parentDiv, filters = [], favoriteOnly = false) {
-  let projectsToRender = projects.sort((a, b) => a.id - b.id);
+  let projectsToRender = projects.sort((a, b) => {
+    const weightA = (a.favorite >= 0 ? 0.6 : 0.4) * Math.random();
+    const weightB = (b.favorite >= 0 ? 0.6 : 0.4) * Math.random();
+    return weightB - weightA;
+  });
 
   if (favoriteOnly)
     projectsToRender = projectsToRender
@@ -311,7 +315,11 @@ function renderProjectContent(contentDiv, project) {
               (block.value.includes(p.type) && p.id != project.id) ||
               block.value.includes(p.id)
           )
-          .sort(() => Math.random() - 0.5)
+          .sort((a, b) => {
+            const weightA = (a.favorite > -1 ? 0.6 : 0.4) * Math.random();
+            const weightB = (b.favorite > -1 ? 0.6 : 0.4) * Math.random();
+            return weightB - weightA;
+          })
           .slice(0, 2);
 
         if (selectedProjects.length == 0) break;
