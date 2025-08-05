@@ -41,10 +41,10 @@ const itSkills = [
   },
   {
     id: 5,
-    name: "Csharp",
+    name: "Rust",
     content: [
-      "C# was the first real programming language I learned. It introduced me to all the doors that programming can open.",
-      "I coded my first Windows applications with it, and even if I prefer JavaScript today, I still often use it in many projects.",
+      "Rust is a systems programming language that focuses on safety and performance. I started learning it to improve my understanding of low-level programming concepts.",
+      "I appreciate its modularity, allowing it to be used in many different projects, from web servers to command-line tools.",
     ],
   },
   {

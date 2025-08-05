@@ -104,6 +104,14 @@ async function renderProjectCard(projectDiv, project) {
           fieldDiv.innerHTML = `<span class="accent">${
             field.key
           }</span>: ${await getLastCommit(field.value)}`;
+          break;
+
+        case "last-release":
+          fieldDiv.innerHTML = `<span class="accent">${
+            field.key
+          }</span>: ${await getLastRelease(field.value)}`;
+          break;
+
         default:
           break;
       }
@@ -372,6 +380,12 @@ async function getLastCommit(repo) {
   const githubApiEndpoint = "https://api.github.com/repos/";
   const lastUpdate = await (await fetch(githubApiEndpoint + repo)).json();
   return FormatDate(lastUpdate.pushed_at);
+}
+
+async function getLastRelease(repo) {
+  const githubApiEndpoint = `https://api.github.com/repos/${repo}/releases/latest`;
+  const lastRelease = await (await fetch(githubApiEndpoint)).json();
+  return `${lastRelease.tag_name} - ${FormatDate(lastRelease.published_at)}`;
 }
 
 function FormatDate(sDate) {

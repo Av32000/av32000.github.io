@@ -31,6 +31,11 @@ const projects = [
         key: "Last Update",
         value: "Av32000/Finance-Tracker",
       },
+      {
+        type: "last-release",
+        key: "Last Release",
+        value: "Av32000/Finance-Tracker",
+      },
     ],
     contentBlocks: [
       {
@@ -75,7 +80,7 @@ const projects = [
     description:
       "Discord Badge is a Discord Bot that expose an API to generate a badge indicating your Discord status (Online, Offline...). It's very easy to use, and can be used on a website or GitHub profile, for example.",
     type: "dev",
-    favorite: 4,
+    favorite: -1,
     cover: {
       type: "icon",
       value: "Node.Js.svg",
@@ -430,6 +435,103 @@ const projects = [
       {
         type: "related",
         value: ["films"],
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "OMCP",
+    type: "dev",
+    description: "Ollama CLI client to connect LLM to MCP Servers locally",
+    favorite: 4,
+    cover: {
+      type: "icon",
+      value: "Rust.svg",
+    },
+    link: {
+      icon: "GitHub.svg",
+      text: "Av32000/OMCP",
+      url: "https://github.com/Av32000/OMCP",
+    },
+    cardFields: [
+      {
+        type: "key",
+        key: "Language",
+        value: "Rust",
+      },
+      {
+        type: "last-commit",
+        key: "Last Update",
+        value: "Av32000/OMCP",
+      },
+      {
+        type: "last-release",
+        key: "Last Release",
+        value: "Av32000/OMCP",
+      },
+    ],
+    contentBlocks: [
+      {
+        type: "text",
+        value:
+          "A powerful CLI client that connects |Ollama| language models to |Model Context Protocol| (MCP) servers, enabling LLMs to access |external tools| and data sources locally.",
+      },
+      {
+        type: "image",
+        value: "omcp/omcp.gif",
+      },
+      {
+        type: "text",
+        value: "Features include :",
+      },
+      {
+        type: "text",
+        value:
+          "|Multiple MCP Server Support|: Connect to MCP servers via STDIO, SSE, and Streamable HTTP transports",
+      },
+      {
+        type: "text",
+        value:
+          "|Interactive Chat Interface|: Terminal-based chat with real-time streaming responses",
+      },
+      {
+        type: "text",
+        value:
+          "|Tool Integration|: Automatic discovery and execution of MCP server tools",
+      },
+      {
+        type: "text",
+        value:
+          "|Model Management|: Built-in Ollama model selection, loading, and pulling",
+      },
+      {
+        type: "text",
+        value:
+          "|Configurable Settings|: Persistent configuration with JSON-based settings",
+      },
+      {
+        type: "text",
+        value:
+          "|Batch Mode|: Execute single prompts without entering interactive mode",
+      },
+      {
+        type: "text",
+        value:
+          "|Tool Control|: Enable/disable tools dynamically during conversations",
+      },
+      {
+        type: "text",
+        value:
+          "|Thinking Mode|: Display model reasoning process (for supported models)",
+      },
+      {
+        type: "text",
+        value:
+          "|Available on the AUR|: Install via |yay -S omcp-git| on Arch Linux",
+      },
+      {
+        type: "related",
+        value: ["dev"],
       },
     ],
   },
