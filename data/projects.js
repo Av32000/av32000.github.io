@@ -97,6 +97,21 @@ const projects = [
         value: "Av32000/CodeLyoko-UHC",
       },
     ],
+    contentBlocks: [
+      {
+        type: "images",
+        value: [
+          "code-lyoko/cl-config.png",
+          "code-lyoko/cl-roles.png",
+          "code-lyoko/cl-tower.png",
+          "code-lyoko/cl-timer.png",
+        ],
+      },
+      {
+        type: "related",
+        value: ["dev"],
+      },
+    ],
   },
   {
     id: 3,
