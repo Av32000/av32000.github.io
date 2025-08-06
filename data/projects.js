@@ -298,9 +298,9 @@ const projects = [
       {
         type: "images",
         value: [
-          "kintsugi/_NFA5400.jpg",
-          "kintsugi/_NFA6179.jpg",
-          "kintsugi/_NFA6196.jpg",
+          "kintsugi/NFA5400.jpg",
+          "kintsugi/NFA6179.jpg",
+          "kintsugi/NFA6196.jpg",
           "kintsugi/Derush.00_01_28_17.Still001.webp",
           "kintsugi/Derush.00_33_03_21.Still005.webp",
         ],
@@ -342,11 +342,11 @@ const projects = [
       {
         type: "images",
         value: [
-          "lycee-hotelier/_NFA3477.jpg",
-          "lycee-hotelier/_NFA3488.jpg",
-          "lycee-hotelier/_NFA3502.jpg",
-          "lycee-hotelier/_NFA3510.jpg",
-          "lycee-hotelier/_NFA3609.jpg",
+          "lycee-hotelier/NFA3477.jpg",
+          "lycee-hotelier/NFA3488.jpg",
+          "lycee-hotelier/NFA3502.jpg",
+          "lycee-hotelier/NFA3510.jpg",
+          "lycee-hotelier/NFA3609.jpg",
           "lycee-hotelier/IMG_0348-Enhanced-NR.jpg",
           "lycee-hotelier/IMG_0456-Enhanced-NR.jpg",
         ],
@@ -412,7 +412,11 @@ const projects = [
       },
       {
         type: "images",
-        value: [],
+        value: [
+          "regard/1744482048560.jpg",
+          "regard/1744482049251.jpg",
+          "regard/NFA0810.jpg",
+        ],
       },
       {
         type: "related",
