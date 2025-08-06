@@ -70,35 +70,6 @@ const projects = [
     ],
   },
   {
-    id: 4,
-    name: "Discord-Badge",
-    link: {
-      icon: "GitHub.svg",
-      text: "Av32000/Discord-Badge",
-      url: "https://github.com/Av32000/Discord-Badge",
-    },
-    description:
-      "Discord Badge is a Discord Bot that expose an API to generate a badge indicating your Discord status (Online, Offline...). It's very easy to use, and can be used on a website or GitHub profile, for example.",
-    type: "dev",
-    favorite: -1,
-    cover: {
-      type: "icon",
-      value: "Node.Js.svg",
-    },
-    cardFields: [
-      {
-        type: "key",
-        key: "Language",
-        value: "Javascript",
-      },
-      {
-        type: "last-commit",
-        key: "Last Update",
-        value: "Av32000/Discord-Badge",
-      },
-    ],
-  },
-  {
     id: 2,
     name: "Code Lyoko UHC",
     type: "dev",
