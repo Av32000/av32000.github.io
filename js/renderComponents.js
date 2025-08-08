@@ -201,31 +201,67 @@ function renderNavBar(navBarDiv) {
   const username = document.createElement("p");
   username.innerText = "Av32000";
 
+  userDiv.append(icon, username);
+
+  const menuToggle = document.createElement("div");
+  menuToggle.classList.add("menu-toggle");
+  menuToggle.innerHTML = `
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  `;
+
   const linksDiv = document.createElement("div");
   linksDiv.classList.add("links");
 
   const homeLink = document.createElement("p");
   homeLink.innerText = "Home";
-  homeLink.addEventListener("click", () => (window.location = "/"));
+  homeLink.style.cursor = "pointer";
+  homeLink.addEventListener("click", (e) => {
+    e.stopPropagation();
+    window.location = "/";
+    navBarDiv.classList.remove("menu-active");
+  });
 
   const projectsLink = document.createElement("p");
   projectsLink.innerText = "Projects";
-  projectsLink.addEventListener(
-    "click",
-    () => (window.location = "/projects.html")
-  );
+  projectsLink.style.cursor = "pointer";
+  projectsLink.addEventListener("click", (e) => {
+    e.stopPropagation();
+    window.location = "/projects.html";
+    navBarDiv.classList.remove("menu-active");
+  });
 
   const contactLink = document.createElement("p");
   contactLink.innerText = "Contact";
-  contactLink.addEventListener(
-    "click",
-    () => (window.location = "/contact.html")
-  );
+  contactLink.style.cursor = "pointer";
+  contactLink.addEventListener("click", (e) => {
+    e.stopPropagation();
+    window.location = "/contact.html";
+    navBarDiv.classList.remove("menu-active");
+  });
 
-  userDiv.append(icon, username);
   linksDiv.append(homeLink, projectsLink, contactLink);
 
-  navBarDiv.append(userDiv, linksDiv);
+  menuToggle.addEventListener("click", () => {
+    navBarDiv.classList.toggle("menu-active");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!navBarDiv.contains(e.target)) {
+      navBarDiv.classList.remove("menu-active");
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 360) {
+      navBarDiv.classList.remove("menu-active");
+    }
+  });
+
+  navBarDiv.append(userDiv, menuToggle, linksDiv);
 }
 
 function renderProjectHeader(headerDiv, project) {
