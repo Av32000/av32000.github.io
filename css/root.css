@@ -28,6 +28,12 @@ body {
   color: var(--primary-color);
 }
 
+.inline-link {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .fade-in,
 .fade-in * {
   animation: fade-in 0.5s ease-out;

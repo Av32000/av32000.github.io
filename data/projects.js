@@ -209,7 +209,7 @@ const projects = [
       {
         type: "text",
         value:
-          'Result: A 98-page dossier available <span class="accent" onclick="window.open(\'https://drive.google.com/file/d/1AJrSbMOlCBBEu8eNssaGScx55ZLRWFTh/view\')" style="cursor:pointer;">here</span> and the presentation pitch below.',
+          "Result: A 98-page dossier available [here](https://drive.google.com/file/d/1AJrSbMOlCBBEu8eNssaGScx55ZLRWFTh/view) and the presentation pitch below.",
       },
       {
         type: "youtube",
@@ -573,7 +573,7 @@ const projects = [
       {
         type: "text",
         value:
-          "The code is available on <a href='https://github.com/Av32000/av32000.github.io' class='accent'>GitHub</a>, so you can read it and discover my coding philosophy.",
+          "The code is available on [GitHub](https://github.com/Av32000/av32000.github.io), so you can read it and discover my coding philosophy.",
       },
 
       {

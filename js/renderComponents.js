@@ -253,7 +253,11 @@ function renderProjectContent(contentDiv, project) {
 
         let text = block.value;
         text = text.replace(/\n/g, "<br>"); // New Lines
-        text = text.replace(/\|(.*?)\|/g, '<span class="accent">$1</span>'); // Acent
+        text = text.replace(/\|(.*?)\|/g, '<span class="accent">$1</span>'); // Accent
+        text = text.replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          "<span class=\"inline-link\" onClick=\"window.open('$2', '_blank')\">$1</span>"
+        ); // Markdown links
 
         textBlock.innerHTML = text;
         contentDiv.append(textBlock);
