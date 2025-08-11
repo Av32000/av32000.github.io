@@ -347,13 +347,13 @@
   background-color: #181818;
   border-radius: 20px;
   padding: 20px;
-  min-height: 80px;
+  min-height: 90px;
   align-items: center;
-  margin-bottom: -30px;
+  margin-bottom: -38px;
 }
 
 .project-card .link * {
-  margin-top: -25px;
+  margin-top: -37.5px;
 }
 
 .project-card .link img {
