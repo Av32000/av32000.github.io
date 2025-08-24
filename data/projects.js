@@ -470,7 +470,7 @@ const projects = [
       {
         type: "text",
         value:
-          "A powerful CLI client that connects |Ollama| language models to |Model Context Protocol| (MCP) servers, enabling LLMs to access |external tools| and data sources locally.",
+          "A powerful CLI client that connects [Ollama](https://ollama.com/) language models to [Model Context Protocol](https://modelcontextprotocol.io) (MCP) servers, enabling LLMs to access |external tools| and data sources locally.",
       },
       {
         type: "image",
@@ -523,7 +523,7 @@ const projects = [
       {
         type: "text",
         value:
-          "|Available on the AUR|: Install via |yay -S omcp-git| on Arch Linux",
+          "[Available on the AUR](https://aur.archlinux.org/packages/omcp-git): Install via |yay -S omcp-git| on Arch Linux",
       },
       {
         type: "related",
