@@ -135,6 +135,11 @@ const projects = [
         key: "Roles",
         value: "Pre-Production / Director / Editing",
       },
+      {
+	type: "key",
+	key: "Date",
+	value: "May 2025"
+      }
     ],
     contentBlocks: [
       {
@@ -379,6 +384,11 @@ const projects = [
         key: "Roles",
         value: "Pre-Production / Director’s Assistant / Technical Setup",
       },
+      {
+	type: "key",
+	key: "Date",
+	value: "April 2025"
+      }
     ],
     contentBlocks: [
       {
