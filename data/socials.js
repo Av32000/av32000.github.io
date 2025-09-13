@@ -20,12 +20,6 @@ const socials = [
   {
     id: 3,
     username: "Av32000",
-    social: "X",
-    url: "https://x.com/av32000",
-  },
-  {
-    id: 4,
-    username: "Av32000",
     social: "Mastodon",
     url: "https://mastodon.social/@Av32000",
   },
