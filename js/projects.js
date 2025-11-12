@@ -1,5 +1,11 @@
 // Projects Filters
-let currentFilter = 0;
+const anchors = ["", "#it", "#films", "#photos"];
+let currentFilter = anchors.indexOf(window.location.hash || "");
+if (currentFilter == -1) {
+  currentFilter = 0;
+}
+history.replaceState(null, null, window.location.pathname);
+
 let filters = [];
 const projectsGrid = document.getElementById("projects-grid");
 const projectsFiltersBtn = Array.from(
