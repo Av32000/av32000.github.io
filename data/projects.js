@@ -136,10 +136,10 @@ const projects = [
         value: "Pre-Production / Director / Editing",
       },
       {
-	type: "key",
-	key: "Date",
-	value: "May 2025"
-      }
+        type: "key",
+        key: "Date",
+        value: "May 2025",
+      },
     ],
     contentBlocks: [
       {
@@ -339,8 +339,13 @@ const projects = [
       },
       {
         type: "key",
-        key: "Date",
-        value: "02/08/2025",
+        key: "Camera",
+        value: "Sony A7III",
+      },
+      {
+        type: "key",
+        key: "Lens",
+        value: "Sony 70-200 F4 G OSS Mark 1",
       },
     ],
     contentBlocks: [
@@ -385,10 +390,10 @@ const projects = [
         value: "Pre-Production / Director’s Assistant / Technical Setup",
       },
       {
-	type: "key",
-	key: "Date",
-	value: "April 2025"
-      }
+        type: "key",
+        key: "Date",
+        value: "April 2025",
+      },
     ],
     contentBlocks: [
       {
