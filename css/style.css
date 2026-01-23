@@ -399,6 +399,6 @@ body {
   .topic-block {
     height: auto;
     page-break-inside: avoid;
-    padding: 5%;
+    padding: 0;
   }
 }

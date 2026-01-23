@@ -176,4 +176,9 @@
   .socials {
     display: flex;
   }
+
+  #header-welcome,
+  .contact-card project-card {
+    transform: scale(1.1);
+  }
 }

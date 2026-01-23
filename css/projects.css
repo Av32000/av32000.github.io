@@ -612,7 +612,8 @@
 @media print {
   iframe,
   img[src$=".gif"],
-  .navbar,
+  .projects-body .navbar,
+  .project-body .navbar,
   .projects-filters,
   .related-projects,
   .socials {
@@ -647,10 +648,6 @@
     padding: 0;
   }
 
-  .project-body .project-card {
-    width: 23vw !important;
-  }
-
   .layout-content {
     height: 80vh !important;
     padding: 0 3% !important;
@@ -663,27 +660,38 @@
 
   .project-header .background-image {
     height: 20vh;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   }
 
   .images-block {
-    grid-template-columns: repeat(3, 1fr) !important;
     flex: 1;
     align-content: start;
     gap: 8px !important;
   }
 
+  .images-block:is(.print-only) {
+    display: grid !important;
+  }
+
   .images-block .image-container {
-    aspect-ratio: 16 / 9;
     width: auto;
     height: auto;
     max-height: 25vh !important;
+    overflow: hidden;
+    box-sizing: border-box;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .images-block img {
     width: 100%;
     height: auto;
+    max-height: 25vh;
     object-fit: contain;
+    -webkit-object-fit: contain;
+    display: block;
   }
 
   .layout-content .content {

@@ -494,3 +494,17 @@ body {
 .menu-toggle[aria-expanded="true"] .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+
+.print-only {
+  display: none !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}

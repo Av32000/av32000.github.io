@@ -12,7 +12,7 @@ function renderProjectsGrid(parentDiv, filters = [], favoriteOnly = false) {
 
   if (filters.length > 0) {
     projectsToRender = projectsToRender.filter(
-      (p) => !filters.includes(p.type)
+      (p) => !filters.includes(p.type),
     );
   }
 
@@ -283,16 +283,21 @@ function renderProjectContent(contentDiv, project) {
   for (let i = 0; i < project.contentBlocks.length; i++) {
     const block = project.contentBlocks[i];
 
+    let customClasses = [...(block.customClasses || [])];
+    if (block.tags?.includes("noPrint")) customClasses.push("no-print");
+    if (block.tags?.includes("printOnly")) customClasses.push("print-only");
+
     switch (block.type) {
       case "text":
         const textBlock = document.createElement("p");
+        customClasses.forEach((c) => textBlock.classList.add(c));
 
         let text = block.value;
         text = text.replace(/\n/g, "<br>"); // New Lines
         text = text.replace(/\|(.*?)\|/g, '<span class="accent">$1</span>'); // Accent
         text = text.replace(
           /\[([^\]]+)\]\(([^)]+)\)/g,
-          "<span class=\"inline-link\" onClick=\"window.open('$2', '_blank')\">$1</span>"
+          "<span class=\"inline-link\" onClick=\"window.open('$2', '_blank')\">$1</span>",
         ); // Markdown links
 
         textBlock.innerHTML = text;
@@ -301,6 +306,7 @@ function renderProjectContent(contentDiv, project) {
 
       case "quote":
         const quoteBlock = document.createElement("p");
+        customClasses.forEach((c) => quoteBlock.classList.add(c));
         quoteBlock.classList.add("quote-text");
         quoteBlock.innerHTML = block.value;
         contentDiv.append(quoteBlock);
@@ -309,6 +315,8 @@ function renderProjectContent(contentDiv, project) {
       case "images":
         const imagesBlock = document.createElement("div");
         imagesBlock.classList.add("images-block");
+        customClasses.forEach((c) => imagesBlock.classList.add(c));
+
         block.value.forEach((image, i) => {
           const imageBlock = document.createElement("div");
           imageBlock.classList.add("image-container");
@@ -318,8 +326,8 @@ function renderProjectContent(contentDiv, project) {
           imageElem.addEventListener("click", () =>
             loadFullscreenImage(
               block.value.map((image) => `/assets/projects/images/${image}`),
-              i
-            )
+              i,
+            ),
           );
           imageBlock.append(imageElem);
           imagesBlock.append(imageBlock);
@@ -329,16 +337,18 @@ function renderProjectContent(contentDiv, project) {
 
       case "image":
         const imageBlock = document.createElement("img");
+        customClasses.forEach((c) => imageBlock.classList.add(c));
         imageBlock.style.cursor = "pointer";
         imageBlock.src = `/assets/projects/images/${block.value}`;
         imageBlock.addEventListener("click", () =>
-          loadFullscreenImage([imageBlock.src])
+          loadFullscreenImage([imageBlock.src]),
         );
         contentDiv.append(imageBlock);
         break;
 
       case "youtube":
         const embed = document.createElement("iframe");
+        customClasses.forEach((c) => embed.classList.add(c));
         embed.src = `https://www.youtube-nocookie.com/embed/${block.value}`;
         embed.allowFullscreen = true;
         embed.allow =
@@ -353,7 +363,7 @@ function renderProjectContent(contentDiv, project) {
           .filter(
             (p) =>
               (block.value.includes(p.type) && p.id != project.id) ||
-              block.value.includes(p.id)
+              block.value.includes(p.id),
           )
           .sort((a, b) => {
             const weightA = (a.favorite > -1 ? 0.6 : 0.4) * Math.random();
@@ -374,7 +384,7 @@ function renderProjectContent(contentDiv, project) {
         projectsList.classList.add("projects-list");
 
         selectedProjects.forEach((p) =>
-          projectsList.append(renderProjectCardSmall(p))
+          projectsList.append(renderProjectCardSmall(p)),
         );
 
         relatedProjects.append(title, projectsList);

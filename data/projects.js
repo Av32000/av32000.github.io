@@ -55,10 +55,21 @@ const projects = [
       },
       {
         type: "images",
+        tags: ["noPrint"],
         value: [
           "finance-tracker/home.png",
           "finance-tracker/transactions.png",
           "finance-tracker/stats-creation.png",
+          "finance-tracker/stats-lines.png",
+          "finance-tracker/stats-tags.png",
+        ],
+      },
+      {
+        type: "images",
+        tags: ["printOnly"],
+        value: [
+          "finance-tracker/home.png",
+          "finance-tracker/transactions.png",
           "finance-tracker/stats-lines.png",
           "finance-tracker/stats-tags.png",
         ],
@@ -213,8 +224,15 @@ const projects = [
       },
       {
         type: "text",
+        tags: ["noPrint"],
         value:
           "Result: A 98-page dossier available [here](https://drive.google.com/file/d/1AJrSbMOlCBBEu8eNssaGScx55ZLRWFTh/view) and the presentation pitch below.",
+      },
+      {
+        type: "text",
+        tags: ["printOnly"],
+        value:
+          "Result: A 98-page dossier available [here](https://drive.google.com/file/d/1AJrSbMOlCBBEu8eNssaGScx55ZLRWFTh/view) and a presentation video pitch.",
       },
       {
         type: "youtube",
@@ -227,8 +245,15 @@ const projects = [
       },
       {
         type: "quote",
+        tags: ["noPrint"],
         value:
           "That’s why we chose to create a fake making-of for the series—we genuinely enjoy seeing behind the scenes. This approach allowed us to hold a casting to introduce actresses who match our characters and to place them within the series’ sets. Moreover, since the project is primarily driven by visuals, we used professional equipment, involved friends in our team, and meticulously prepared the shoot.",
+      },
+      {
+        type: "quote",
+        tags: ["printOnly"],
+        value:
+          "That’s e chose to create a fake making-of for the series. Since the project is primarily driven by visuals, we used professional equipment, and meticulously prepared the shoot.",
       },
       {
         type: "quote",
@@ -242,9 +267,20 @@ const projects = [
       },
       {
         type: "images",
+        tags: ["noPrint"],
         value: [
           "roadkill/IMG_5267.jpg",
           "roadkill/IMG_5487.jpg",
+          "roadkill/IMG_5566.jpg",
+          "roadkill/IMG_9649.jpg",
+          "roadkill/IMG_9714.jpg",
+        ],
+      },
+      {
+        type: "images",
+        tags: ["printOnly"],
+        value: [
+          "roadkill/IMG_5267.jpg",
           "roadkill/IMG_5566.jpg",
           "roadkill/IMG_9649.jpg",
           "roadkill/IMG_9714.jpg",
@@ -351,9 +387,22 @@ const projects = [
     contentBlocks: [
       {
         type: "images",
+        tags: ["noPrint"],
         value: [
           "lycee-hotelier/NFA3477.jpg",
           "lycee-hotelier/NFA3488.jpg",
+          "lycee-hotelier/NFA3502.jpg",
+          "lycee-hotelier/NFA3510.jpg",
+          "lycee-hotelier/NFA3609.jpg",
+          "lycee-hotelier/IMG_0348-Enhanced-NR.jpg",
+          "lycee-hotelier/IMG_0456-Enhanced-NR.jpg",
+        ],
+      },
+      {
+        type: "images",
+        tags: ["printOnly"],
+        value: [
+          "lycee-hotelier/NFA3477.jpg",
           "lycee-hotelier/NFA3502.jpg",
           "lycee-hotelier/NFA3510.jpg",
           "lycee-hotelier/NFA3609.jpg",
@@ -587,12 +636,19 @@ const projects = [
       },
       {
         type: "text",
+        tags: ["noPrint"],
         value:
           "The code is available on [GitHub](https://github.com/Av32000/av32000.github.io), so you can read it and discover my coding philosophy.",
       },
-
+      {
+        type: "text",
+        tags: ["printOnly"],
+        value:
+          "This is an automatic export from the website. The code is available on [GitHub](https://github.com/Av32000/av32000.github.io), so you can read it and discover my coding philosophy.",
+      },
       {
         type: "images",
+        tags: ["noPrint"],
         value: [
           "portfolio/render-components.png",
           "portfolio/js-folder.png",
