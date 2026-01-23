@@ -467,16 +467,6 @@ body {
   outline-offset: 2px;
 }
 
-@media print {
-  .navbar,
-  .socials,
-  .disk-1,
-  .disk-2,
-  .disk-3 {
-    display: none;
-  }
-}
-
 @keyframes slideDown {
   from {
     opacity: 0;

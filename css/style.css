@@ -372,19 +372,33 @@ body {
 
 /* Print Styles */
 @media print {
-  .background,
-  .disk,
+  .navbar {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar .links,
+  .socials,
   #bottom-btn {
     display: none;
+  }
+
+  [data-inviewport="from-right"],
+  [data-inviewport="from-left"] {
+    transform: none;
+    transition: none;
   }
 
   .header {
     height: auto;
     page-break-after: always;
+    padding: 5%;
   }
 
   .topic-block {
     height: auto;
     page-break-inside: avoid;
+    padding: 5%;
   }
 }

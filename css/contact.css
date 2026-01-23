@@ -171,3 +171,9 @@
     height: 22px;
   }
 }
+
+@media print {
+  .socials {
+    display: flex;
+  }
+}
