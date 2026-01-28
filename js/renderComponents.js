@@ -1,24 +1,65 @@
-function renderProjectsGrid(parentDiv, filters = [], favoriteOnly = false) {
-  let projectsToRender = projects.sort((a, b) => {
-    const weightA = (a.favorite >= 0 ? 0.6 : 0.4) * Math.random();
-    const weightB = (b.favorite >= 0 ? 0.6 : 0.4) * Math.random();
-    return weightB - weightA;
-  });
+function renderProjectsGrid(parentDiv, filters = {}) {
+  console.log(filters);
+  let projectsToRender = projects;
 
-  if (favoriteOnly)
+  if (filters.favoriteOnly) projectsToRender = projectsToRender;
+
+  if (filters.types && filters.types.length > 0) {
+    projectsToRender = projectsToRender.filter((p) =>
+      filters.types.includes(p.type),
+    );
+  }
+
+  if (filters.ids && filters.ids.length > 0) {
+    const includeIds = filters.ids.filter((id) => id >= 0);
+    const excludeIds = filters.ids.filter((id) => id < 0).map((id) => -id);
+
+    if (includeIds.length > 0) {
+      projectsToRender = projectsToRender.filter((p) =>
+        includeIds.includes(p.id),
+      );
+    } else {
+      projectsToRender = projectsToRender.filter(
+        (p) => !excludeIds.includes(p.id),
+      );
+    }
+  }
+
+  if (filters.optIds && filters.optIds.length > 0) {
+    filters.optIds.forEach((id) => {
+      if (!projectsToRender.find((p) => p.id === id)) {
+        const projectToAdd = projects.find((p) => p.id === id);
+        if (projectToAdd) projectsToRender.push(projectToAdd);
+      }
+    });
+  }
+
+  if (filters.order && filters.order.length > 0) {
+    projectsToRender = projectsToRender.sort((a, b) => {
+      return filters.order.indexOf(a.id) - filters.order.indexOf(b.id);
+    });
+  } else {
+    projectsToRender = projectsToRender.sort((a, b) => {
+      const weightA = (a.favorite >= 0 ? 0.6 : 0.4) * Math.random();
+      const weightB = (b.favorite >= 0 ? 0.6 : 0.4) * Math.random();
+      return weightB - weightA;
+    });
+  }
+
+  if (filters.favoriteOnly)
     projectsToRender = projectsToRender
       .filter((p) => p.favorite >= 0)
       .sort((a, b) => a.favorite - b.favorite);
 
-  if (filters.length > 0) {
-    projectsToRender = projectsToRender.filter(
-      (p) => !filters.includes(p.type),
-    );
+  if (filters.maxCount && projectsToRender.length > filters.maxCount) {
+    projectsToRender = projectsToRender.slice(0, filters.maxCount);
   }
 
   for (let i = 0; i < projectsToRender.length; i++) {
     parentDiv.append(renderProjectCardSmall(projectsToRender[i], parentDiv));
   }
+
+  return projectsToRender;
 }
 
 function renderProjectCardSmall(project) {
@@ -359,21 +400,6 @@ function renderProjectContent(contentDiv, project) {
         break;
 
       case "related":
-        const selectedProjects = projects
-          .filter(
-            (p) =>
-              (block.value.includes(p.type) && p.id != project.id) ||
-              block.value.includes(p.id),
-          )
-          .sort((a, b) => {
-            const weightA = (a.favorite > -1 ? 0.6 : 0.4) * Math.random();
-            const weightB = (b.favorite > -1 ? 0.6 : 0.4) * Math.random();
-            return weightB - weightA;
-          })
-          .slice(0, 2);
-
-        if (selectedProjects.length == 0) break;
-
         const relatedProjects = document.createElement("div");
         relatedProjects.classList.add("related-projects");
 
@@ -383,9 +409,19 @@ function renderProjectContent(contentDiv, project) {
         const projectsList = document.createElement("div");
         projectsList.classList.add("projects-list");
 
-        selectedProjects.forEach((p) =>
-          projectsList.append(renderProjectCardSmall(p)),
-        );
+        let filters = {
+          ...block.value,
+          maxCount: 2,
+        };
+
+        if (filters.ids) {
+          if (!filters.ids.includes(-project.id)) filters.ids.push(-project.id);
+        } else {
+          filters.ids = [-project.id];
+        }
+
+        let renderedProjects = renderProjectsGrid(projectsList, filters);
+        if (renderedProjects.length === 0) break;
 
         relatedProjects.append(title, projectsList);
         contentDiv.append(relatedProjects);

@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 0,
+    id: 4,
     name: "Finance Tracker",
     type: "dev",
     description:
@@ -76,7 +76,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["dev"],
+        value: { types: ["dev"] },
       },
     ],
   },
@@ -120,7 +120,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["dev"],
+        value: { types: ["dev"] },
       },
     ],
   },
@@ -184,7 +184,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["films"],
+        value: { types: ["films"] },
       },
     ],
   },
@@ -288,7 +288,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["films"],
+        value: { types: ["films"] },
       },
     ],
   },
@@ -348,7 +348,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["films"],
+        value: { types: ["films"], optIds: [7] },
       },
     ],
   },
@@ -412,7 +412,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["photos"],
+        value: { types: ["photos", "films"] },
       },
     ],
   },
@@ -484,7 +484,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["films"],
+        value: { types: ["films"] },
       },
     ],
   },
@@ -581,7 +581,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["dev"],
+        value: { types: ["dev"] },
       },
     ],
   },
@@ -659,7 +659,7 @@ const projects = [
       },
       {
         type: "related",
-        value: ["dev"],
+        value: { types: ["dev"] },
       },
     ],
   },

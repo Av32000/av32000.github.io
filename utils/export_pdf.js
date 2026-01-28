@@ -8,13 +8,15 @@ import { createServer } from "vite";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
 const outputPdfPath = path.join(projectRoot, "out/portfolio.pdf");
+const ignoreIds = [2, 5];
 
 async function exportToPdf() {
   const projectsPath = path.join(projectRoot, "data", "projects.js");
   const projectsCode = await fs.readFile(projectsPath, "utf-8");
-  const projectIds = [...projectsCode.matchAll(/id:\s*(\d+)/g)].map(
-    (match) => match[1],
-  );
+  const projectIds = [...projectsCode.matchAll(/id:\s*(\d+)/g)]
+    .map((match) => match[1])
+    .sort((a, b) => a - b)
+    .filter((id) => !ignoreIds.includes(parseInt(id)));
 
   console.log("Starting Vite server...");
   const server = await createServer({
@@ -45,17 +47,17 @@ async function exportToPdf() {
       (id) => `/projects/details.html?id=${id}`,
     );
 
-    const routes = ["/", "/projects.html", ...projectsPaths, "/contact.html"];
+    const routes = [
+      "/",
+      `/projects.html?order=${projectIds.join(",")}&ids=${ignoreIds.map((id) => -id).join(",")}`,
+      ...projectsPaths,
+      "/contact.html",
+    ];
 
     for (const route of routes) {
       const pageUrl = `${url}${route}`;
       console.log(`Navigating to ${pageUrl}...`);
       await page.goto(pageUrl, { waitUntil: "networkidle0" });
-
-      if ((await page.title()).includes("View More")) {
-        console.log(`Skipping View More page`);
-        continue;
-      }
 
       console.log(`Generating PDF for ${route}...`);
 

@@ -61,32 +61,31 @@ function applyOSMessage() {
 }
 
 // Header Scroll Btn
-function scrollToProjects(){
-  const projectsBlocks = document.getElementById("favorite-projects")
-  if(projectsBlocks.clientHeight <= window.innerHeight){
+function scrollToProjects() {
+  const projectsBlocks = document.getElementById("favorite-projects");
+  if (projectsBlocks.clientHeight <= window.innerHeight) {
     projectsBlocks.scrollIntoView({
-			behavior: 'smooth',
-			block: 'start'
-		});
-  }else{
+      behavior: "smooth",
+      block: "start",
+    });
+  } else {
     document.getElementById("favorite-projects-title").scrollIntoView({
-			behavior: 'smooth',
-			block: 'start'
-		});
-
+      behavior: "smooth",
+      block: "start",
+    });
   }
 }
 
 // Project Rendering
 function render() {
   const favoriteProjectsGrid = document.getElementById(
-    "favorite-projects-grid"
+    "favorite-projects-grid",
   );
   const navbar = document.getElementById("navbar");
   const footerDiv = document.getElementById("socials");
   const itSkillsDiv = document.getElementById("it-skills-wheel");
 
-  renderProjectsGrid(favoriteProjectsGrid, [], true);
+  renderProjectsGrid(favoriteProjectsGrid, { favoriteOnly: true });
   renderNavBar(navbar);
   renderFooter(footerDiv);
   renderSkillsWheel(itSkillsDiv, itSkills, 0);
