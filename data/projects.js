@@ -183,6 +183,15 @@ const projects = [
         value: "ESbr3xTVNks",
       },
       {
+        type: "images",
+        value: [
+          "sdt25/584-_NFA4143.jpg",
+          "sdt25/590-IMG_2690.jpg",
+          "sdt25/596-_NFA4214.jpg",
+          "sdt25/live_smoke.jpg",
+        ],
+      },
+      {
         type: "related",
         value: { types: ["films"] },
       },
