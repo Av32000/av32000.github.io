@@ -368,9 +368,9 @@ const projects = [
     description: "Photo shoot for Lycée Hotelier of Saint-Quentin en Yvelines",
     favorite: -1,
     link: {
-      icon: "Lightroom.svg",
-      text: "adobe.ly/414hT6G",
-      url: "https://adobe.ly/414hT6G",
+      icon: "Immich.svg",
+      text: "av32000.dev/PxdM93bw",
+      url: "https://av32000.dev/PxdM93bw",
     },
     cover: {
       type: "image",
