@@ -607,8 +607,8 @@ const projects = [
     },
     link: {
       icon: "GitHub.svg",
-      text: "Av32000/av32000.github.io",
-      url: "https://github.com/Av32000/av32000.github.io",
+      text: "Av32000/av32000.dev",
+      url: "https://github.com/Av32000/av32000.dev",
     },
     cardFields: [
       {
